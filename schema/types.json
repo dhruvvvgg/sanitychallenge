@@ -1,0 +1,963 @@
+[
+  {
+    "name": "source",
+    "title": "source",
+    "type": "document",
+    "fields": [
+      {
+        "name": "title",
+        "title": "title",
+        "type": "string"
+      },
+      {
+        "name": "url",
+        "title": "url",
+        "type": "url"
+      },
+      {
+        "name": "publisher",
+        "title": "publisher",
+        "type": "string"
+      },
+      {
+        "name": "authorityTier",
+        "title": "authorityTier",
+        "type": "number"
+      },
+      {
+        "name": "retrievedAt",
+        "title": "retrievedAt",
+        "type": "datetime"
+      },
+      {
+        "name": "licenseNote",
+        "title": "licenseNote",
+        "type": "text"
+      },
+      {
+        "name": "evidencePath",
+        "title": "evidencePath",
+        "type": "string"
+      },
+      {
+        "name": "sha256",
+        "title": "sha256",
+        "type": "string"
+      }
+    ]
+  },
+  {
+    "name": "regime",
+    "title": "regime",
+    "type": "document",
+    "fields": [
+      {
+        "name": "key",
+        "title": "key",
+        "type": "string",
+        "options": {
+          "list": [
+            "eu",
+            "uk",
+            "in",
+            "us"
+          ]
+        }
+      },
+      {
+        "name": "instrument",
+        "title": "instrument",
+        "type": "string"
+      },
+      {
+        "name": "applicability",
+        "title": "applicability",
+        "type": "object",
+        "fields": [
+          {
+            "name": "alternatives",
+            "title": "alternatives",
+            "type": "array",
+            "of": [
+              {
+                "type": "object",
+                "name": "scopeAlternative",
+                "fields": [
+                  {
+                    "name": "departure",
+                    "title": "departure",
+                    "type": "array",
+                    "of": [
+                      {
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "arrival",
+                    "title": "arrival",
+                    "type": "array",
+                    "of": [
+                      {
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "carriers",
+                    "title": "carriers",
+                    "type": "array",
+                    "of": [
+                      {
+                        "type": "string"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "effectiveFrom",
+        "title": "effectiveFrom",
+        "type": "date"
+      },
+      {
+        "name": "sources",
+        "title": "sources",
+        "type": "array",
+        "of": [
+          {
+            "type": "reference",
+            "to": [
+              {
+                "type": "source"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "entitlementBand",
+    "title": "entitlementBand",
+    "type": "document",
+    "fields": [
+      {
+        "name": "regime",
+        "title": "regime",
+        "type": "reference",
+        "to": [
+          {
+            "type": "regime"
+          }
+        ]
+      },
+      {
+        "name": "dimension",
+        "title": "dimension",
+        "type": "string",
+        "options": {
+          "list": [
+            "distance_km",
+            "block_time_minutes",
+            "fare_percentage",
+            "fixed"
+          ]
+        }
+      },
+      {
+        "name": "min",
+        "title": "min",
+        "type": "number"
+      },
+      {
+        "name": "max",
+        "title": "max",
+        "type": "number"
+      },
+      {
+        "name": "value",
+        "title": "value",
+        "type": "number"
+      },
+      {
+        "name": "currency",
+        "title": "currency",
+        "type": "string"
+      },
+      {
+        "name": "multiplier",
+        "title": "multiplier",
+        "type": "number"
+      },
+      {
+        "name": "cap",
+        "title": "cap",
+        "type": "number"
+      },
+      {
+        "name": "intraEU",
+        "title": "intraEU",
+        "type": "boolean"
+      },
+      {
+        "name": "reductionMinutes",
+        "title": "reductionMinutes",
+        "type": "number"
+      },
+      {
+        "name": "note",
+        "title": "note",
+        "type": "text"
+      },
+      {
+        "name": "source",
+        "title": "source",
+        "type": "reference",
+        "to": [
+          {
+            "type": "source"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "rule",
+    "title": "rule",
+    "type": "document",
+    "fields": [
+      {
+        "name": "title",
+        "title": "title",
+        "type": "string"
+      },
+      {
+        "name": "regime",
+        "title": "regime",
+        "type": "reference",
+        "to": [
+          {
+            "type": "regime"
+          }
+        ]
+      },
+      {
+        "name": "trigger",
+        "title": "trigger",
+        "type": "string",
+        "options": {
+          "list": [
+            "arrival_delay",
+            "cancellation",
+            "denied_boarding",
+            "care",
+            "refund"
+          ]
+        }
+      },
+      {
+        "name": "algorithm",
+        "title": "algorithm",
+        "type": "string"
+      },
+      {
+        "name": "thresholds",
+        "title": "thresholds",
+        "type": "object",
+        "fields": [
+          {
+            "name": "arrivalMinutes",
+            "title": "arrivalMinutes",
+            "type": "number"
+          },
+          {
+            "name": "reductionFraction",
+            "title": "reductionFraction",
+            "type": "number"
+          },
+          {
+            "name": "longBandValue",
+            "title": "longBandValue",
+            "type": "number"
+          },
+          {
+            "name": "longReductionBelowMinutes",
+            "title": "longReductionBelowMinutes",
+            "type": "number"
+          },
+          {
+            "name": "noticeLongHours",
+            "title": "noticeLongHours",
+            "type": "number"
+          },
+          {
+            "name": "noticeMediumHours",
+            "title": "noticeMediumHours",
+            "type": "number"
+          },
+          {
+            "name": "mediumEarlyMinutes",
+            "title": "mediumEarlyMinutes",
+            "type": "number"
+          },
+          {
+            "name": "mediumArrivalMinutes",
+            "title": "mediumArrivalMinutes",
+            "type": "number"
+          },
+          {
+            "name": "shortEarlyMinutes",
+            "title": "shortEarlyMinutes",
+            "type": "number"
+          },
+          {
+            "name": "shortArrivalMinutes",
+            "title": "shortArrivalMinutes",
+            "type": "number"
+          },
+          {
+            "name": "shortDistance",
+            "title": "shortDistance",
+            "type": "number"
+          },
+          {
+            "name": "mediumDistance",
+            "title": "mediumDistance",
+            "type": "number"
+          },
+          {
+            "name": "shortMinutes",
+            "title": "shortMinutes",
+            "type": "number"
+          },
+          {
+            "name": "mediumMinutes",
+            "title": "mediumMinutes",
+            "type": "number"
+          },
+          {
+            "name": "longMinutes",
+            "title": "longMinutes",
+            "type": "number"
+          },
+          {
+            "name": "departureMinutes",
+            "title": "departureMinutes",
+            "type": "number"
+          },
+          {
+            "name": "minimumSeats",
+            "title": "minimumSeats",
+            "type": "number"
+          },
+          {
+            "name": "noCompensationMinutes",
+            "title": "noCompensationMinutes",
+            "type": "number"
+          },
+          {
+            "name": "domesticHighMinutes",
+            "title": "domesticHighMinutes",
+            "type": "number"
+          },
+          {
+            "name": "internationalHighMinutes",
+            "title": "internationalHighMinutes",
+            "type": "number"
+          },
+          {
+            "name": "lowMultiplier",
+            "title": "lowMultiplier",
+            "type": "number"
+          },
+          {
+            "name": "highMultiplier",
+            "title": "highMultiplier",
+            "type": "number"
+          },
+          {
+            "name": "domesticRefundMinutes",
+            "title": "domesticRefundMinutes",
+            "type": "number"
+          },
+          {
+            "name": "internationalRefundMinutes",
+            "title": "internationalRefundMinutes",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "name": "conditions",
+        "title": "conditions",
+        "type": "array",
+        "of": [
+          {
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "name": "entitlements",
+        "title": "entitlements",
+        "type": "array",
+        "of": [
+          {
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "name": "bands",
+        "title": "bands",
+        "type": "array",
+        "of": [
+          {
+            "type": "reference",
+            "to": [
+              {
+                "type": "entitlementBand"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "sources",
+        "title": "sources",
+        "type": "array",
+        "of": [
+          {
+            "type": "reference",
+            "to": [
+              {
+                "type": "source"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "claimDeadline",
+        "title": "claimDeadline",
+        "type": "text"
+      },
+      {
+        "name": "paraphrase",
+        "title": "paraphrase",
+        "type": "text"
+      },
+      {
+        "name": "quote",
+        "title": "quote",
+        "type": "text"
+      },
+      {
+        "name": "verified",
+        "title": "verified",
+        "type": "boolean"
+      },
+      {
+        "name": "verificationStatus",
+        "title": "verificationStatus",
+        "type": "string"
+      },
+      {
+        "name": "effectiveFrom",
+        "title": "effectiveFrom",
+        "type": "date"
+      },
+      {
+        "name": "effectiveTo",
+        "title": "effectiveTo",
+        "type": "date"
+      }
+    ]
+  },
+  {
+    "name": "cause",
+    "title": "cause",
+    "type": "document",
+    "fields": [
+      {
+        "name": "key",
+        "title": "key",
+        "type": "string"
+      },
+      {
+        "name": "title",
+        "title": "title",
+        "type": "string"
+      }
+    ]
+  },
+  {
+    "name": "causeStance",
+    "title": "causeStance",
+    "type": "document",
+    "fields": [
+      {
+        "name": "regime",
+        "title": "regime",
+        "type": "reference",
+        "to": [
+          {
+            "type": "regime"
+          }
+        ]
+      },
+      {
+        "name": "cause",
+        "title": "cause",
+        "type": "reference",
+        "to": [
+          {
+            "type": "cause"
+          }
+        ]
+      },
+      {
+        "name": "stance",
+        "title": "stance",
+        "type": "string",
+        "options": {
+          "list": [
+            "exempts",
+            "does_not_exempt",
+            "contested",
+            "unspecified"
+          ]
+        }
+      },
+      {
+        "name": "paraphrase",
+        "title": "paraphrase",
+        "type": "text"
+      },
+      {
+        "name": "sources",
+        "title": "sources",
+        "type": "array",
+        "of": [
+          {
+            "type": "reference",
+            "to": [
+              {
+                "type": "source"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "verified",
+        "title": "verified",
+        "type": "boolean"
+      }
+    ]
+  },
+  {
+    "name": "caseLaw",
+    "title": "caseLaw",
+    "type": "document",
+    "fields": [
+      {
+        "name": "title",
+        "title": "title",
+        "type": "string"
+      },
+      {
+        "name": "holding",
+        "title": "holding",
+        "type": "text"
+      },
+      {
+        "name": "stances",
+        "title": "stances",
+        "type": "array",
+        "of": [
+          {
+            "type": "reference",
+            "to": [
+              {
+                "type": "causeStance"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "sources",
+        "title": "sources",
+        "type": "array",
+        "of": [
+          {
+            "type": "reference",
+            "to": [
+              {
+                "type": "source"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "verified",
+        "title": "verified",
+        "type": "boolean"
+      },
+      {
+        "name": "verificationStatus",
+        "title": "verificationStatus",
+        "type": "string"
+      }
+    ]
+  },
+  {
+    "name": "airlinePolicy",
+    "title": "airlinePolicy",
+    "type": "document",
+    "fields": [
+      {
+        "name": "title",
+        "title": "title",
+        "type": "string"
+      },
+      {
+        "name": "airline",
+        "title": "airline",
+        "type": "string"
+      },
+      {
+        "name": "summary",
+        "title": "summary",
+        "type": "text"
+      },
+      {
+        "name": "conflictsWith",
+        "title": "conflictsWith",
+        "type": "array",
+        "of": [
+          {
+            "type": "reference",
+            "to": [
+              {
+                "type": "rule"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "sources",
+        "title": "sources",
+        "type": "array",
+        "of": [
+          {
+            "type": "reference",
+            "to": [
+              {
+                "type": "source"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "verified",
+        "title": "verified",
+        "type": "boolean"
+      }
+    ]
+  },
+  {
+    "name": "scenario",
+    "title": "scenario",
+    "type": "document",
+    "fields": [
+      {
+        "name": "title",
+        "title": "title",
+        "type": "string"
+      },
+      {
+        "name": "split",
+        "title": "split",
+        "type": "string"
+      },
+      {
+        "name": "verification",
+        "title": "verification",
+        "type": "string"
+      },
+      {
+        "name": "input",
+        "title": "input",
+        "type": "object",
+        "fields": [
+          {
+            "name": "departure",
+            "title": "departure",
+            "type": "string"
+          },
+          {
+            "name": "arrival",
+            "title": "arrival",
+            "type": "string"
+          },
+          {
+            "name": "carrier",
+            "title": "carrier",
+            "type": "string"
+          },
+          {
+            "name": "airline",
+            "title": "airline",
+            "type": "string"
+          },
+          {
+            "name": "flightDate",
+            "title": "flightDate",
+            "type": "date"
+          },
+          {
+            "name": "trigger",
+            "title": "trigger",
+            "type": "string"
+          },
+          {
+            "name": "cause",
+            "title": "cause",
+            "type": "string"
+          },
+          {
+            "name": "extraordinaryEvidence",
+            "title": "extraordinaryEvidence",
+            "type": "string"
+          },
+          {
+            "name": "fareCurrency",
+            "title": "fareCurrency",
+            "type": "string"
+          },
+          {
+            "name": "deniedReason",
+            "title": "deniedReason",
+            "type": "string"
+          },
+          {
+            "name": "distanceKm",
+            "title": "distanceKm",
+            "type": "number"
+          },
+          {
+            "name": "arrivalDelayMinutes",
+            "title": "arrivalDelayMinutes",
+            "type": "number"
+          },
+          {
+            "name": "departureDelayMinutes",
+            "title": "departureDelayMinutes",
+            "type": "number"
+          },
+          {
+            "name": "noticeHours",
+            "title": "noticeHours",
+            "type": "number"
+          },
+          {
+            "name": "aircraftSeats",
+            "title": "aircraftSeats",
+            "type": "number"
+          },
+          {
+            "name": "fare",
+            "title": "fare",
+            "type": "number"
+          },
+          {
+            "name": "reroutedArrivalDelayMinutes",
+            "title": "reroutedArrivalDelayMinutes",
+            "type": "number"
+          },
+          {
+            "name": "reroutedDepartureEarlyMinutes",
+            "title": "reroutedDepartureEarlyMinutes",
+            "type": "number"
+          },
+          {
+            "name": "confirmedBooking",
+            "title": "confirmedBooking",
+            "type": "boolean"
+          },
+          {
+            "name": "checkedInOnTime",
+            "title": "checkedInOnTime",
+            "type": "boolean"
+          },
+          {
+            "name": "involuntary",
+            "title": "involuntary",
+            "type": "boolean"
+          },
+          {
+            "name": "declinedTravelAndBenefits",
+            "title": "declinedTravelAndBenefits",
+            "type": "boolean"
+          },
+          {
+            "name": "overnight",
+            "title": "overnight",
+            "type": "boolean"
+          },
+          {
+            "name": "reroutingOffered",
+            "title": "reroutingOffered",
+            "type": "boolean"
+          },
+          {
+            "name": "receivedBenefitsAbroad",
+            "title": "receivedBenefitsAbroad",
+            "type": "boolean"
+          },
+          {
+            "name": "singleFlight",
+            "title": "singleFlight",
+            "type": "boolean"
+          }
+        ]
+      },
+      {
+        "name": "sources",
+        "title": "sources",
+        "type": "array",
+        "of": [
+          {
+            "type": "reference",
+            "to": [
+              {
+                "type": "source"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "expected",
+        "title": "expected",
+        "type": "object",
+        "fields": [
+          {
+            "name": "status",
+            "title": "status",
+            "type": "string"
+          },
+          {
+            "name": "regime",
+            "title": "regime",
+            "type": "string"
+          },
+          {
+            "name": "amount",
+            "title": "amount",
+            "type": "number"
+          },
+          {
+            "name": "currency",
+            "title": "currency",
+            "type": "string"
+          },
+          {
+            "name": "entitlements",
+            "title": "entitlements",
+            "type": "array",
+            "of": [
+              {
+                "type": "string"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "gap",
+    "title": "gap",
+    "type": "document",
+    "fields": [
+      {
+        "name": "category",
+        "title": "category",
+        "type": "string"
+      },
+      {
+        "name": "reason",
+        "title": "reason",
+        "type": "text"
+      },
+      {
+        "name": "mode",
+        "title": "mode",
+        "type": "string"
+      },
+      {
+        "name": "backend",
+        "title": "backend",
+        "type": "string"
+      },
+      {
+        "name": "createdAt",
+        "title": "createdAt",
+        "type": "datetime"
+      },
+      {
+        "name": "regime",
+        "title": "regime",
+        "type": "string"
+      }
+    ]
+  },
+  {
+    "name": "corpusDoc",
+    "title": "corpusDoc",
+    "type": "document",
+    "fields": [
+      {
+        "name": "title",
+        "title": "title",
+        "type": "string"
+      },
+      {
+        "name": "url",
+        "title": "url",
+        "type": "url"
+      },
+      {
+        "name": "publisher",
+        "title": "publisher",
+        "type": "string"
+      },
+      {
+        "name": "tier",
+        "title": "tier",
+        "type": "number"
+      },
+      {
+        "name": "markdown",
+        "title": "markdown",
+        "type": "text"
+      },
+      {
+        "name": "retrievedAt",
+        "title": "retrievedAt",
+        "type": "datetime"
+      }
+    ]
+  }
+]

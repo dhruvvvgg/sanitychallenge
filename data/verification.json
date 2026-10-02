@@ -1,0 +1,45 @@
+{
+  "checkedAnchors": {
+    "eu261-original": [
+      "EUR 250",
+      "EUR 400",
+      "EUR 600",
+      "two weeks",
+      "two hours",
+      "five hours",
+      "Community carrier"
+    ],
+    "uk261-xml": [
+      "\u00a3220",
+      "\u00a3350",
+      "\u00a3520",
+      "three hours or more",
+      "UK air carrier"
+    ],
+    "us250": [
+      "$1,075",
+      "$2,150",
+      "less than two hours",
+      "less than four hours"
+    ],
+    "dot-refund": [
+      "3 hours or more",
+      "6 hours or more",
+      "chooses not to travel"
+    ],
+    "dot-delay-alt": [
+      "airlines are not required to compensate passengers"
+    ],
+    "sturgeon-press": [
+      "three hours or more",
+      "technical problem"
+    ],
+    "nelson-press": [
+      "three hours or more"
+    ]
+  },
+  "publicDocuments": 56,
+  "privateDocuments": 13,
+  "livePublished": false,
+  "method": "Manual primary-text review with reproducible anchor checks; official court summaries are labeled, not full judgments."
+}

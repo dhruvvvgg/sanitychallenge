@@ -1,0 +1,538 @@
+[
+  {
+    "id": "eu261",
+    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32004R0261",
+    "resolvedUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32004R0261",
+    "status": "empty",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "contentType": "text/html; charset=UTF-8",
+    "path": "data/sources/eu261.html",
+    "retrievedAt": "2026-10-02T20:56:05.354115+00:00"
+  },
+  {
+    "id": "uk261",
+    "url": "https://www.legislation.gov.uk/eur/2004/261/contents",
+    "resolvedUrl": "https://www.legislation.gov.uk/eur/2004/261/contents",
+    "status": "fetched",
+    "bytes": 33393,
+    "sha256": "448898314ed6885a1ce6b2013e164c0078d03c0a24fe147fb93f866bf2d09f95",
+    "contentType": "text/html;charset=utf-8",
+    "path": "data/sources/uk261.html",
+    "retrievedAt": "2026-10-02T20:56:05.521759+00:00"
+  },
+  {
+    "id": "caa",
+    "url": "https://www.caa.co.uk/passengers/before-you-fly/am-i-entitled-to-compensation/",
+    "resolvedUrl": "https://www.caa.co.uk/air-passengers/",
+    "status": "challenge",
+    "bytes": 23926,
+    "sha256": "a210b618aed82c91da5e55472e293ce9910907336662f7f99477751796e7a454",
+    "contentType": "text/html; charset=utf-8",
+    "path": "data/sources/caa.html",
+    "retrievedAt": "2026-10-02T20:56:06.396831+00:00"
+  },
+  {
+    "id": "dot-denied",
+    "url": "https://www.transportation.gov/individuals/aviation-consumer-protection/bumping-oversales",
+    "resolvedUrl": "https://www.transportation.gov/individuals/aviation-consumer-protection/bumping-oversales",
+    "status": "fetched",
+    "bytes": 74262,
+    "sha256": "92348861e9938f18c46a4bcc88b7137ebb1a837c088c99d204878aab310659b9",
+    "contentType": "text/html; charset=UTF-8",
+    "path": "data/sources/dot-denied.html",
+    "retrievedAt": "2026-10-02T20:56:05.681383+00:00"
+  },
+  {
+    "id": "dot-refund",
+    "url": "https://www.transportation.gov/individuals/aviation-consumer-protection/refunds",
+    "resolvedUrl": "https://www.transportation.gov/individuals/aviation-consumer-protection/refunds",
+    "status": "fetched",
+    "bytes": 79647,
+    "sha256": "8a5fa92921c59cc20b88fea7a812a42ca365f3dd98979672de5919645e868fc0",
+    "contentType": "text/html; charset=UTF-8",
+    "path": "data/sources/dot-refund.html",
+    "retrievedAt": "2026-10-02T20:56:05.237934+00:00"
+  },
+  {
+    "id": "dot-delay",
+    "url": "https://www.transportation.gov/individuals/aviation-consumer-protection/flight-delays-cancellations",
+    "status": "failed",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "id": "us250",
+    "url": "https://www.ecfr.gov/current/title-14/chapter-II/subchapter-A/part-250",
+    "resolvedUrl": "https://www.ecfr.gov/current/title-14/chapter-II/subchapter-A/part-250",
+    "status": "fetched",
+    "bytes": 141271,
+    "sha256": "961fa201fee37cf083dcb2a138c7dd194e0f1b5a813db7bc78a2ca21ed0d1a7e",
+    "contentType": "text/html; charset=utf-8",
+    "path": "data/sources/us250.html",
+    "retrievedAt": "2026-10-02T20:56:05.612526+00:00"
+  },
+  {
+    "id": "dgca",
+    "url": "https://www.dgca.gov.in/digigov-portal/Upload?flag=iframeAttachView&attachId=150612014",
+    "resolvedUrl": "https://www.dgca.gov.in/digigov-portal/Upload?flag=iframeAttachView&attachId=150612014",
+    "status": "empty",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "contentType": "",
+    "path": "data/sources/dgca.html",
+    "retrievedAt": "2026-10-02T20:56:06.310007+00:00"
+  },
+  {
+    "id": "sturgeon",
+    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:62007CJ0402",
+    "resolvedUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:62007CJ0402",
+    "status": "empty",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "contentType": "text/html; charset=UTF-8",
+    "path": "data/sources/sturgeon.html",
+    "retrievedAt": "2026-10-02T20:56:05.557866+00:00"
+  },
+  {
+    "id": "nelson",
+    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:62010CJ0581",
+    "resolvedUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:62010CJ0581",
+    "status": "empty",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "contentType": "text/html; charset=UTF-8",
+    "path": "data/sources/nelson.html",
+    "retrievedAt": "2026-10-02T20:56:05.475218+00:00"
+  },
+  {
+    "id": "wallentin",
+    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:62007CJ0549",
+    "resolvedUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:62007CJ0549",
+    "status": "empty",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "contentType": "text/html; charset=UTF-8",
+    "path": "data/sources/wallentin.html",
+    "retrievedAt": "2026-10-02T20:56:05.563350+00:00"
+  },
+  {
+    "id": "mcdonagh",
+    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:62011CJ0012",
+    "resolvedUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:62011CJ0012",
+    "status": "empty",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "contentType": "text/html; charset=UTF-8",
+    "path": "data/sources/mcdonagh.html",
+    "retrievedAt": "2026-10-02T20:56:05.813399+00:00"
+  },
+  {
+    "id": "folkerts",
+    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:62011CJ0011",
+    "resolvedUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:62011CJ0011",
+    "status": "empty",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "contentType": "text/html; charset=UTF-8",
+    "path": "data/sources/folkerts.html",
+    "retrievedAt": "2026-10-02T20:56:05.713545+00:00"
+  },
+  {
+    "id": "vanderlans",
+    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:62014CJ0257",
+    "resolvedUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:62014CJ0257",
+    "status": "empty",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "contentType": "text/html; charset=UTF-8",
+    "path": "data/sources/vanderlans.html",
+    "retrievedAt": "2026-10-02T20:56:05.772688+00:00"
+  },
+  {
+    "id": "krusemann",
+    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:62017CJ0195",
+    "resolvedUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:62017CJ0195",
+    "status": "empty",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "contentType": "text/html; charset=UTF-8",
+    "path": "data/sources/krusemann.html",
+    "retrievedAt": "2026-10-02T20:56:05.783729+00:00"
+  },
+  {
+    "id": "peuskova",
+    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:62015CJ0315",
+    "resolvedUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:62015CJ0315",
+    "status": "empty",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "contentType": "text/html; charset=UTF-8",
+    "path": "data/sources/peuskova.html",
+    "retrievedAt": "2026-10-02T20:56:05.769691+00:00"
+  },
+  {
+    "id": "finnair",
+    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:62011CJ0022",
+    "resolvedUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:62011CJ0022",
+    "status": "empty",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "contentType": "text/html; charset=UTF-8",
+    "path": "data/sources/finnair.html",
+    "retrievedAt": "2026-10-02T20:56:05.792031+00:00"
+  },
+  {
+    "id": "germanwings",
+    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:62013CJ0452",
+    "resolvedUrl": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:62013CJ0452",
+    "status": "empty",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "contentType": "text/html; charset=UTF-8",
+    "path": "data/sources/germanwings.html",
+    "retrievedAt": "2026-10-02T20:56:05.801004+00:00"
+  },
+  {
+    "id": "indigo",
+    "url": "https://www.goindigo.in/information/conditions-of-carriage.html",
+    "resolvedUrl": "https://www.goindigo.in/information/conditions-of-carriage.html",
+    "status": "fetched",
+    "bytes": 542044,
+    "sha256": "af0105016f3146424d37bef1e5c1a02f0825a049f8de53bc3958eafd37da4772",
+    "contentType": "text/html;charset=utf-8",
+    "path": "data/sources/indigo.html",
+    "retrievedAt": "2026-10-02T20:56:07.481693+00:00"
+  },
+  {
+    "id": "airindia",
+    "url": "https://www.airindia.com/in/en/conditions-of-carriage.html",
+    "status": "failed",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "id": "airindiaexpress",
+    "url": "https://www.airindiaexpress.com/terms-and-conditions",
+    "resolvedUrl": "https://www.airindiaexpress.com/terms-and-conditions",
+    "status": "fetched",
+    "bytes": 8365,
+    "sha256": "68d0ecae9344044a851ebf56edffc79420205acc09fdd51629910801255c5b83",
+    "contentType": "text/html;charset=utf-8",
+    "path": "data/sources/airindiaexpress.html",
+    "retrievedAt": "2026-10-02T20:56:06.805873+00:00"
+  },
+  {
+    "id": "spicejet",
+    "url": "https://www.spicejet.com/tnc.aspx",
+    "resolvedUrl": "https://www.spicejet.com/tnc.aspx",
+    "status": "fetched",
+    "bytes": 32974,
+    "sha256": "d6a0ced49828763f1ea3ec22011aa74e7caebc180806b312eb4a6a0ce19e7aef",
+    "contentType": "text/html; charset=UTF-8",
+    "path": "data/sources/spicejet.html",
+    "retrievedAt": "2026-10-02T20:56:07.395330+00:00"
+  },
+  {
+    "id": "akasa",
+    "url": "https://www.akasaair.com/terms-and-conditions",
+    "status": "failed",
+    "error": "HTTP Error 504: Gateway Timeout"
+  },
+  {
+    "id": "ryanair",
+    "url": "https://help.ryanair.com/hc/en-gb/articles/12889869090705-General-Terms-Conditions-of-Carriage",
+    "status": "failed",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "id": "easyjet",
+    "url": "https://www.easyjet.com/en/terms-and-conditions",
+    "resolvedUrl": "https://www.easyjet.com/en/help-centre/policy-terms-and-conditions/terms-and-conditions",
+    "status": "challenge",
+    "bytes": 447779,
+    "sha256": "265ca1909bfb2b143812ecd9d063bb695b456a026365294b05dd07d704e7c76a",
+    "contentType": "text/html; charset=utf-8",
+    "path": "data/sources/easyjet.html",
+    "retrievedAt": "2026-10-02T20:56:07.366090+00:00"
+  },
+  {
+    "id": "lufthansa",
+    "url": "https://www.lufthansa.com/us/en/conditions-of-carriage",
+    "status": "failed",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "id": "ba",
+    "url": "https://www.britishairways.com/content/information/legal/conditions-of-carriage",
+    "resolvedUrl": "https://www.britishairways.com/content/information/legal/conditions-of-carriage",
+    "status": "fetched",
+    "bytes": 55441,
+    "sha256": "89f325af7013afe1ee8ad4b263c902d7eb2bde7c6e0a8be6eae72208d9326a18",
+    "contentType": "text/html;charset=utf-8",
+    "path": "data/sources/ba.html",
+    "retrievedAt": "2026-10-02T20:56:06.789677+00:00"
+  },
+  {
+    "id": "delta",
+    "url": "https://www.delta.com/us/en/legal/contract-of-carriage-dgr",
+    "resolvedUrl": "https://www.delta.com/us/en/legal/contract-of-carriage-dgr",
+    "status": "fetched",
+    "bytes": 170489,
+    "sha256": "ab5cd42090f2d6214e991b608f238d75909d82fc18ed66d94202ab7182d07d45",
+    "contentType": "text/html",
+    "path": "data/sources/delta.html",
+    "retrievedAt": "2026-10-02T20:56:07.065560+00:00"
+  },
+  {
+    "id": "united",
+    "url": "https://www.united.com/en/us/fly/contract-of-carriage.html",
+    "resolvedUrl": "https://www.united.com/en/us/fly/contract-of-carriage.html",
+    "status": "challenge",
+    "bytes": 89391,
+    "sha256": "e100ed73b98c10f7a97ecece099c7d7b192bd2710a14d257ff7690787f7b8eb8",
+    "contentType": "text/html",
+    "path": "data/sources/united.html",
+    "retrievedAt": "2026-10-02T20:56:07.164567+00:00"
+  },
+  {
+    "id": "docs-sanity-context",
+    "url": "https://www.sanity.io/docs/ai/sanity-context.md",
+    "resolvedUrl": "https://www.sanity.io/docs/ai/sanity-context.md",
+    "status": "fetched",
+    "bytes": 8098,
+    "sha256": "c382f1c83f4c48176ea669b178c08820f37ce647293e3239b680b01accd01d13",
+    "contentType": "text/markdown;charset=UTF-8",
+    "path": "data/sources/docs-sanity-context.md",
+    "retrievedAt": "2026-10-02T20:56:07.467650+00:00"
+  },
+  {
+    "id": "docs-sanity-context-create-knowledge-base",
+    "url": "https://www.sanity.io/docs/ai/sanity-context-create-knowledge-base.md",
+    "resolvedUrl": "https://www.sanity.io/docs/ai/sanity-context-create-knowledge-base.md",
+    "status": "fetched",
+    "bytes": 5184,
+    "sha256": "9e7c87935308fb1d9973dc300abf6cb0600101869d7e680df01be6bc53c93ecf",
+    "contentType": "text/markdown;charset=UTF-8",
+    "path": "data/sources/docs-sanity-context-create-knowledge-base.md",
+    "retrievedAt": "2026-10-02T20:56:07.887850+00:00"
+  },
+  {
+    "id": "docs-sanity-context-source-types",
+    "url": "https://www.sanity.io/docs/ai/sanity-context-source-types.md",
+    "resolvedUrl": "https://www.sanity.io/docs/ai/sanity-context-source-types.md",
+    "status": "fetched",
+    "bytes": 4041,
+    "sha256": "a056bf8880ae99cad210050b1170af94f653ee359947990063903eec10727595",
+    "contentType": "text/markdown;charset=UTF-8",
+    "path": "data/sources/docs-sanity-context-source-types.md",
+    "retrievedAt": "2026-10-02T20:56:07.831207+00:00"
+  },
+  {
+    "id": "docs-sanity-context-resolve-issues",
+    "url": "https://www.sanity.io/docs/ai/sanity-context-resolve-issues.md",
+    "resolvedUrl": "https://www.sanity.io/docs/ai/sanity-context-resolve-issues.md",
+    "status": "fetched",
+    "bytes": 4510,
+    "sha256": "eb1edc11e48032a58fc7ffbbbb6108b82377bc940bad3966cd8224e4ba659362",
+    "contentType": "text/markdown;charset=UTF-8",
+    "path": "data/sources/docs-sanity-context-resolve-issues.md",
+    "retrievedAt": "2026-10-02T20:56:08.034972+00:00"
+  },
+  {
+    "id": "docs-sanity-context-configure-mcp",
+    "url": "https://www.sanity.io/docs/ai/sanity-context-configure-mcp.md",
+    "resolvedUrl": "https://www.sanity.io/docs/ai/sanity-context-configure-mcp.md",
+    "status": "fetched",
+    "bytes": 4316,
+    "sha256": "e638db1a8be688bbf2b6245521f9637ae7aab95c59a975e7be5178f0fc48bfcd",
+    "contentType": "text/markdown;charset=UTF-8",
+    "path": "data/sources/docs-sanity-context-configure-mcp.md",
+    "retrievedAt": "2026-10-02T20:56:07.931767+00:00"
+  },
+  {
+    "id": "docs-sanity-context-mcp-tools",
+    "url": "https://www.sanity.io/docs/ai/sanity-context-mcp-tools.md",
+    "resolvedUrl": "https://www.sanity.io/docs/ai/sanity-context-mcp-tools.md",
+    "status": "fetched",
+    "bytes": 9329,
+    "sha256": "344155b707feba33ae69e2eefc017b1386203a3e46c65abe4864074c3099c557",
+    "contentType": "text/markdown;charset=UTF-8",
+    "path": "data/sources/docs-sanity-context-mcp-tools.md",
+    "retrievedAt": "2026-10-02T20:56:08.244405+00:00"
+  },
+  {
+    "id": "docs-sanity-context-retrieval-modes",
+    "url": "https://www.sanity.io/docs/ai/sanity-context-retrieval-modes.md",
+    "resolvedUrl": "https://www.sanity.io/docs/ai/sanity-context-retrieval-modes.md",
+    "status": "fetched",
+    "bytes": 4724,
+    "sha256": "502fd052263cc18bfbf7b7af76ad971d6bf9b1bb5627e23c34a5bfdf5f8da55e",
+    "contentType": "text/markdown;charset=UTF-8",
+    "path": "data/sources/docs-sanity-context-retrieval-modes.md",
+    "retrievedAt": "2026-10-02T20:56:08.224591+00:00"
+  },
+  {
+    "id": "docs-sanity-context-insights",
+    "url": "https://www.sanity.io/docs/ai/sanity-context-insights.md",
+    "resolvedUrl": "https://www.sanity.io/docs/ai/sanity-context-insights.md",
+    "status": "fetched",
+    "bytes": 8701,
+    "sha256": "153156ca86aa06dac9f9a3104a0c68fae642224e58ba86482eecb1c767a51c0e",
+    "contentType": "text/markdown;charset=UTF-8",
+    "path": "data/sources/docs-sanity-context-insights.md",
+    "retrievedAt": "2026-10-02T20:56:08.180925+00:00"
+  },
+  {
+    "id": "docs-sanity-context-vercel-ai-sdk",
+    "url": "https://www.sanity.io/docs/ai/sanity-context-vercel-ai-sdk.md",
+    "resolvedUrl": "https://www.sanity.io/docs/ai/sanity-context-vercel-ai-sdk.md",
+    "status": "fetched",
+    "bytes": 5362,
+    "sha256": "2f658eb8dd0ca1863334192f306696ba7e2a2b70b8b5c1efd1c919a2595878ff",
+    "contentType": "text/markdown;charset=UTF-8",
+    "path": "data/sources/docs-sanity-context-vercel-ai-sdk.md",
+    "retrievedAt": "2026-10-02T20:56:08.635318+00:00"
+  },
+  {
+    "id": "docs-cli-context",
+    "url": "https://www.sanity.io/docs/cli-reference/cli-context.md",
+    "resolvedUrl": "https://www.sanity.io/docs/cli-reference/cli-context.md",
+    "status": "fetched",
+    "bytes": 8493,
+    "sha256": "16361bc158b19c110ebabd3a3166f17160c6cb165e82db350c7731f060b53885",
+    "contentType": "text/markdown;charset=UTF-8",
+    "path": "data/sources/docs-cli-context.md",
+    "retrievedAt": "2026-10-02T20:56:08.785675+00:00"
+  },
+  {
+    "id": "eu261-alt",
+    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32004R0261",
+    "status": "empty",
+    "bytes": 0,
+    "path": "data/sources/eu261-alt.html",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "retrievedAt": "2026-10-02T20:57:33.617608+00:00"
+  },
+  {
+    "id": "eu261-pdf",
+    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32004R0261",
+    "status": "empty",
+    "bytes": 0,
+    "path": "data/sources/eu261-pdf.html",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "retrievedAt": "2026-10-02T20:57:33.726933+00:00"
+  },
+  {
+    "id": "eu-your-europe",
+    "url": "https://europa.eu/youreurope/citizens/travel/passenger-rights/air/index_en.htm",
+    "status": "fetched",
+    "bytes": 209859,
+    "path": "data/sources/eu-your-europe.html",
+    "sha256": "8ec534d7b4dae1a868071149ecd32dfd6515d260b6ab981b6d873c960a210387",
+    "retrievedAt": "2026-10-02T20:57:34.735914+00:00"
+  },
+  {
+    "id": "uk261-xml",
+    "url": "https://www.legislation.gov.uk/eur/2004/261/data.xml",
+    "status": "fetched",
+    "bytes": 649074,
+    "path": "data/sources/uk261-xml.html",
+    "sha256": "98d134e2e63863cbafbe4532f89a6897eea46064d6d10e1a73fc980835c360bf",
+    "retrievedAt": "2026-10-02T20:57:33.820115+00:00"
+  },
+  {
+    "id": "india-charter",
+    "url": "https://www.civilaviation.gov.in/sites/default/files/2023-08/Passenger%20Charter%20MoCA.pdf",
+    "status": "failed",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "id": "dot-delay-alt",
+    "url": "https://www.transportation.gov/airconsumer/fly-rights",
+    "status": "fetched",
+    "bytes": 133620,
+    "path": "data/sources/dot-delay-alt.html",
+    "sha256": "799583c9208d2dc928425007a34408e1f2015470c711aca350ea8efc4a45d518",
+    "retrievedAt": "2026-10-02T20:57:33.445485+00:00"
+  },
+  {
+    "id": "sturgeon-alt",
+    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A62007CJ0402",
+    "status": "empty",
+    "bytes": 0,
+    "path": "data/sources/sturgeon-alt.html",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "retrievedAt": "2026-10-02T20:57:33.736667+00:00"
+  },
+  {
+    "id": "nelson-alt",
+    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A62010CJ0581",
+    "status": "empty",
+    "bytes": 0,
+    "path": "data/sources/nelson-alt.html",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "retrievedAt": "2026-10-02T20:57:33.815861+00:00"
+  },
+  {
+    "id": "wallentin-alt",
+    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A62007CJ0549",
+    "status": "empty",
+    "bytes": 0,
+    "path": "data/sources/wallentin-alt.html",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "retrievedAt": "2026-10-02T20:57:33.939111+00:00"
+  },
+  {
+    "id": "eu261-original",
+    "url": "https://www.legislation.gov.uk/eur/2004/261/adopted/data.xml",
+    "status": "fetched",
+    "bytes": 604060,
+    "path": "data/sources/eu261-original.html",
+    "sha256": "ff76adac01a5dab1985da50820c5b9fb588f2c3cfa93e50171690ba55f76f601",
+    "retrievedAt": "2026-10-02T21:00:08.730986+00:00"
+  },
+  {
+    "id": "sturgeon-press",
+    "url": "https://curia.europa.eu/jcms/upload/docs/application/pdf/2009-11/cp090102en.pdf",
+    "status": "fetched",
+    "bytes": 138777,
+    "path": "data/sources/sturgeon-press.pdf",
+    "sha256": "76c87515b41782c6b1090999beaf6758eb613231de5bdba1a94343a5589bb718",
+    "retrievedAt": "2026-10-02T21:00:09.904863+00:00"
+  },
+  {
+    "id": "nelson-press",
+    "url": "https://curia.europa.eu/jcms/upload/docs/application/pdf/2012-10/cp120135en.pdf",
+    "status": "fetched",
+    "bytes": 45702,
+    "path": "data/sources/nelson-press.pdf",
+    "sha256": "14fed6111575541526ec9c8c4239ecbca695acbcb0fc2b94b92d838d0edc7620",
+    "retrievedAt": "2026-10-02T21:00:09.690270+00:00"
+  },
+  {
+    "id": "wallentin-press",
+    "url": "https://curia.europa.eu/jcms/upload/docs/application/pdf/2008-12/cp080100en.pdf",
+    "status": "failed",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "id": "moca-passengers",
+    "url": "https://www.civilaviation.gov.in/ministry-documents/passenger-centric-initiatives",
+    "status": "failed",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "id": "india-charter-alt",
+    "url": "https://www.civilaviation.gov.in/sites/default/files/Passenger%20Charter.pdf",
+    "status": "failed",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "id": "us-refund-reg",
+    "url": "https://www.ecfr.gov/current/title-14/chapter-II/subchapter-F/part-260",
+    "status": "fetched",
+    "bytes": 129757,
+    "path": "data/sources/us-refund-reg.html",
+    "sha256": "a2171c86f221bcc8a12751c0e5a34467357446ef1b98e5c54a93f03f8b86aeee",
+    "retrievedAt": "2026-10-02T21:00:09.419237+00:00"
+  }
+]

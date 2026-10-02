@@ -5,3 +5,10 @@ node_modules/
 *.tsbuildinfo
 coverage/
 .local/
+# Retrieval artifacts remain local; public payloads contain facts and short paraphrases.
+data/sources/*.html
+data/sources/*.pdf
+data/sources/*.txt
+!data/sources/*-legal.txt
+!data/sources/us250.txt
+!data/sources/us-refund-reg.txt

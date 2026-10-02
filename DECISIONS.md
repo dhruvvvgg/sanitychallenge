@@ -6,3 +6,9 @@
 - Current environment: Node 24.19.0. npm cache is moved to /workspace because the home directory is not writable.
 - Legal coverage is bounded by fetched primary evidence; unclear or uncovered facts cause abstention. No deadline or extraordinary-circumstances claim will be invented.
 - No sub-agents: session instructions permit delegation only when explicitly requested; mission does not request it.
+- EU primary regulation is the original instrument from the official National Archives mirror; current UK text is separate. The UK domestic medium-distance band does not retain the EU's intra-EU over-3500-km exception.
+- US regulation says “less than” 2h/4h for the lower oversales band. At exactly 2h/4h apply the higher band despite less precise DOT consumer tables. Surface this real wording tension side by side.
+- Current India CAR could not be fetched and verified. Include Indian routes in evaluation as explicit coverage abstentions; do not derive statutory entitlements from airline terms.
+- Sturgeon and Nelson holdings use labeled official court press summaries, not a claim of full-judgment verification. Requested unverified court cases and airlines are excluded.
+- Public seed has 56 documents; private corpus has 13; 40 golden cases keep the total at 109. No tier-5 pages are needed or copied.
+- Sanity plugin rechecked after user correction: ALL_TOOLS, cloud/executor skill catalogs and MCP resources still expose no Sanity plugin in this session. This is a session capability blocker, not a claim about the user's installation.
