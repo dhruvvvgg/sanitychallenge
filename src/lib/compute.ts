@@ -24,6 +24,7 @@ export function compute_entitlement(s:Scenario,data:Dataset):Ruling {
   findings.push(f);
   if(s.trigger==='baggage'||!s.singleFlight) {unknown(f,s.trigger==='baggage'?'Baggage is outside this corpus.':'Connecting itineraries need a separate scope analysis; this engine covers single flights.');continue;}
   if(s.flightDate > new Date().toISOString().slice(0,10)) {unknown(f,'Future flight: rules have not been verified for that date.');continue;}
+  if(!s.eligibleTicketAndAircraft) {unknown(f,'Non-public concession/staff fares or non-covered aircraft need individual scope review.');continue;}
   if(!s.confirmedBooking || (!s.checkedInOnTime && s.trigger!=='cancellation')) {unknown(f,'Confirmed reservation and applicable check-in conditions are not established.');continue;}
   f.met.push('Route and operating-carrier scope match','Confirmed reservation');
   if(s.trigger!=='cancellation')f.met.push('Check-in deadline met');
@@ -37,7 +38,9 @@ export function compute_entitlement(s:Scenario,data:Dataset):Ruling {
    const band=bandFor(rule!,s,data);
    if(!band) {unknown(f,'No verified distance band; check great-circle distance.');continue;}
    f.sourceIds.push(band.source._ref);
+   if(!Number.isFinite(band.value)||band.value<0) {unknown(f,'The entitlement band is invalid.');continue;}
    f.currency=band.currency;
+   if(s.trigger==='denied_boarding'&&(!s.involuntary||s.deniedReason!=='oversales')) {unknown(f,'Voluntary surrender or reasonable boarding refusal needs individual review.');continue;}
    // Care is independent of extraordinary-circumstances compensation defenses.
    const care=rules.find(r=>r.trigger==='care');
    if(usable(care,s)) {
@@ -103,10 +106,13 @@ export function compute_entitlement(s:Scenario,data:Dataset):Ruling {
   } else unknown(f,'Current DGCA CAR revision could not be verified; Indian entitlements are not determined.');
  }
  if(!findings.length) findings.push({regime:'uncovered',status:'abstain',eligible:null,amount:null,currency:null,amountLabel:'Not determined',entitlements:[],met:[],unmet:[],uncertainties:['No regime in the verified corpus covers this route and carrier.'],sourceIds:[],ruleIds:[]});
- for(const f of findings) {f.sourceIds=[...new Set(f.sourceIds)];f.ruleIds=[...new Set(f.ruleIds)];f.entitlements=[...new Set(f.entitlements)];}
+ for(const f of findings) {
+  if(f.status==='assessed' && f.sourceIds.some(id=>!data.sources.some(source=>source._id===id))) {unknown(f,'A cited primary source is missing from the dataset.');f.entitlements=[];}
+  if(f.amount!==null&&!Number.isFinite(f.amount)) {unknown(f,'A monetary input or source band is invalid.');f.entitlements=[];}
+  f.sourceIds=[...new Set(f.sourceIds)];f.ruleIds=[...new Set(f.ruleIds)];f.entitlements=[...new Set(f.entitlements)];}
  const sources=data.sources.filter(x=>findings.some(f=>f.sourceIds.includes(x._id)));
  const conflicts:Ruling['conflicts']=[];
  const statute=sources.find(x=>x._id==='source-us250');const guidance=sources.find(x=>x._id==='source-dot-denied');
- if(statute&&guidance&&s.trigger==='denied_boarding'&&s.departure==='us'&&s.reroutingOffered&&s.reroutedArrivalDelayMinutes===(s.arrival==='us'?120:240))conflicts.push({topic:'Exact rerouting-delay boundary',left:{claim:'Regulation puts exactly two hours domestic / four hours international in the higher band.',source:statute},right:{claim:'DOT consumer table says “1 to 2” / “1 to 4” and “over”, which obscures the exact boundary.',source:guidance},resolution:'Use 14 CFR 250.5, the higher-authority operative rule.'});
+ if(statute&&guidance&&s.trigger==='denied_boarding'&&s.departure==='us'&&s.reroutingOffered&&s.reroutedArrivalDelayMinutes===(data.rules.find(r=>r.algorithm==='us_oversales')?.thresholds[s.arrival==='us'?'domesticHighMinutes':'internationalHighMinutes']))conflicts.push({topic:'Exact rerouting-delay boundary',left:{claim:'Regulation puts exactly two hours domestic / four hours international in the higher band.',source:statute},right:{claim:'DOT consumer table says “1 to 2” / “1 to 4” and “over”, which obscures the exact boundary.',source:guidance},resolution:'Use 14 CFR 250.5, the higher-authority operative rule.'});
  return {status:findings.every(f=>f.status==='abstain')?'abstain':findings.some(f=>f.status==='abstain')?'partial':'assessed',findings,sources,conflicts,computedBy:'compute_entitlement',notice:'Information, not legal advice. Conditional on the facts supplied. Separate overlapping regimes are not additive; do not recover twice for the same loss.'};
 }

@@ -159,7 +159,8 @@
           ],
           "carriers": [
             "*"
-          ]
+          ],
+          "_key": "k0"
         },
         {
           "departure": [
@@ -173,7 +174,8 @@
           ],
           "carriers": [
             "eu"
-          ]
+          ],
+          "_key": "k1"
         }
       ]
     },
@@ -181,7 +183,8 @@
     "sources": [
       {
         "_type": "reference",
-        "_ref": "source-eu261-original"
+        "_ref": "source-eu261-original",
+        "_key": "k0"
       }
     ]
   },
@@ -201,7 +204,8 @@
           ],
           "carriers": [
             "*"
-          ]
+          ],
+          "_key": "k0"
         },
         {
           "departure": [
@@ -216,7 +220,8 @@
           "carriers": [
             "eu",
             "uk"
-          ]
+          ],
+          "_key": "k1"
         },
         {
           "departure": [
@@ -230,7 +235,8 @@
           ],
           "carriers": [
             "uk"
-          ]
+          ],
+          "_key": "k2"
         }
       ]
     },
@@ -238,7 +244,8 @@
     "sources": [
       {
         "_type": "reference",
-        "_ref": "source-uk261-xml"
+        "_ref": "source-uk261-xml",
+        "_key": "k0"
       }
     ]
   },
@@ -258,7 +265,8 @@
           ],
           "carriers": [
             "*"
-          ]
+          ],
+          "_key": "k0"
         },
         {
           "departure": [
@@ -269,7 +277,8 @@
           ],
           "carriers": [
             "*"
-          ]
+          ],
+          "_key": "k1"
         }
       ]
     },
@@ -277,11 +286,13 @@
     "sources": [
       {
         "_type": "reference",
-        "_ref": "source-us250"
+        "_ref": "source-us250",
+        "_key": "k0"
       },
       {
         "_type": "reference",
-        "_ref": "source-us-refund-reg"
+        "_ref": "source-us-refund-reg",
+        "_key": "k1"
       }
     ]
   },
@@ -301,7 +312,8 @@
           ],
           "carriers": [
             "*"
-          ]
+          ],
+          "_key": "k0"
         },
         {
           "departure": [
@@ -312,7 +324,8 @@
           ],
           "carriers": [
             "*"
-          ]
+          ],
+          "_key": "k1"
         }
       ]
     },
@@ -521,37 +534,45 @@
     "bands": [
       {
         "_type": "reference",
-        "_ref": "band-eu-0"
+        "_ref": "band-eu-0",
+        "_key": "k0"
       },
       {
         "_type": "reference",
-        "_ref": "band-eu-1"
+        "_ref": "band-eu-1",
+        "_key": "k1"
       },
       {
         "_type": "reference",
-        "_ref": "band-eu-2"
+        "_ref": "band-eu-2",
+        "_key": "k2"
       },
       {
         "_type": "reference",
-        "_ref": "band-eu-intra"
+        "_ref": "band-eu-intra",
+        "_key": "k3"
       }
     ],
     "sources": [
       {
         "_type": "reference",
-        "_ref": "source-eu261-original"
+        "_ref": "source-eu261-original",
+        "_key": "k0"
       },
       {
         "_type": "reference",
-        "_ref": "source-sturgeon-press"
+        "_ref": "source-sturgeon-press",
+        "_key": "k1"
       },
       {
         "_type": "reference",
-        "_ref": "source-nelson-press"
+        "_ref": "source-nelson-press",
+        "_key": "k2"
       },
       {
         "_type": "reference",
-        "_ref": "source-eu-your-europe"
+        "_ref": "source-eu-your-europe",
+        "_key": "k3"
       }
     ],
     "effectiveFrom": "2009-11-19",
@@ -596,25 +617,30 @@
     "bands": [
       {
         "_type": "reference",
-        "_ref": "band-eu-0"
+        "_ref": "band-eu-0",
+        "_key": "k0"
       },
       {
         "_type": "reference",
-        "_ref": "band-eu-1"
+        "_ref": "band-eu-1",
+        "_key": "k1"
       },
       {
         "_type": "reference",
-        "_ref": "band-eu-2"
+        "_ref": "band-eu-2",
+        "_key": "k2"
       },
       {
         "_type": "reference",
-        "_ref": "band-eu-intra"
+        "_ref": "band-eu-intra",
+        "_key": "k3"
       }
     ],
     "sources": [
       {
         "_type": "reference",
-        "_ref": "source-eu261-original"
+        "_ref": "source-eu261-original",
+        "_key": "k0"
       }
     ],
     "effectiveFrom": "2009-11-19",
@@ -653,25 +679,30 @@
     "bands": [
       {
         "_type": "reference",
-        "_ref": "band-eu-0"
+        "_ref": "band-eu-0",
+        "_key": "k0"
       },
       {
         "_type": "reference",
-        "_ref": "band-eu-1"
+        "_ref": "band-eu-1",
+        "_key": "k1"
       },
       {
         "_type": "reference",
-        "_ref": "band-eu-2"
+        "_ref": "band-eu-2",
+        "_key": "k2"
       },
       {
         "_type": "reference",
-        "_ref": "band-eu-intra"
+        "_ref": "band-eu-intra",
+        "_key": "k3"
       }
     ],
     "sources": [
       {
         "_type": "reference",
-        "_ref": "source-eu261-original"
+        "_ref": "source-eu261-original",
+        "_key": "k0"
       }
     ],
     "effectiveFrom": "2009-11-19",
@@ -711,25 +742,30 @@
     "bands": [
       {
         "_type": "reference",
-        "_ref": "band-eu-0"
+        "_ref": "band-eu-0",
+        "_key": "k0"
       },
       {
         "_type": "reference",
-        "_ref": "band-eu-1"
+        "_ref": "band-eu-1",
+        "_key": "k1"
       },
       {
         "_type": "reference",
-        "_ref": "band-eu-2"
+        "_ref": "band-eu-2",
+        "_key": "k2"
       },
       {
         "_type": "reference",
-        "_ref": "band-eu-intra"
+        "_ref": "band-eu-intra",
+        "_key": "k3"
       }
     ],
     "sources": [
       {
         "_type": "reference",
-        "_ref": "source-eu261-original"
+        "_ref": "source-eu261-original",
+        "_key": "k0"
       }
     ],
     "effectiveFrom": "2009-11-19",
@@ -764,25 +800,30 @@
     "bands": [
       {
         "_type": "reference",
-        "_ref": "band-eu-0"
+        "_ref": "band-eu-0",
+        "_key": "k0"
       },
       {
         "_type": "reference",
-        "_ref": "band-eu-1"
+        "_ref": "band-eu-1",
+        "_key": "k1"
       },
       {
         "_type": "reference",
-        "_ref": "band-eu-2"
+        "_ref": "band-eu-2",
+        "_key": "k2"
       },
       {
         "_type": "reference",
-        "_ref": "band-eu-intra"
+        "_ref": "band-eu-intra",
+        "_key": "k3"
       }
     ],
     "sources": [
       {
         "_type": "reference",
-        "_ref": "source-eu261-original"
+        "_ref": "source-eu261-original",
+        "_key": "k0"
       }
     ],
     "effectiveFrom": "2009-11-19",
@@ -819,21 +860,25 @@
     "bands": [
       {
         "_type": "reference",
-        "_ref": "band-uk-0"
+        "_ref": "band-uk-0",
+        "_key": "k0"
       },
       {
         "_type": "reference",
-        "_ref": "band-uk-1"
+        "_ref": "band-uk-1",
+        "_key": "k1"
       },
       {
         "_type": "reference",
-        "_ref": "band-uk-2"
+        "_ref": "band-uk-2",
+        "_key": "k2"
       }
     ],
     "sources": [
       {
         "_type": "reference",
-        "_ref": "source-uk261-xml"
+        "_ref": "source-uk261-xml",
+        "_key": "k0"
       }
     ],
     "effectiveFrom": "2023-12-14",
@@ -878,21 +923,25 @@
     "bands": [
       {
         "_type": "reference",
-        "_ref": "band-uk-0"
+        "_ref": "band-uk-0",
+        "_key": "k0"
       },
       {
         "_type": "reference",
-        "_ref": "band-uk-1"
+        "_ref": "band-uk-1",
+        "_key": "k1"
       },
       {
         "_type": "reference",
-        "_ref": "band-uk-2"
+        "_ref": "band-uk-2",
+        "_key": "k2"
       }
     ],
     "sources": [
       {
         "_type": "reference",
-        "_ref": "source-uk261-xml"
+        "_ref": "source-uk261-xml",
+        "_key": "k0"
       }
     ],
     "effectiveFrom": "2023-12-14",
@@ -931,21 +980,25 @@
     "bands": [
       {
         "_type": "reference",
-        "_ref": "band-uk-0"
+        "_ref": "band-uk-0",
+        "_key": "k0"
       },
       {
         "_type": "reference",
-        "_ref": "band-uk-1"
+        "_ref": "band-uk-1",
+        "_key": "k1"
       },
       {
         "_type": "reference",
-        "_ref": "band-uk-2"
+        "_ref": "band-uk-2",
+        "_key": "k2"
       }
     ],
     "sources": [
       {
         "_type": "reference",
-        "_ref": "source-uk261-xml"
+        "_ref": "source-uk261-xml",
+        "_key": "k0"
       }
     ],
     "effectiveFrom": "2023-12-14",
@@ -985,21 +1038,25 @@
     "bands": [
       {
         "_type": "reference",
-        "_ref": "band-uk-0"
+        "_ref": "band-uk-0",
+        "_key": "k0"
       },
       {
         "_type": "reference",
-        "_ref": "band-uk-1"
+        "_ref": "band-uk-1",
+        "_key": "k1"
       },
       {
         "_type": "reference",
-        "_ref": "band-uk-2"
+        "_ref": "band-uk-2",
+        "_key": "k2"
       }
     ],
     "sources": [
       {
         "_type": "reference",
-        "_ref": "source-uk261-xml"
+        "_ref": "source-uk261-xml",
+        "_key": "k0"
       }
     ],
     "effectiveFrom": "2023-12-14",
@@ -1034,21 +1091,25 @@
     "bands": [
       {
         "_type": "reference",
-        "_ref": "band-uk-0"
+        "_ref": "band-uk-0",
+        "_key": "k0"
       },
       {
         "_type": "reference",
-        "_ref": "band-uk-1"
+        "_ref": "band-uk-1",
+        "_key": "k1"
       },
       {
         "_type": "reference",
-        "_ref": "band-uk-2"
+        "_ref": "band-uk-2",
+        "_key": "k2"
       }
     ],
     "sources": [
       {
         "_type": "reference",
-        "_ref": "source-uk261-xml"
+        "_ref": "source-uk261-xml",
+        "_key": "k0"
       }
     ],
     "effectiveFrom": "2023-12-14",
@@ -1087,21 +1148,25 @@
     "bands": [
       {
         "_type": "reference",
-        "_ref": "band-us-0"
+        "_ref": "band-us-0",
+        "_key": "k0"
       },
       {
         "_type": "reference",
-        "_ref": "band-us-1"
+        "_ref": "band-us-1",
+        "_key": "k1"
       }
     ],
     "sources": [
       {
         "_type": "reference",
-        "_ref": "source-us250"
+        "_ref": "source-us250",
+        "_key": "k0"
       },
       {
         "_type": "reference",
-        "_ref": "source-dot-denied"
+        "_ref": "source-dot-denied",
+        "_key": "k1"
       }
     ],
     "effectiveFrom": "2024-10-23",
@@ -1137,15 +1202,18 @@
     "sources": [
       {
         "_type": "reference",
-        "_ref": "source-us-refund-reg"
+        "_ref": "source-us-refund-reg",
+        "_key": "k0"
       },
       {
         "_type": "reference",
-        "_ref": "source-dot-refund"
+        "_ref": "source-dot-refund",
+        "_key": "k1"
       },
       {
         "_type": "reference",
-        "_ref": "source-dot-delay-alt"
+        "_ref": "source-dot-delay-alt",
+        "_key": "k2"
       }
     ],
     "effectiveFrom": "2024-10-28",
@@ -1181,15 +1249,18 @@
     "sources": [
       {
         "_type": "reference",
-        "_ref": "source-us-refund-reg"
+        "_ref": "source-us-refund-reg",
+        "_key": "k0"
       },
       {
         "_type": "reference",
-        "_ref": "source-dot-refund"
+        "_ref": "source-dot-refund",
+        "_key": "k1"
       },
       {
         "_type": "reference",
-        "_ref": "source-dot-delay-alt"
+        "_ref": "source-dot-delay-alt",
+        "_key": "k2"
       }
     ],
     "effectiveFrom": "2024-10-28",
@@ -1225,15 +1296,18 @@
     "sources": [
       {
         "_type": "reference",
-        "_ref": "source-us-refund-reg"
+        "_ref": "source-us-refund-reg",
+        "_key": "k0"
       },
       {
         "_type": "reference",
-        "_ref": "source-dot-refund"
+        "_ref": "source-dot-refund",
+        "_key": "k1"
       },
       {
         "_type": "reference",
-        "_ref": "source-dot-delay-alt"
+        "_ref": "source-dot-delay-alt",
+        "_key": "k2"
       }
     ],
     "effectiveFrom": "2024-10-28",
@@ -1269,15 +1343,18 @@
     "sources": [
       {
         "_type": "reference",
-        "_ref": "source-us-refund-reg"
+        "_ref": "source-us-refund-reg",
+        "_key": "k0"
       },
       {
         "_type": "reference",
-        "_ref": "source-dot-refund"
+        "_ref": "source-dot-refund",
+        "_key": "k1"
       },
       {
         "_type": "reference",
-        "_ref": "source-dot-delay-alt"
+        "_ref": "source-dot-delay-alt",
+        "_key": "k2"
       }
     ],
     "effectiveFrom": "2024-10-28",
@@ -1339,7 +1416,8 @@
     "sources": [
       {
         "_type": "reference",
-        "_ref": "source-sturgeon-press"
+        "_ref": "source-sturgeon-press",
+        "_key": "k0"
       }
     ]
   },
@@ -1360,7 +1438,8 @@
     "sources": [
       {
         "_type": "reference",
-        "_ref": "source-sturgeon-press"
+        "_ref": "source-sturgeon-press",
+        "_key": "k0"
       }
     ]
   },
@@ -1381,7 +1460,8 @@
     "sources": [
       {
         "_type": "reference",
-        "_ref": "source-sturgeon-press"
+        "_ref": "source-sturgeon-press",
+        "_key": "k0"
       }
     ]
   },
@@ -1402,7 +1482,8 @@
     "sources": [
       {
         "_type": "reference",
-        "_ref": "source-uk261-xml"
+        "_ref": "source-uk261-xml",
+        "_key": "k0"
       }
     ]
   },
@@ -1423,7 +1504,8 @@
     "sources": [
       {
         "_type": "reference",
-        "_ref": "source-uk261-xml"
+        "_ref": "source-uk261-xml",
+        "_key": "k0"
       }
     ]
   },
@@ -1444,7 +1526,8 @@
     "sources": [
       {
         "_type": "reference",
-        "_ref": "source-uk261-xml"
+        "_ref": "source-uk261-xml",
+        "_key": "k0"
       }
     ]
   },
@@ -1456,13 +1539,15 @@
     "stances": [
       {
         "_type": "reference",
-        "_ref": "stance-eu-technical"
+        "_ref": "stance-eu-technical",
+        "_key": "k0"
       }
     ],
     "sources": [
       {
         "_type": "reference",
-        "_ref": "source-sturgeon-press"
+        "_ref": "source-sturgeon-press",
+        "_key": "k0"
       }
     ],
     "verified": true,
@@ -1477,7 +1562,8 @@
     "sources": [
       {
         "_type": "reference",
-        "_ref": "source-nelson-press"
+        "_ref": "source-nelson-press",
+        "_key": "k0"
       }
     ],
     "verified": true,
@@ -1493,7 +1579,8 @@
     "sources": [
       {
         "_type": "reference",
-        "_ref": "source-indigo"
+        "_ref": "source-indigo",
+        "_key": "k0"
       }
     ],
     "verified": true
@@ -1508,7 +1595,8 @@
     "sources": [
       {
         "_type": "reference",
-        "_ref": "source-delta"
+        "_ref": "source-delta",
+        "_key": "k0"
       }
     ],
     "verified": true

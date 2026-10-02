@@ -801,6 +801,11 @@
             "type": "boolean"
           },
           {
+            "name": "eligibleTicketAndAircraft",
+            "title": "eligibleTicketAndAircraft",
+            "type": "boolean"
+          },
+          {
             "name": "involuntary",
             "title": "involuntary",
             "type": "boolean"

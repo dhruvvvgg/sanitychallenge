@@ -20,7 +20,7 @@ typ('airlinePolicy',[f('title'),f('airline'),f('summary','text'),refs('conflicts
 # Scenario input fields follow the API, not opaque serialized blobs.
 sc=[f('departure'),f('arrival'),f('carrier'),f('airline'),f('flightDate','date'),f('trigger'),f('cause'),f('extraordinaryEvidence'),f('fareCurrency'),f('deniedReason')]
 sc += [f(n,'number') for n in ['distanceKm','arrivalDelayMinutes','departureDelayMinutes','noticeHours','aircraftSeats','fare','reroutedArrivalDelayMinutes','reroutedDepartureEarlyMinutes']]
-sc += [f(n,'boolean') for n in ['confirmedBooking','checkedInOnTime','involuntary','declinedTravelAndBenefits','overnight','reroutingOffered','receivedBenefitsAbroad','singleFlight']]
+sc += [f(n,'boolean') for n in ['confirmedBooking','checkedInOnTime','eligibleTicketAndAircraft','involuntary','declinedTravelAndBenefits','overnight','reroutingOffered','receivedBenefitsAbroad','singleFlight']]
 typ('scenario',[f('title'),f('split'),f('verification'),f('input','object',fields=sc),refs('sources',['source']),f('expected','object',fields=[f('status'),f('regime'),f('amount','number'),f('currency'),strings('entitlements')])])
 typ('gap',[f('category'),f('reason','text'),f('mode'),f('backend'),f('createdAt','datetime'),f('regime')])
 typ('corpusDoc',[f('title'),f('url','url'),f('publisher'),f('tier','number'),f('markdown','text'),f('retrievedAt','datetime')])

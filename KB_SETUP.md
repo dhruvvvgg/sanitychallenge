@@ -21,4 +21,4 @@ CLI reference fetched in this run confirms these command forms. Omit `--watch` o
 
 Dashboard alternative: Sanity Dashboard → Context → Knowledge Bases → create → name **Passenger rights corpus**, add the purpose above → add a dataset source → project **disruption-desk** / dataset **corpus**, with GROQ `*[_type=="corpusDoc"]` → Build → verify entry count → review Issues. Actual button wording may vary. See the fetched Create a Knowledge Base and Resolve Issues docs.
 
-If the Context app cannot see schema after MCP schema deployment, record that error and redeploy through the supported authenticated schema flow; do not invent a local Studio to conceal it. The raw corpus import is 13 documents; KB entry count can differ after indexing/chunking. Persist conflict decisions through Issues, not only this repository.
+If the Context app cannot see schema after MCP schema deployment, record that error and redeploy through the supported authenticated schema flow; do not invent a local Studio to conceal it. The raw corpus import is 35 documents; KB entry count can differ after indexing/chunking. Persist conflict decisions through Issues, not only this repository.

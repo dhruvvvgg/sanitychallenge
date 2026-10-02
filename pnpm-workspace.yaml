@@ -5,3 +5,5 @@ allowBuilds:
 autoInstallPeers: false
 onlyBuiltDependencies:
   - esbuild
+verifyDepsBeforeRun: false
+storeDir: /workspace/.pnpm-store

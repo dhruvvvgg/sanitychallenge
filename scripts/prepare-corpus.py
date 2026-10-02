@@ -23,7 +23,7 @@ class T(HTMLParser):
 for key in ['us250','us-refund-reg','dot-refund','dot-delay-alt','dot-denied','eu-your-europe']:
  h=T();h.feed((root/f'data/sources/{key}.html').read_text());(root/f'data/sources/{key}.txt').write_text('\n'.join(' '.join(x.split()) for x in ''.join(h.p).splitlines() if x.strip()))
 for key,anchors in checks.items():
- p=root/f'data/sources/{key}'+Path('') if False else root/f'data/sources/{key}{"-legal" if key in ["eu261-original","uk261-xml"] else ""}.txt'
+ p=root/f'data/sources/{key}{"-legal" if key in ["eu261-original","uk261-xml"] else ""}.txt'
  txt=p.read_text()
  for a in anchors:assert a in txt, f'{key}: evidence anchor missing: {a}'
 D=[];C=[]
@@ -80,23 +80,39 @@ add('caseLaw','case-nelson',title='Nelson: long-delay approach confirmed',holdin
 for airline,sid,summary in [('IndiGo','source-indigo','Refund provisions describe original-payment and credit-shell options and special processing rules. This contract is not a substitute for the current DGCA CAR.'),('Delta','source-delta','Rule 20 describes alternate transport, overnight assistance for bumped passengers, and denied-boarding compensation. Regulatory rights are not replaced by a contractual liability statement.')]:
  add('airlinePolicy','policy-'+airline.lower(),airline=airline,title=airline+' conditions of carriage',summary=summary,conflictsWith=[],sources=[ref(sid)],verified=True)
 # Private corpus: own-words official summaries; complete original statutory sections permitted.
-for key,title in [('eu261-original','EU261 Articles 1–19'),('uk261-xml','UK261 consolidated Articles 1–19'),('us250','US oversales Part 250'),('us-refund-reg','US refunds Part 260')]:
- path=root/f'data/sources/{key}{"-legal" if key in ["eu261-original","uk261-xml"] else ""}.txt'
- txt=path.read_text()
- # Chunk by paragraphs under API batch size; no crawling of site siblings.
- paras=txt.splitlines();chunks=[];acc=''
- for line in paras:
-  if len((acc+'\n'+line).encode())>32000:chunks.append(acc);acc=''
-  acc+='\n'+line
- if acc:chunks.append(acc)
- for i,chunk in enumerate(chunks):C.append({'_id':f'corpus-{key}-{i}','_type':'corpusDoc','title':f'{title} / section block {i+1}','url':fetches[key]['url'],'publisher':next(x['publisher'] for x in D if x['_id']=='source-'+key),'tier':1,'markdown':chunk.strip(),'retrievedAt':fetches[key]['retrievedAt']})
+# Chunk covered legal provisions by article/section; exclude baggage provisions.
+import re
+for key in ['eu261-original','uk261-xml']:
+ tree=ET.fromstring((root/f'data/sources/{key}.html').read_text())
+ selected={'article-2','article-3','article-4','article-5','article-6','article-7','article-8','article-9','article-15'}
+ for article in tree.iter():
+  aid=article.attrib.get('id','')
+  if article.tag.endswith('P1') and aid in selected:
+   text='\n'.join(' '.join(''.join(x.itertext()).split()) for x in article.iter() if x.tag.endswith('Text'))
+   C.append({'_id':f'corpus-{key}-{aid.lower()}','_type':'corpusDoc','title':f'{"EU261 original" if key=="eu261-original" else "UK261 consolidated"} / {aid.replace("-"," ")}','url':fetches[key]['url'],'publisher':'UK National Archives / legislature','tier':1,'markdown':text,'retrievedAt':fetches[key]['retrievedAt']})
+for key,sections in [('us250',{'250.2','250.5','250.6','250.9'}),('us-refund-reg',{'260.3','260.6','260.7','260.9','260.10'})]:
+ text=(root/f'data/sources/{key}.txt').read_text();matches=list(re.finditer(r'^§ (\d+\.\w+) ',text,re.M))
+ for i,match in enumerate(matches):
+  section=match.group(1)
+  if section not in sections:continue
+  chunk=text[match.start():matches[i+1].start() if i+1<len(matches) else len(text)]
+  C.append({'_id':f'corpus-{key}-{section.replace(".","-")}','_type':'corpusDoc','title':f'14 CFR section {section}','url':fetches[key]['url'],'publisher':'US eCFR / Department of Transportation','tier':1,'markdown':chunk,'retrievedAt':fetches[key]['retrievedAt']})
 for key in ['sturgeon-press','nelson-press','dot-denied','dot-refund','dot-delay-alt','eu-your-europe','indigo','delta']:
  summaries=[x.get('paraphrase',x.get('holding',x.get('summary',''))) for x in D if x['_type'] in ['rule','caseLaw','airlinePolicy'] and any(s['_ref']=='source-'+key for s in x['sources'])]
  C.append({'_id':'corpus-'+key,'_type':'corpusDoc','title':next(x['title'] for x in D if x['_id']=='source-'+key),'url':fetches[key]['url'],'publisher':next(x['publisher'] for x in D if x['_id']=='source-'+key),'tier':next(x['authorityTier'] for x in D if x['_id']=='source-'+key),'markdown':'\n\n'.join(dict.fromkeys(summaries)) or 'Official source reviewed. See linked primary page for details.','retrievedAt':fetches[key]['retrievedAt']})
+def add_array_keys(value):
+ if isinstance(value,dict):
+  for v in value.values():add_array_keys(v)
+ elif isinstance(value,list):
+  for i,v in enumerate(value):
+   if isinstance(v,dict):v.setdefault('_key',f'k{i}')
+   add_array_keys(v)
+for document in D+C:add_array_keys(document)
 (root/'data/production.json').write_text(json.dumps(D,indent=2)+'\n');(root/'data/corpus.json').write_text(json.dumps(C,indent=2)+'\n')
 # Each import batch contains fewer than 100 kB, with no credentials.
 (root/'data/import').mkdir(exist_ok=True)
 for dataset,docs in [('production',D),('corpus',C)]:
+ for old_batch in (root/'data/import').glob(dataset+'-*.json'):old_batch.unlink()
  batches=[];batch=[]
  for doc in docs:
   if len(json.dumps(batch+[doc]).encode())>90000:batches.append(batch);batch=[]

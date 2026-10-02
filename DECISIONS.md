@@ -10,5 +10,9 @@
 - US regulation says “less than” 2h/4h for the lower oversales band. At exactly 2h/4h apply the higher band despite less precise DOT consumer tables. Surface this real wording tension side by side.
 - Current India CAR could not be fetched and verified. Include Indian routes in evaluation as explicit coverage abstentions; do not derive statutory entitlements from airline terms.
 - Sturgeon and Nelson holdings use labeled official court press summaries, not a claim of full-judgment verification. Requested unverified court cases and airlines are excluded.
-- Public seed has 56 documents; private corpus has 13; 40 golden cases keep the total at 109. No tier-5 pages are needed or copied.
+- Public seed has 56 documents; private corpus has 13; 40 golden cases keep the total at 131. No tier-5 pages are needed or copied.
 - Sanity plugin rechecked after user correction: ALL_TOOLS, cloud/executor skill catalogs and MCP resources still expose no Sanity plugin in this session. This is a session capability blocker, not a claim about the user's installation.
+- After schema review, corpus is chunked by covered article/section instead of size blocks: 35 private documents, 56 public structured documents, 40 scenario documents = 131 total, below 140. Baggage sections are excluded. Array objects have stable Sanity `_key` values.
+- Baseline B0 is implemented for a future key: no retrieval, symbolic band/entitlement selections only, shared code arithmetic. It is explicitly a limited hybrid baseline and was not run. No model is allowed to emit displayed monetary amounts.
+- Core code was frozen before held-out evaluation; no test cases or expected answers were adjusted from results. Subsequent changes refine presentation, corpus chunking, reference array keys and a separate fare/aircraft exclusion guard without fitting to the held-out cases. Fixture hash is retained in each report.
+- Package manager v11 uses pnpm-workspace.yaml settings. Build permission is limited to esbuild; peer auto-install is disabled to avoid installing a Studio project. A repository-local cache is permitted. Frozen installs continue package integrity and supply-chain checks.

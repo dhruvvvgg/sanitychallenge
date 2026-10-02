@@ -1,0 +1,916 @@
+[
+  {
+    "id": "scenario-01",
+    "question": "EU short route at three hours",
+    "label": "precomputed",
+    "input": {
+      "departure": "eu",
+      "arrival": "other",
+      "carrier": "eu",
+      "airline": "Unspecified",
+      "flightDate": "2026-10-01",
+      "trigger": "arrival_delay",
+      "distanceKm": 1200,
+      "arrivalDelayMinutes": 180,
+      "departureDelayMinutes": 0,
+      "cause": "operational",
+      "extraordinaryEvidence": "not_proven",
+      "noticeHours": 0,
+      "confirmedBooking": true,
+      "checkedInOnTime": true,
+      "eligibleTicketAndAircraft": true,
+      "involuntary": true,
+      "deniedReason": "oversales",
+      "aircraftSeats": 180,
+      "fare": 200,
+      "fareCurrency": "USD",
+      "declinedTravelAndBenefits": false,
+      "overnight": false,
+      "reroutingOffered": false,
+      "reroutedArrivalDelayMinutes": 0,
+      "reroutedDepartureEarlyMinutes": 0,
+      "receivedBenefitsAbroad": false,
+      "singleFlight": true
+    },
+    "ruling": {
+      "status": "assessed",
+      "findings": [
+        {
+          "regime": "eu",
+          "status": "assessed",
+          "eligible": true,
+          "amount": 250,
+          "currency": "EUR",
+          "amountLabel": "Statutory compensation",
+          "entitlements": [
+            "compensation"
+          ],
+          "met": [
+            "Route and operating-carrier scope match",
+            "Confirmed reservation",
+            "Check-in deadline met",
+            "No proven extraordinary-circumstances defense"
+          ],
+          "unmet": [
+            "Departure-delay threshold for care not reached"
+          ],
+          "uncertainties": [],
+          "ruleIds": [
+            "rule-eu-arrival_delay",
+            "rule-eu-care",
+            "rule-eu-refund"
+          ],
+          "sourceIds": [
+            "source-eu261-original",
+            "source-sturgeon-press",
+            "source-nelson-press",
+            "source-eu-your-europe"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "_id": "source-eu261-original",
+          "_type": "source",
+          "title": "EU261 original legal text (National Archives mirror)",
+          "url": "https://www.legislation.gov.uk/eur/2004/261/adopted/data.xml",
+          "publisher": "EU legislature / UK National Archives",
+          "authorityTier": 1,
+          "retrievedAt": "2026-10-02T21:00:08.730986+00:00",
+          "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
+          "evidencePath": "data/sources/eu261-original.html",
+          "sha256": "ff76adac01a5dab1985da50820c5b9fb588f2c3cfa93e50171690ba55f76f601"
+        },
+        {
+          "_id": "source-eu-your-europe",
+          "_type": "source",
+          "title": "Your Europe: air passenger rights",
+          "url": "https://europa.eu/youreurope/citizens/travel/passenger-rights/air/index_en.htm",
+          "publisher": "European Commission",
+          "authorityTier": 2,
+          "retrievedAt": "2026-10-02T20:57:34.735914+00:00",
+          "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
+          "evidencePath": "data/sources/eu-your-europe.html",
+          "sha256": "8ec534d7b4dae1a868071149ecd32dfd6515d260b6ab981b6d873c960a210387"
+        },
+        {
+          "_id": "source-sturgeon-press",
+          "_type": "source",
+          "title": "Sturgeon, C-402/07 and C-432/07 — official court announcement",
+          "url": "https://curia.europa.eu/jcms/upload/docs/application/pdf/2009-11/cp090102en.pdf",
+          "publisher": "Court of Justice of the European Union",
+          "authorityTier": 3,
+          "retrievedAt": "2026-10-02T21:00:09.904863+00:00",
+          "licenseNote": "Official court press summary; not full judgment. Full judgment could not be retrieved.",
+          "evidencePath": "data/sources/sturgeon-press.pdf",
+          "sha256": "76c87515b41782c6b1090999beaf6758eb613231de5bdba1a94343a5589bb718"
+        },
+        {
+          "_id": "source-nelson-press",
+          "_type": "source",
+          "title": "Nelson, C-581/10 and C-629/10 — official court announcement",
+          "url": "https://curia.europa.eu/jcms/upload/docs/application/pdf/2012-10/cp120135en.pdf",
+          "publisher": "Court of Justice of the European Union",
+          "authorityTier": 3,
+          "retrievedAt": "2026-10-02T21:00:09.690270+00:00",
+          "licenseNote": "Official court press summary; not full judgment. Full judgment could not be retrieved.",
+          "evidencePath": "data/sources/nelson-press.pdf",
+          "sha256": "14fed6111575541526ec9c8c4239ecbca695acbcb0fc2b94b92d838d0edc7620"
+        }
+      ],
+      "conflicts": [],
+      "computedBy": "compute_entitlement",
+      "notice": "Information, not legal advice. Conditional on the facts supplied. Separate overlapping regimes are not additive; do not recover twice for the same loss."
+    }
+  },
+  {
+    "id": "scenario-08",
+    "question": "EU weather proven defense retains care",
+    "label": "precomputed",
+    "input": {
+      "departure": "eu",
+      "arrival": "other",
+      "carrier": "eu",
+      "airline": "Unspecified",
+      "flightDate": "2026-10-01",
+      "trigger": "arrival_delay",
+      "distanceKm": 1200,
+      "arrivalDelayMinutes": 180,
+      "departureDelayMinutes": 120,
+      "cause": "weather",
+      "extraordinaryEvidence": "proven",
+      "noticeHours": 0,
+      "confirmedBooking": true,
+      "checkedInOnTime": true,
+      "eligibleTicketAndAircraft": true,
+      "involuntary": true,
+      "deniedReason": "oversales",
+      "aircraftSeats": 180,
+      "fare": 200,
+      "fareCurrency": "USD",
+      "declinedTravelAndBenefits": false,
+      "overnight": false,
+      "reroutingOffered": false,
+      "reroutedArrivalDelayMinutes": 0,
+      "reroutedDepartureEarlyMinutes": 0,
+      "receivedBenefitsAbroad": false,
+      "singleFlight": true
+    },
+    "ruling": {
+      "status": "assessed",
+      "findings": [
+        {
+          "regime": "eu",
+          "status": "assessed",
+          "eligible": false,
+          "amount": 0,
+          "currency": "EUR",
+          "amountLabel": "No fixed compensation",
+          "entitlements": [
+            "meals_and_refreshments",
+            "communications"
+          ],
+          "met": [
+            "Route and operating-carrier scope match",
+            "Confirmed reservation",
+            "Check-in deadline met",
+            "Care trigger met; reasonable waiting-time assistance",
+            "Weather may support a defense; carrier proof and reasonable measures remain required."
+          ],
+          "unmet": [
+            "Carrier extraordinary-circumstances defense proven, including reasonable measures"
+          ],
+          "uncertainties": [],
+          "ruleIds": [
+            "rule-eu-arrival_delay",
+            "rule-eu-care",
+            "rule-eu-refund"
+          ],
+          "sourceIds": [
+            "source-eu261-original",
+            "source-sturgeon-press",
+            "source-nelson-press",
+            "source-eu-your-europe"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "_id": "source-eu261-original",
+          "_type": "source",
+          "title": "EU261 original legal text (National Archives mirror)",
+          "url": "https://www.legislation.gov.uk/eur/2004/261/adopted/data.xml",
+          "publisher": "EU legislature / UK National Archives",
+          "authorityTier": 1,
+          "retrievedAt": "2026-10-02T21:00:08.730986+00:00",
+          "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
+          "evidencePath": "data/sources/eu261-original.html",
+          "sha256": "ff76adac01a5dab1985da50820c5b9fb588f2c3cfa93e50171690ba55f76f601"
+        },
+        {
+          "_id": "source-eu-your-europe",
+          "_type": "source",
+          "title": "Your Europe: air passenger rights",
+          "url": "https://europa.eu/youreurope/citizens/travel/passenger-rights/air/index_en.htm",
+          "publisher": "European Commission",
+          "authorityTier": 2,
+          "retrievedAt": "2026-10-02T20:57:34.735914+00:00",
+          "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
+          "evidencePath": "data/sources/eu-your-europe.html",
+          "sha256": "8ec534d7b4dae1a868071149ecd32dfd6515d260b6ab981b6d873c960a210387"
+        },
+        {
+          "_id": "source-sturgeon-press",
+          "_type": "source",
+          "title": "Sturgeon, C-402/07 and C-432/07 — official court announcement",
+          "url": "https://curia.europa.eu/jcms/upload/docs/application/pdf/2009-11/cp090102en.pdf",
+          "publisher": "Court of Justice of the European Union",
+          "authorityTier": 3,
+          "retrievedAt": "2026-10-02T21:00:09.904863+00:00",
+          "licenseNote": "Official court press summary; not full judgment. Full judgment could not be retrieved.",
+          "evidencePath": "data/sources/sturgeon-press.pdf",
+          "sha256": "76c87515b41782c6b1090999beaf6758eb613231de5bdba1a94343a5589bb718"
+        },
+        {
+          "_id": "source-nelson-press",
+          "_type": "source",
+          "title": "Nelson, C-581/10 and C-629/10 — official court announcement",
+          "url": "https://curia.europa.eu/jcms/upload/docs/application/pdf/2012-10/cp120135en.pdf",
+          "publisher": "Court of Justice of the European Union",
+          "authorityTier": 3,
+          "retrievedAt": "2026-10-02T21:00:09.690270+00:00",
+          "licenseNote": "Official court press summary; not full judgment. Full judgment could not be retrieved.",
+          "evidencePath": "data/sources/nelson-press.pdf",
+          "sha256": "14fed6111575541526ec9c8c4239ecbca695acbcb0fc2b94b92d838d0edc7620"
+        }
+      ],
+      "conflicts": [],
+      "computedBy": "compute_entitlement",
+      "notice": "Information, not legal advice. Conditional on the facts supplied. Separate overlapping regimes are not additive; do not recover twice for the same loss."
+    }
+  },
+  {
+    "id": "scenario-10",
+    "question": "EU cancellation late notice",
+    "label": "precomputed",
+    "input": {
+      "departure": "eu",
+      "arrival": "other",
+      "carrier": "eu",
+      "airline": "Unspecified",
+      "flightDate": "2026-10-01",
+      "trigger": "cancellation",
+      "distanceKm": 1200,
+      "arrivalDelayMinutes": 180,
+      "departureDelayMinutes": 0,
+      "cause": "operational",
+      "extraordinaryEvidence": "not_proven",
+      "noticeHours": 0,
+      "confirmedBooking": true,
+      "checkedInOnTime": true,
+      "eligibleTicketAndAircraft": true,
+      "involuntary": true,
+      "deniedReason": "oversales",
+      "aircraftSeats": 180,
+      "fare": 200,
+      "fareCurrency": "USD",
+      "declinedTravelAndBenefits": false,
+      "overnight": false,
+      "reroutingOffered": false,
+      "reroutedArrivalDelayMinutes": 0,
+      "reroutedDepartureEarlyMinutes": 0,
+      "receivedBenefitsAbroad": false,
+      "singleFlight": true
+    },
+    "ruling": {
+      "status": "assessed",
+      "findings": [
+        {
+          "regime": "eu",
+          "status": "assessed",
+          "eligible": true,
+          "amount": 250,
+          "currency": "EUR",
+          "amountLabel": "Statutory compensation",
+          "entitlements": [
+            "meals_and_refreshments",
+            "communications",
+            "refund_or_rerouting_choice",
+            "compensation"
+          ],
+          "met": [
+            "Route and operating-carrier scope match",
+            "Confirmed reservation",
+            "Care trigger met; reasonable waiting-time assistance",
+            "Notice and rerouting do not meet a compensation exception",
+            "No proven extraordinary-circumstances defense"
+          ],
+          "unmet": [],
+          "uncertainties": [],
+          "ruleIds": [
+            "rule-eu-cancellation",
+            "rule-eu-care",
+            "rule-eu-refund"
+          ],
+          "sourceIds": [
+            "source-eu261-original"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "_id": "source-eu261-original",
+          "_type": "source",
+          "title": "EU261 original legal text (National Archives mirror)",
+          "url": "https://www.legislation.gov.uk/eur/2004/261/adopted/data.xml",
+          "publisher": "EU legislature / UK National Archives",
+          "authorityTier": 1,
+          "retrievedAt": "2026-10-02T21:00:08.730986+00:00",
+          "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
+          "evidencePath": "data/sources/eu261-original.html",
+          "sha256": "ff76adac01a5dab1985da50820c5b9fb588f2c3cfa93e50171690ba55f76f601"
+        }
+      ],
+      "conflicts": [],
+      "computedBy": "compute_entitlement",
+      "notice": "Information, not legal advice. Conditional on the facts supplied. Separate overlapping regimes are not additive; do not recover twice for the same loss."
+    }
+  },
+  {
+    "id": "scenario-15",
+    "question": "UK short distance current band",
+    "label": "precomputed",
+    "input": {
+      "departure": "uk",
+      "arrival": "other",
+      "carrier": "uk",
+      "airline": "Unspecified",
+      "flightDate": "2026-10-01",
+      "trigger": "arrival_delay",
+      "distanceKm": 1200,
+      "arrivalDelayMinutes": 180,
+      "departureDelayMinutes": 0,
+      "cause": "operational",
+      "extraordinaryEvidence": "not_proven",
+      "noticeHours": 0,
+      "confirmedBooking": true,
+      "checkedInOnTime": true,
+      "eligibleTicketAndAircraft": true,
+      "involuntary": true,
+      "deniedReason": "oversales",
+      "aircraftSeats": 180,
+      "fare": 200,
+      "fareCurrency": "USD",
+      "declinedTravelAndBenefits": false,
+      "overnight": false,
+      "reroutingOffered": false,
+      "reroutedArrivalDelayMinutes": 0,
+      "reroutedDepartureEarlyMinutes": 0,
+      "receivedBenefitsAbroad": false,
+      "singleFlight": true
+    },
+    "ruling": {
+      "status": "assessed",
+      "findings": [
+        {
+          "regime": "uk",
+          "status": "assessed",
+          "eligible": true,
+          "amount": 220,
+          "currency": "GBP",
+          "amountLabel": "Statutory compensation",
+          "entitlements": [
+            "compensation"
+          ],
+          "met": [
+            "Route and operating-carrier scope match",
+            "Confirmed reservation",
+            "Check-in deadline met",
+            "No proven extraordinary-circumstances defense"
+          ],
+          "unmet": [
+            "Departure-delay threshold for care not reached"
+          ],
+          "uncertainties": [],
+          "ruleIds": [
+            "rule-uk-arrival_delay",
+            "rule-uk-care",
+            "rule-uk-refund"
+          ],
+          "sourceIds": [
+            "source-uk261-xml"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "_id": "source-uk261-xml",
+          "_type": "source",
+          "title": "UK261 consolidated text, Articles 3–9",
+          "url": "https://www.legislation.gov.uk/eur/2004/261/data.xml",
+          "publisher": "UK National Archives",
+          "authorityTier": 1,
+          "retrievedAt": "2026-10-02T20:57:33.820115+00:00",
+          "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
+          "evidencePath": "data/sources/uk261-xml.html",
+          "sha256": "98d134e2e63863cbafbe4532f89a6897eea46064d6d10e1a73fc980835c360bf"
+        }
+      ],
+      "conflicts": [],
+      "computedBy": "compute_entitlement",
+      "notice": "Information, not legal advice. Conditional on the facts supplied. Separate overlapping regimes are not additive; do not recover twice for the same loss."
+    }
+  },
+  {
+    "id": "scenario-20",
+    "question": "US domestic exactly two hours",
+    "label": "precomputed",
+    "input": {
+      "departure": "us",
+      "arrival": "us",
+      "carrier": "us",
+      "airline": "Unspecified",
+      "flightDate": "2026-10-01",
+      "trigger": "denied_boarding",
+      "distanceKm": 1200,
+      "arrivalDelayMinutes": 180,
+      "departureDelayMinutes": 0,
+      "cause": "operational",
+      "extraordinaryEvidence": "not_proven",
+      "noticeHours": 0,
+      "confirmedBooking": true,
+      "checkedInOnTime": true,
+      "eligibleTicketAndAircraft": true,
+      "involuntary": true,
+      "deniedReason": "oversales",
+      "aircraftSeats": 180,
+      "fare": 200,
+      "fareCurrency": "USD",
+      "declinedTravelAndBenefits": false,
+      "overnight": false,
+      "reroutingOffered": true,
+      "reroutedArrivalDelayMinutes": 120,
+      "reroutedDepartureEarlyMinutes": 0,
+      "receivedBenefitsAbroad": false,
+      "singleFlight": true
+    },
+    "ruling": {
+      "status": "assessed",
+      "findings": [
+        {
+          "regime": "us",
+          "status": "assessed",
+          "eligible": true,
+          "amount": 800,
+          "currency": "USD",
+          "amountLabel": "Statutory minimum (carrier may pay more)",
+          "entitlements": [
+            "compensation"
+          ],
+          "met": [
+            "Route and operating-carrier scope match",
+            "Confirmed reservation",
+            "Check-in deadline met",
+            "US-origin involuntary oversales; covered aircraft; fare supplied"
+          ],
+          "unmet": [],
+          "uncertainties": [],
+          "ruleIds": [
+            "rule-us-denied_boarding"
+          ],
+          "sourceIds": [
+            "source-us250",
+            "source-us-refund-reg",
+            "source-dot-denied"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "_id": "source-us250",
+          "_type": "source",
+          "title": "14 CFR Part 250: oversales, sections 250.2–250.6",
+          "url": "https://www.ecfr.gov/current/title-14/chapter-II/subchapter-A/part-250",
+          "publisher": "US eCFR / Department of Transportation",
+          "authorityTier": 1,
+          "retrievedAt": "2026-10-02T20:56:05.612526+00:00",
+          "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
+          "evidencePath": "data/sources/us250.html",
+          "sha256": "961fa201fee37cf083dcb2a138c7dd194e0f1b5a813db7bc78a2ca21ed0d1a7e"
+        },
+        {
+          "_id": "source-us-refund-reg",
+          "_type": "source",
+          "title": "14 CFR Part 260: refunds",
+          "url": "https://www.ecfr.gov/current/title-14/chapter-II/subchapter-F/part-260",
+          "publisher": "US eCFR / Department of Transportation",
+          "authorityTier": 1,
+          "retrievedAt": "2026-10-02T21:00:09.419237+00:00",
+          "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
+          "evidencePath": "data/sources/us-refund-reg.html",
+          "sha256": "a2171c86f221bcc8a12751c0e5a34467357446ef1b98e5c54a93f03f8b86aeee"
+        },
+        {
+          "_id": "source-dot-denied",
+          "_type": "source",
+          "title": "DOT bumping / oversales guidance",
+          "url": "https://www.transportation.gov/individuals/aviation-consumer-protection/bumping-oversales",
+          "publisher": "US Department of Transportation",
+          "authorityTier": 2,
+          "retrievedAt": "2026-10-02T20:56:05.681383+00:00",
+          "licenseNote": "Official consumer guidance. Boundary wording is less precise than the regulation.",
+          "evidencePath": "data/sources/dot-denied.html",
+          "sha256": "92348861e9938f18c46a4bcc88b7137ebb1a837c088c99d204878aab310659b9"
+        }
+      ],
+      "conflicts": [
+        {
+          "topic": "Exact rerouting-delay boundary",
+          "left": {
+            "claim": "Regulation puts exactly two hours domestic / four hours international in the higher band.",
+            "source": {
+              "_id": "source-us250",
+              "_type": "source",
+              "title": "14 CFR Part 250: oversales, sections 250.2–250.6",
+              "url": "https://www.ecfr.gov/current/title-14/chapter-II/subchapter-A/part-250",
+              "publisher": "US eCFR / Department of Transportation",
+              "authorityTier": 1,
+              "retrievedAt": "2026-10-02T20:56:05.612526+00:00",
+              "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
+              "evidencePath": "data/sources/us250.html",
+              "sha256": "961fa201fee37cf083dcb2a138c7dd194e0f1b5a813db7bc78a2ca21ed0d1a7e"
+            }
+          },
+          "right": {
+            "claim": "DOT consumer table says “1 to 2” / “1 to 4” and “over”, which obscures the exact boundary.",
+            "source": {
+              "_id": "source-dot-denied",
+              "_type": "source",
+              "title": "DOT bumping / oversales guidance",
+              "url": "https://www.transportation.gov/individuals/aviation-consumer-protection/bumping-oversales",
+              "publisher": "US Department of Transportation",
+              "authorityTier": 2,
+              "retrievedAt": "2026-10-02T20:56:05.681383+00:00",
+              "licenseNote": "Official consumer guidance. Boundary wording is less precise than the regulation.",
+              "evidencePath": "data/sources/dot-denied.html",
+              "sha256": "92348861e9938f18c46a4bcc88b7137ebb1a837c088c99d204878aab310659b9"
+            }
+          },
+          "resolution": "Use 14 CFR 250.5, the higher-authority operative rule."
+        }
+      ],
+      "computedBy": "compute_entitlement",
+      "notice": "Information, not legal advice. Conditional on the facts supplied. Separate overlapping regimes are not additive; do not recover twice for the same loss."
+    }
+  },
+  {
+    "id": "scenario-24",
+    "question": "US cancelled flight declined travel",
+    "label": "precomputed",
+    "input": {
+      "departure": "us",
+      "arrival": "us",
+      "carrier": "us",
+      "airline": "Unspecified",
+      "flightDate": "2026-10-01",
+      "trigger": "cancellation",
+      "distanceKm": 1200,
+      "arrivalDelayMinutes": 180,
+      "departureDelayMinutes": 0,
+      "cause": "operational",
+      "extraordinaryEvidence": "not_proven",
+      "noticeHours": 0,
+      "confirmedBooking": true,
+      "checkedInOnTime": true,
+      "eligibleTicketAndAircraft": true,
+      "involuntary": true,
+      "deniedReason": "oversales",
+      "aircraftSeats": 180,
+      "fare": 200,
+      "fareCurrency": "USD",
+      "declinedTravelAndBenefits": true,
+      "overnight": false,
+      "reroutingOffered": false,
+      "reroutedArrivalDelayMinutes": 0,
+      "reroutedDepartureEarlyMinutes": 0,
+      "receivedBenefitsAbroad": false,
+      "singleFlight": true
+    },
+    "ruling": {
+      "status": "assessed",
+      "findings": [
+        {
+          "regime": "us",
+          "status": "assessed",
+          "eligible": false,
+          "amount": 0,
+          "currency": null,
+          "amountLabel": "No general fixed delay award; airline commitments may add rights",
+          "entitlements": [
+            "unused_ticket_refund"
+          ],
+          "met": [
+            "Route and operating-carrier scope match",
+            "Confirmed reservation"
+          ],
+          "unmet": [
+            "No general federal fixed compensation mandate for ordinary flight delay or cancellation"
+          ],
+          "uncertainties": [
+            "Airline-specific care commitments and non-time schedule changes are not adjudicated here."
+          ],
+          "ruleIds": [
+            "rule-us-cancellation"
+          ],
+          "sourceIds": [
+            "source-us250",
+            "source-us-refund-reg",
+            "source-dot-refund",
+            "source-dot-delay-alt"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "_id": "source-us250",
+          "_type": "source",
+          "title": "14 CFR Part 250: oversales, sections 250.2–250.6",
+          "url": "https://www.ecfr.gov/current/title-14/chapter-II/subchapter-A/part-250",
+          "publisher": "US eCFR / Department of Transportation",
+          "authorityTier": 1,
+          "retrievedAt": "2026-10-02T20:56:05.612526+00:00",
+          "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
+          "evidencePath": "data/sources/us250.html",
+          "sha256": "961fa201fee37cf083dcb2a138c7dd194e0f1b5a813db7bc78a2ca21ed0d1a7e"
+        },
+        {
+          "_id": "source-us-refund-reg",
+          "_type": "source",
+          "title": "14 CFR Part 260: refunds",
+          "url": "https://www.ecfr.gov/current/title-14/chapter-II/subchapter-F/part-260",
+          "publisher": "US eCFR / Department of Transportation",
+          "authorityTier": 1,
+          "retrievedAt": "2026-10-02T21:00:09.419237+00:00",
+          "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
+          "evidencePath": "data/sources/us-refund-reg.html",
+          "sha256": "a2171c86f221bcc8a12751c0e5a34467357446ef1b98e5c54a93f03f8b86aeee"
+        },
+        {
+          "_id": "source-dot-refund",
+          "_type": "source",
+          "title": "DOT refunds guidance",
+          "url": "https://www.transportation.gov/individuals/aviation-consumer-protection/refunds",
+          "publisher": "US Department of Transportation",
+          "authorityTier": 2,
+          "retrievedAt": "2026-10-02T20:56:05.237934+00:00",
+          "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
+          "evidencePath": "data/sources/dot-refund.html",
+          "sha256": "8a5fa92921c59cc20b88fea7a812a42ca365f3dd98979672de5919645e868fc0"
+        },
+        {
+          "_id": "source-dot-delay-alt",
+          "_type": "source",
+          "title": "DOT Fly Rights: delayed and cancelled flights",
+          "url": "https://www.transportation.gov/airconsumer/fly-rights",
+          "publisher": "US Department of Transportation",
+          "authorityTier": 2,
+          "retrievedAt": "2026-10-02T20:57:33.445485+00:00",
+          "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
+          "evidencePath": "data/sources/dot-delay-alt.html",
+          "sha256": "799583c9208d2dc928425007a34408e1f2015470c711aca350ea8efc4a45d518"
+        }
+      ],
+      "conflicts": [],
+      "computedBy": "compute_entitlement",
+      "notice": "Information, not legal advice. Conditional on the facts supplied. Separate overlapping regimes are not additive; do not recover twice for the same loss."
+    }
+  },
+  {
+    "id": "scenario-26",
+    "question": "Delhi to Mumbai: current CAR unverified",
+    "label": "precomputed",
+    "input": {
+      "departure": "in",
+      "arrival": "in",
+      "carrier": "in",
+      "airline": "IndiGo",
+      "flightDate": "2026-10-01",
+      "trigger": "arrival_delay",
+      "distanceKm": 1200,
+      "arrivalDelayMinutes": 180,
+      "departureDelayMinutes": 0,
+      "cause": "operational",
+      "extraordinaryEvidence": "not_proven",
+      "noticeHours": 0,
+      "confirmedBooking": true,
+      "checkedInOnTime": true,
+      "eligibleTicketAndAircraft": true,
+      "involuntary": true,
+      "deniedReason": "oversales",
+      "aircraftSeats": 180,
+      "fare": 200,
+      "fareCurrency": "USD",
+      "declinedTravelAndBenefits": false,
+      "overnight": false,
+      "reroutingOffered": false,
+      "reroutedArrivalDelayMinutes": 0,
+      "reroutedDepartureEarlyMinutes": 0,
+      "receivedBenefitsAbroad": false,
+      "singleFlight": true
+    },
+    "ruling": {
+      "status": "abstain",
+      "findings": [
+        {
+          "regime": "in",
+          "status": "abstain",
+          "eligible": null,
+          "amount": null,
+          "currency": null,
+          "amountLabel": "Not determined",
+          "entitlements": [],
+          "met": [
+            "Route and operating-carrier scope match",
+            "Confirmed reservation",
+            "Check-in deadline met"
+          ],
+          "unmet": [],
+          "uncertainties": [
+            "No verified rule for this disruption and date in the current corpus."
+          ],
+          "ruleIds": [],
+          "sourceIds": []
+        }
+      ],
+      "sources": [],
+      "conflicts": [],
+      "computedBy": "compute_entitlement",
+      "notice": "Information, not legal advice. Conditional on the facts supplied. Separate overlapping regimes are not additive; do not recover twice for the same loss."
+    }
+  },
+  {
+    "id": "scenario-31",
+    "question": "EU and UK both scope an EU–UK flight",
+    "label": "precomputed",
+    "input": {
+      "departure": "eu",
+      "arrival": "uk",
+      "carrier": "uk",
+      "airline": "Unspecified",
+      "flightDate": "2026-10-01",
+      "trigger": "arrival_delay",
+      "distanceKm": 1200,
+      "arrivalDelayMinutes": 180,
+      "departureDelayMinutes": 0,
+      "cause": "operational",
+      "extraordinaryEvidence": "not_proven",
+      "noticeHours": 0,
+      "confirmedBooking": true,
+      "checkedInOnTime": true,
+      "eligibleTicketAndAircraft": true,
+      "involuntary": true,
+      "deniedReason": "oversales",
+      "aircraftSeats": 180,
+      "fare": 200,
+      "fareCurrency": "USD",
+      "declinedTravelAndBenefits": false,
+      "overnight": false,
+      "reroutingOffered": false,
+      "reroutedArrivalDelayMinutes": 0,
+      "reroutedDepartureEarlyMinutes": 0,
+      "receivedBenefitsAbroad": false,
+      "singleFlight": true
+    },
+    "ruling": {
+      "status": "assessed",
+      "findings": [
+        {
+          "regime": "eu",
+          "status": "assessed",
+          "eligible": true,
+          "amount": 250,
+          "currency": "EUR",
+          "amountLabel": "Statutory compensation",
+          "entitlements": [
+            "compensation"
+          ],
+          "met": [
+            "Route and operating-carrier scope match",
+            "Confirmed reservation",
+            "Check-in deadline met",
+            "No proven extraordinary-circumstances defense"
+          ],
+          "unmet": [
+            "Departure-delay threshold for care not reached"
+          ],
+          "uncertainties": [],
+          "ruleIds": [
+            "rule-eu-arrival_delay",
+            "rule-eu-care",
+            "rule-eu-refund"
+          ],
+          "sourceIds": [
+            "source-eu261-original",
+            "source-sturgeon-press",
+            "source-nelson-press",
+            "source-eu-your-europe"
+          ]
+        },
+        {
+          "regime": "uk",
+          "status": "assessed",
+          "eligible": true,
+          "amount": 220,
+          "currency": "GBP",
+          "amountLabel": "Statutory compensation",
+          "entitlements": [
+            "compensation"
+          ],
+          "met": [
+            "Route and operating-carrier scope match",
+            "Confirmed reservation",
+            "Check-in deadline met",
+            "No proven extraordinary-circumstances defense"
+          ],
+          "unmet": [
+            "Departure-delay threshold for care not reached"
+          ],
+          "uncertainties": [],
+          "ruleIds": [
+            "rule-uk-arrival_delay",
+            "rule-uk-care",
+            "rule-uk-refund"
+          ],
+          "sourceIds": [
+            "source-uk261-xml"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "_id": "source-eu261-original",
+          "_type": "source",
+          "title": "EU261 original legal text (National Archives mirror)",
+          "url": "https://www.legislation.gov.uk/eur/2004/261/adopted/data.xml",
+          "publisher": "EU legislature / UK National Archives",
+          "authorityTier": 1,
+          "retrievedAt": "2026-10-02T21:00:08.730986+00:00",
+          "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
+          "evidencePath": "data/sources/eu261-original.html",
+          "sha256": "ff76adac01a5dab1985da50820c5b9fb588f2c3cfa93e50171690ba55f76f601"
+        },
+        {
+          "_id": "source-uk261-xml",
+          "_type": "source",
+          "title": "UK261 consolidated text, Articles 3–9",
+          "url": "https://www.legislation.gov.uk/eur/2004/261/data.xml",
+          "publisher": "UK National Archives",
+          "authorityTier": 1,
+          "retrievedAt": "2026-10-02T20:57:33.820115+00:00",
+          "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
+          "evidencePath": "data/sources/uk261-xml.html",
+          "sha256": "98d134e2e63863cbafbe4532f89a6897eea46064d6d10e1a73fc980835c360bf"
+        },
+        {
+          "_id": "source-eu-your-europe",
+          "_type": "source",
+          "title": "Your Europe: air passenger rights",
+          "url": "https://europa.eu/youreurope/citizens/travel/passenger-rights/air/index_en.htm",
+          "publisher": "European Commission",
+          "authorityTier": 2,
+          "retrievedAt": "2026-10-02T20:57:34.735914+00:00",
+          "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
+          "evidencePath": "data/sources/eu-your-europe.html",
+          "sha256": "8ec534d7b4dae1a868071149ecd32dfd6515d260b6ab981b6d873c960a210387"
+        },
+        {
+          "_id": "source-sturgeon-press",
+          "_type": "source",
+          "title": "Sturgeon, C-402/07 and C-432/07 — official court announcement",
+          "url": "https://curia.europa.eu/jcms/upload/docs/application/pdf/2009-11/cp090102en.pdf",
+          "publisher": "Court of Justice of the European Union",
+          "authorityTier": 3,
+          "retrievedAt": "2026-10-02T21:00:09.904863+00:00",
+          "licenseNote": "Official court press summary; not full judgment. Full judgment could not be retrieved.",
+          "evidencePath": "data/sources/sturgeon-press.pdf",
+          "sha256": "76c87515b41782c6b1090999beaf6758eb613231de5bdba1a94343a5589bb718"
+        },
+        {
+          "_id": "source-nelson-press",
+          "_type": "source",
+          "title": "Nelson, C-581/10 and C-629/10 — official court announcement",
+          "url": "https://curia.europa.eu/jcms/upload/docs/application/pdf/2012-10/cp120135en.pdf",
+          "publisher": "Court of Justice of the European Union",
+          "authorityTier": 3,
+          "retrievedAt": "2026-10-02T21:00:09.690270+00:00",
+          "licenseNote": "Official court press summary; not full judgment. Full judgment could not be retrieved.",
+          "evidencePath": "data/sources/nelson-press.pdf",
+          "sha256": "14fed6111575541526ec9c8c4239ecbca695acbcb0fc2b94b92d838d0edc7620"
+        }
+      ],
+      "conflicts": [],
+      "computedBy": "compute_entitlement",
+      "notice": "Information, not legal advice. Conditional on the facts supplied. Separate overlapping regimes are not additive; do not recover twice for the same loss."
+    }
+  }
+]
