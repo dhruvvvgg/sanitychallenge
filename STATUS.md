@@ -22,3 +22,5 @@
 Local work is committed on branch `work`. The GitHub remote initially has no commits; no push or public deployment was performed. A prepared filesystem snapshot and local commits are different from remotely reproducible checkout state. Fresh-task restoration of local-only commits has not been verified.
 
 Reusable installation and startup configuration is a separate platform draft operation, not service execution or publication. The installed dependencies/build files can be retained; the server must restart in later tasks. Final draft-save confirmation is recorded in the task tool output.
+
+Final cloud draft save: **UNCONFIRMED / BLOCKED**. The update and subsequent diagnostic read both returned a closed MCP session (`RPC UNAVAILABLE`). Local fallback instructions are preserved in scripts/cloud-install.sh, docs/CLOUD_START.md and docs/environment-draft.json; they do not prove platform persistence. Retry the draft update after the service reconnects, then declare the actual local HEAD. Local application validation remains passed.
