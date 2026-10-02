@@ -534,5 +534,15 @@
     "path": "data/sources/us-refund-reg.html",
     "sha256": "a2171c86f221bcc8a12751c0e5a34467357446ef1b98e5c54a93f03f8b86aeee",
     "retrievedAt": "2026-10-02T21:00:09.419237+00:00"
+  },
+  {
+    "id": "us-cap-effective",
+    "url": "https://www.federalregister.gov/citation/89-FR-84818",
+    "resolvedUrl": "https://www.federalregister.gov/documents/2024/10/24/2024-23588/periodic-revisions-to-denied-boarding-compensation-and-domestic-baggage-liability-limits#page-84818",
+    "status": "fetched",
+    "bytes": 104742,
+    "sha256": "005792312154cc7a04fa0ef2fbcb85786158bc8bf440665af2aa10be542efb9c",
+    "path": "data/sources/us-cap-effective.html",
+    "retrievedAt": "2026-10-02T21:44:15.348516+00:00"
   }
 ]

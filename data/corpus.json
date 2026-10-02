@@ -270,6 +270,16 @@
     "retrievedAt": "2026-10-02T21:00:09.419237+00:00"
   },
   {
+    "_id": "corpus-us-cap-effective",
+    "_type": "corpusDoc",
+    "title": "US denied-boarding cap revision: effective date",
+    "url": "https://www.federalregister.gov/citation/89-FR-84818",
+    "publisher": "US Department of Transportation / Federal Register",
+    "tier": 1,
+    "markdown": "The October 24, 2024 final rule makes the revised involuntary denied-boarding caps effective on January 22, 2025. The revised lower and higher caps are USD 1,075 and USD 2,150. This corpus covers only the oversales amendment; no baggage entitlement is modeled.",
+    "retrievedAt": "2026-10-02T21:44:15.348516+00:00"
+  },
+  {
     "_id": "corpus-sturgeon-press",
     "_type": "corpusDoc",
     "title": "Sturgeon, C-402/07 and C-432/07 \u2014 official court announcement",

@@ -36,10 +36,15 @@
     ],
     "nelson-press": [
       "three hours or more"
+    ],
+    "us-cap-effective": [
+      "January 22, 2025",
+      "$1,075",
+      "$2,150"
     ]
   },
-  "publicDocuments": 56,
-  "privateDocuments": 35,
+  "publicDocuments": 57,
+  "privateDocuments": 36,
   "livePublished": false,
   "method": "Manual primary-text review with reproducible anchor checks; official court summaries are labeled, not full judgments."
 }

@@ -59,6 +59,7 @@ export function compute_entitlement(s:Scenario,data:Dataset):Ruling {
     if(s.trigger==='cancellation'||s.trigger==='denied_boarding') f.entitlements.push('refund_or_rerouting_choice');
     else if(s.departureDelayMinutes>=refund!.thresholds.departureMinutes&&s.declinedTravelAndBenefits)f.entitlements.push('unused_ticket_refund');
    }
+   if(s.trigger==='arrival_delay'&&s.declinedTravelAndBenefits) {unknown(f,'Arrival-delay compensation requires a covered final-arrival delay for the passenger. You declined travel; care/refund are separate and the fixed award is not determined.');continue;}
    if(s.trigger==='care'||s.trigger==='refund') {f.amount=null;f.eligible=null;f.amountLabel='Care / refund assessed separately; ticket value not computed';continue;}
    if(s.trigger==='denied_boarding') {
     if(!s.involuntary) {unknown(f,'Voluntary surrender is negotiated separately; no fixed involuntary denied-boarding award.');continue;}
@@ -97,6 +98,7 @@ export function compute_entitlement(s:Scenario,data:Dataset):Ruling {
     if(!b) {unknown(f,'Required fare band is missing.');continue;}
     f.sourceIds.push(b.source._ref);cash(f,Math.round(Math.min(s.fare*(b.multiplier||0),b.cap??Infinity)*100)/100,b.currency,'Statutory minimum (carrier may pay more)');
    } else {
+    if(s.declinedTravelAndBenefits&&s.trigger!=='cancellation')f.uncertainties.push('Refund depends on the changed scheduled arrival, not an actual delay after travel. The supplied delay must describe the carrier’s revised schedule.');
     f.unmet.push('No general federal fixed compensation mandate for ordinary flight delay or cancellation');
     if(s.declinedTravelAndBenefits && (s.trigger==='cancellation'||s.arrivalDelayMinutes>=(s.departure==='us'&&s.arrival==='us'?t.domesticRefundMinutes:t.internationalRefundMinutes)))f.entitlements.push('unused_ticket_refund');
     else f.unmet.push('Refund requires cancellation/significant change and declining travel and benefits');

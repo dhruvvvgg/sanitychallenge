@@ -37,6 +37,7 @@ describe('Structural and boundary invariants',()=>{
  it('US just under two hours uses the lower multiplier',async()=>{
   expect((await run({departure:'us',arrival:'us',carrier:'us',trigger:'denied_boarding',reroutingOffered:true,reroutedArrivalDelayMinutes:119})).findings[0].amount).toBe(400);
  });
+ it('does not apply new US caps before their verified effective date',async()=>{const facts:Partial<Scenario>={departure:'us',arrival:'us',carrier:'us',trigger:'denied_boarding',reroutingOffered:true,reroutedArrivalDelayMinutes:90};expect((await run({...facts,flightDate:'2025-01-21'})).findings[0].amount).toBeNull();expect((await run({...facts,flightDate:'2025-01-22'})).findings[0].amount).toBe(400);});
  it('UK medium and long bands do not use EU intra-regime exception',async()=>{
   const r=await run({departure:'eu',arrival:'eu',carrier:'uk',distanceKm:4000,arrivalDelayMinutes:240});
   expect(r.findings.find(f=>f.regime==='eu')?.amount).toBe(400);expect(r.findings.find(f=>f.regime==='uk')?.amount).toBe(520);
@@ -46,10 +47,11 @@ describe('Structural and boundary invariants',()=>{
   expect(compute_entitlement(s,d).status).toBe('abstain');expect(compute_entitlement(s,d).findings[0].amount).toBeNull();
  });
  it('unverified rules are not applied',async()=>{
-  const s=scenario();const d=await getDossier(s,docs as Document[]);d.rules.find(r=>r._id==='rule-eu-arrival_delay')!.verified=false;
+  const s=scenario();const d=structuredClone(await getDossier(s,docs as Document[]));d.rules.find(r=>r._id==='rule-eu-arrival_delay')!.verified=false;
   expect(compute_entitlement(s,d).status).toBe('abstain');
  });
  it('does not assess excluded fares or aircraft',async()=>{expect((await run({eligibleTicketAndAircraft:false})).status).toBe('abstain');});
+ it('does not award passenger arrival-delay compensation after travel was declined',async()=>{const r=await run({declinedTravelAndBenefits:true,departureDelayMinutes:300});expect(r.findings[0].amount).toBeNull();expect(r.findings[0].entitlements).toContain('unused_ticket_refund');});
  it('never modifies rules or scenario inputs',async()=>{
   const s=scenario();const d=await getDossier(s,docs as Document[]);const before=JSON.stringify({s,d});compute_entitlement(s,d);expect(JSON.stringify({s,d})).toBe(before);
  });

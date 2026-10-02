@@ -1,6 +1,6 @@
 # Evaluation results
 
-Run: 2026-10-02T21:31:36.776Z. This report labels actual mode and backend; no live Sanity or Context claim is implied by local scores.
+Run: 2026-10-02T21:44:18.659Z. This report labels actual mode and backend; no live Sanity or Context claim is implied by local scores.
 
 | Method | Runtime mode / content | Primary cases | Eligibility | Amount | Entitlement-set F1 | Citation metadata validity | Correct abstention |
 |---|---|---:|---:|---:|---:|---:|---:|

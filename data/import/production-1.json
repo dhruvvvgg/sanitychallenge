@@ -24,6 +24,18 @@
     "sha256": "98d134e2e63863cbafbe4532f89a6897eea46064d6d10e1a73fc980835c360bf"
   },
   {
+    "_id": "source-us-cap-effective",
+    "_type": "source",
+    "title": "US oversales cap revision: effective January 22, 2025",
+    "url": "https://www.federalregister.gov/citation/89-FR-84818",
+    "publisher": "US Department of Transportation / Federal Register",
+    "authorityTier": 1,
+    "retrievedAt": "2026-10-02T21:44:15.348516+00:00",
+    "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
+    "evidencePath": "data/sources/us-cap-effective.html",
+    "sha256": "005792312154cc7a04fa0ef2fbcb85786158bc8bf440665af2aa10be542efb9c"
+  },
+  {
     "_id": "source-us250",
     "_type": "source",
     "title": "14 CFR Part 250: oversales, sections 250.2\u2013250.6",
@@ -329,7 +341,7 @@
         }
       ]
     },
-    "effectiveFrom": "2000-01-01",
+    "effectiveFrom": null,
     "sources": []
   },
   {
@@ -1165,11 +1177,16 @@
       },
       {
         "_type": "reference",
-        "_ref": "source-dot-denied",
+        "_ref": "source-us-cap-effective",
         "_key": "k1"
+      },
+      {
+        "_type": "reference",
+        "_ref": "source-dot-denied",
+        "_key": "k2"
       }
     ],
-    "effectiveFrom": "2024-10-23",
+    "effectiveFrom": "2025-01-22",
     "claimDeadline": "Not adjudicated: verify the competent jurisdiction and current limitation rules.",
     "verified": true,
     "verificationStatus": "verified",

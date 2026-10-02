@@ -1,6 +1,6 @@
 {
   "summary": {
-    "time": "2026-10-02T21:44:18.659Z",
+    "time": "2026-10-02T21:39:19.817Z",
     "capabilities": {
       "mode": "DETERMINISTIC",
       "provider": null,
@@ -16,8 +16,8 @@
     "expectedAbstentions": 12,
     "hashes": {
       "scenarios": "76b973e089fc7e7ab7a2f06eb1b9a87b4ab50b7130a0c157fc4e717f26b53f37",
-      "production": "540f76cbf39d342fccb0668c04e568d7c30b7198d3d78d0c23e0de9147eb86e7",
-      "corpus": "a5c36fb0f7ae0d8f64eb1a6e6aa7ec0cc0d1a31e5de984cbfb1d4a71770f20e0"
+      "production": "0728efcd99f4d6dcb042c41e08ade72072b620f706280d52a3b09ebf980751c0",
+      "corpus": "9b693eae46687d323037ed4a67d3ea33188420f7e978046c4246c70fb22c402d"
     },
     "modes": {
       "D": {
@@ -1550,24 +1550,11 @@
               "sourceIds": [
                 "source-us250",
                 "source-us-refund-reg",
-                "source-us-cap-effective",
                 "source-dot-denied"
               ]
             }
           ],
           "sources": [
-            {
-              "_id": "source-us-cap-effective",
-              "_type": "source",
-              "title": "US oversales cap revision: effective January 22, 2025",
-              "url": "https://www.federalregister.gov/citation/89-FR-84818",
-              "publisher": "US Department of Transportation / Federal Register",
-              "authorityTier": 1,
-              "retrievedAt": "2026-10-02T21:44:15.348516+00:00",
-              "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
-              "evidencePath": "data/sources/us-cap-effective.html",
-              "sha256": "005792312154cc7a04fa0ef2fbcb85786158bc8bf440665af2aa10be542efb9c"
-            },
             {
               "_id": "source-us250",
               "_type": "source",
@@ -1649,24 +1636,11 @@
               "sourceIds": [
                 "source-us250",
                 "source-us-refund-reg",
-                "source-us-cap-effective",
                 "source-dot-denied"
               ]
             }
           ],
           "sources": [
-            {
-              "_id": "source-us-cap-effective",
-              "_type": "source",
-              "title": "US oversales cap revision: effective January 22, 2025",
-              "url": "https://www.federalregister.gov/citation/89-FR-84818",
-              "publisher": "US Department of Transportation / Federal Register",
-              "authorityTier": 1,
-              "retrievedAt": "2026-10-02T21:44:15.348516+00:00",
-              "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
-              "evidencePath": "data/sources/us-cap-effective.html",
-              "sha256": "005792312154cc7a04fa0ef2fbcb85786158bc8bf440665af2aa10be542efb9c"
-            },
             {
               "_id": "source-us250",
               "_type": "source",
@@ -1748,24 +1722,11 @@
               "sourceIds": [
                 "source-us250",
                 "source-us-refund-reg",
-                "source-us-cap-effective",
                 "source-dot-denied"
               ]
             }
           ],
           "sources": [
-            {
-              "_id": "source-us-cap-effective",
-              "_type": "source",
-              "title": "US oversales cap revision: effective January 22, 2025",
-              "url": "https://www.federalregister.gov/citation/89-FR-84818",
-              "publisher": "US Department of Transportation / Federal Register",
-              "authorityTier": 1,
-              "retrievedAt": "2026-10-02T21:44:15.348516+00:00",
-              "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
-              "evidencePath": "data/sources/us-cap-effective.html",
-              "sha256": "005792312154cc7a04fa0ef2fbcb85786158bc8bf440665af2aa10be542efb9c"
-            },
             {
               "_id": "source-us250",
               "_type": "source",
@@ -1882,24 +1843,11 @@
               "sourceIds": [
                 "source-us250",
                 "source-us-refund-reg",
-                "source-us-cap-effective",
                 "source-dot-denied"
               ]
             }
           ],
           "sources": [
-            {
-              "_id": "source-us-cap-effective",
-              "_type": "source",
-              "title": "US oversales cap revision: effective January 22, 2025",
-              "url": "https://www.federalregister.gov/citation/89-FR-84818",
-              "publisher": "US Department of Transportation / Federal Register",
-              "authorityTier": 1,
-              "retrievedAt": "2026-10-02T21:44:15.348516+00:00",
-              "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
-              "evidencePath": "data/sources/us-cap-effective.html",
-              "sha256": "005792312154cc7a04fa0ef2fbcb85786158bc8bf440665af2aa10be542efb9c"
-            },
             {
               "_id": "source-us250",
               "_type": "source",
@@ -1981,24 +1929,11 @@
               "sourceIds": [
                 "source-us250",
                 "source-us-refund-reg",
-                "source-us-cap-effective",
                 "source-dot-denied"
               ]
             }
           ],
           "sources": [
-            {
-              "_id": "source-us-cap-effective",
-              "_type": "source",
-              "title": "US oversales cap revision: effective January 22, 2025",
-              "url": "https://www.federalregister.gov/citation/89-FR-84818",
-              "publisher": "US Department of Transportation / Federal Register",
-              "authorityTier": 1,
-              "retrievedAt": "2026-10-02T21:44:15.348516+00:00",
-              "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
-              "evidencePath": "data/sources/us-cap-effective.html",
-              "sha256": "005792312154cc7a04fa0ef2fbcb85786158bc8bf440665af2aa10be542efb9c"
-            },
             {
               "_id": "source-us250",
               "_type": "source",
@@ -2080,24 +2015,11 @@
               "sourceIds": [
                 "source-us250",
                 "source-us-refund-reg",
-                "source-us-cap-effective",
                 "source-dot-denied"
               ]
             }
           ],
           "sources": [
-            {
-              "_id": "source-us-cap-effective",
-              "_type": "source",
-              "title": "US oversales cap revision: effective January 22, 2025",
-              "url": "https://www.federalregister.gov/citation/89-FR-84818",
-              "publisher": "US Department of Transportation / Federal Register",
-              "authorityTier": 1,
-              "retrievedAt": "2026-10-02T21:44:15.348516+00:00",
-              "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
-              "evidencePath": "data/sources/us-cap-effective.html",
-              "sha256": "005792312154cc7a04fa0ef2fbcb85786158bc8bf440665af2aa10be542efb9c"
-            },
             {
               "_id": "source-us250",
               "_type": "source",
@@ -2663,24 +2585,11 @@
               "sourceIds": [
                 "source-us250",
                 "source-us-refund-reg",
-                "source-us-cap-effective",
                 "source-dot-denied"
               ]
             }
           ],
           "sources": [
-            {
-              "_id": "source-us-cap-effective",
-              "_type": "source",
-              "title": "US oversales cap revision: effective January 22, 2025",
-              "url": "https://www.federalregister.gov/citation/89-FR-84818",
-              "publisher": "US Department of Transportation / Federal Register",
-              "authorityTier": 1,
-              "retrievedAt": "2026-10-02T21:44:15.348516+00:00",
-              "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
-              "evidencePath": "data/sources/us-cap-effective.html",
-              "sha256": "005792312154cc7a04fa0ef2fbcb85786158bc8bf440665af2aa10be542efb9c"
-            },
             {
               "_id": "source-us250",
               "_type": "source",
@@ -3234,24 +3143,11 @@
               "sourceIds": [
                 "source-us250",
                 "source-us-refund-reg",
-                "source-us-cap-effective",
                 "source-dot-denied"
               ]
             }
           ],
           "sources": [
-            {
-              "_id": "source-us-cap-effective",
-              "_type": "source",
-              "title": "US oversales cap revision: effective January 22, 2025",
-              "url": "https://www.federalregister.gov/citation/89-FR-84818",
-              "publisher": "US Department of Transportation / Federal Register",
-              "authorityTier": 1,
-              "retrievedAt": "2026-10-02T21:44:15.348516+00:00",
-              "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
-              "evidencePath": "data/sources/us-cap-effective.html",
-              "sha256": "005792312154cc7a04fa0ef2fbcb85786158bc8bf440665af2aa10be542efb9c"
-            },
             {
               "_id": "source-us250",
               "_type": "source",
@@ -4524,24 +4420,11 @@
               "sourceIds": [
                 "source-us250",
                 "source-us-refund-reg",
-                "source-us-cap-effective",
                 "source-dot-denied"
               ]
             }
           ],
           "sources": [
-            {
-              "_id": "source-us-cap-effective",
-              "_type": "source",
-              "title": "US oversales cap revision: effective January 22, 2025",
-              "url": "https://www.federalregister.gov/citation/89-FR-84818",
-              "publisher": "US Department of Transportation / Federal Register",
-              "authorityTier": 1,
-              "retrievedAt": "2026-10-02T21:44:15.348516+00:00",
-              "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
-              "evidencePath": "data/sources/us-cap-effective.html",
-              "sha256": "005792312154cc7a04fa0ef2fbcb85786158bc8bf440665af2aa10be542efb9c"
-            },
             {
               "_id": "source-us250",
               "_type": "source",
@@ -4623,24 +4506,11 @@
               "sourceIds": [
                 "source-us250",
                 "source-us-refund-reg",
-                "source-us-cap-effective",
                 "source-dot-denied"
               ]
             }
           ],
           "sources": [
-            {
-              "_id": "source-us-cap-effective",
-              "_type": "source",
-              "title": "US oversales cap revision: effective January 22, 2025",
-              "url": "https://www.federalregister.gov/citation/89-FR-84818",
-              "publisher": "US Department of Transportation / Federal Register",
-              "authorityTier": 1,
-              "retrievedAt": "2026-10-02T21:44:15.348516+00:00",
-              "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
-              "evidencePath": "data/sources/us-cap-effective.html",
-              "sha256": "005792312154cc7a04fa0ef2fbcb85786158bc8bf440665af2aa10be542efb9c"
-            },
             {
               "_id": "source-us250",
               "_type": "source",
@@ -4722,24 +4592,11 @@
               "sourceIds": [
                 "source-us250",
                 "source-us-refund-reg",
-                "source-us-cap-effective",
                 "source-dot-denied"
               ]
             }
           ],
           "sources": [
-            {
-              "_id": "source-us-cap-effective",
-              "_type": "source",
-              "title": "US oversales cap revision: effective January 22, 2025",
-              "url": "https://www.federalregister.gov/citation/89-FR-84818",
-              "publisher": "US Department of Transportation / Federal Register",
-              "authorityTier": 1,
-              "retrievedAt": "2026-10-02T21:44:15.348516+00:00",
-              "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
-              "evidencePath": "data/sources/us-cap-effective.html",
-              "sha256": "005792312154cc7a04fa0ef2fbcb85786158bc8bf440665af2aa10be542efb9c"
-            },
             {
               "_id": "source-us250",
               "_type": "source",
@@ -4856,24 +4713,11 @@
               "sourceIds": [
                 "source-us250",
                 "source-us-refund-reg",
-                "source-us-cap-effective",
                 "source-dot-denied"
               ]
             }
           ],
           "sources": [
-            {
-              "_id": "source-us-cap-effective",
-              "_type": "source",
-              "title": "US oversales cap revision: effective January 22, 2025",
-              "url": "https://www.federalregister.gov/citation/89-FR-84818",
-              "publisher": "US Department of Transportation / Federal Register",
-              "authorityTier": 1,
-              "retrievedAt": "2026-10-02T21:44:15.348516+00:00",
-              "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
-              "evidencePath": "data/sources/us-cap-effective.html",
-              "sha256": "005792312154cc7a04fa0ef2fbcb85786158bc8bf440665af2aa10be542efb9c"
-            },
             {
               "_id": "source-us250",
               "_type": "source",
@@ -4955,24 +4799,11 @@
               "sourceIds": [
                 "source-us250",
                 "source-us-refund-reg",
-                "source-us-cap-effective",
                 "source-dot-denied"
               ]
             }
           ],
           "sources": [
-            {
-              "_id": "source-us-cap-effective",
-              "_type": "source",
-              "title": "US oversales cap revision: effective January 22, 2025",
-              "url": "https://www.federalregister.gov/citation/89-FR-84818",
-              "publisher": "US Department of Transportation / Federal Register",
-              "authorityTier": 1,
-              "retrievedAt": "2026-10-02T21:44:15.348516+00:00",
-              "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
-              "evidencePath": "data/sources/us-cap-effective.html",
-              "sha256": "005792312154cc7a04fa0ef2fbcb85786158bc8bf440665af2aa10be542efb9c"
-            },
             {
               "_id": "source-us250",
               "_type": "source",
@@ -5054,24 +4885,11 @@
               "sourceIds": [
                 "source-us250",
                 "source-us-refund-reg",
-                "source-us-cap-effective",
                 "source-dot-denied"
               ]
             }
           ],
           "sources": [
-            {
-              "_id": "source-us-cap-effective",
-              "_type": "source",
-              "title": "US oversales cap revision: effective January 22, 2025",
-              "url": "https://www.federalregister.gov/citation/89-FR-84818",
-              "publisher": "US Department of Transportation / Federal Register",
-              "authorityTier": 1,
-              "retrievedAt": "2026-10-02T21:44:15.348516+00:00",
-              "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
-              "evidencePath": "data/sources/us-cap-effective.html",
-              "sha256": "005792312154cc7a04fa0ef2fbcb85786158bc8bf440665af2aa10be542efb9c"
-            },
             {
               "_id": "source-us250",
               "_type": "source",
@@ -5595,24 +5413,11 @@
               "sourceIds": [
                 "source-us250",
                 "source-us-refund-reg",
-                "source-us-cap-effective",
                 "source-dot-denied"
               ]
             }
           ],
           "sources": [
-            {
-              "_id": "source-us-cap-effective",
-              "_type": "source",
-              "title": "US oversales cap revision: effective January 22, 2025",
-              "url": "https://www.federalregister.gov/citation/89-FR-84818",
-              "publisher": "US Department of Transportation / Federal Register",
-              "authorityTier": 1,
-              "retrievedAt": "2026-10-02T21:44:15.348516+00:00",
-              "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
-              "evidencePath": "data/sources/us-cap-effective.html",
-              "sha256": "005792312154cc7a04fa0ef2fbcb85786158bc8bf440665af2aa10be542efb9c"
-            },
             {
               "_id": "source-us250",
               "_type": "source",
@@ -6065,24 +5870,11 @@
               "sourceIds": [
                 "source-us250",
                 "source-us-refund-reg",
-                "source-us-cap-effective",
                 "source-dot-denied"
               ]
             }
           ],
           "sources": [
-            {
-              "_id": "source-us-cap-effective",
-              "_type": "source",
-              "title": "US oversales cap revision: effective January 22, 2025",
-              "url": "https://www.federalregister.gov/citation/89-FR-84818",
-              "publisher": "US Department of Transportation / Federal Register",
-              "authorityTier": 1,
-              "retrievedAt": "2026-10-02T21:44:15.348516+00:00",
-              "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
-              "evidencePath": "data/sources/us-cap-effective.html",
-              "sha256": "005792312154cc7a04fa0ef2fbcb85786158bc8bf440665af2aa10be542efb9c"
-            },
             {
               "_id": "source-us250",
               "_type": "source",

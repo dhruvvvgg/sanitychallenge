@@ -1,4 +1,5 @@
 import {readFile,writeFile,mkdir} from 'node:fs/promises';
+import {existsSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import cases from '../eval/scenarios.json';
 import documents from '../data/production.json';
@@ -10,6 +11,7 @@ import {compute_entitlement} from '../src/lib/compute';
 import {agentRuling} from '../src/lib/agent';
 import {noRetrievalBaseline} from '../src/lib/baseline';
 import {scenarioSchema,type Dataset,type Document,type Ruling,type Scenario} from '../src/lib/types';
+if(existsSync('.env.local'))process.loadEnvFile('.env.local');
 type Expected={status:string;regime:string;amount:number|null;currency:string|null;entitlements:string[];additional?:Expected[]};
 type Scores={eligibility:boolean;amount:boolean;entitlementF1:number;citationValidity:number|null;abstention:boolean;status:boolean};
 const sha=(text:string)=>createHash('sha256').update(text).digest('hex');

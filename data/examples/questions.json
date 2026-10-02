@@ -481,11 +481,24 @@
           "sourceIds": [
             "source-us250",
             "source-us-refund-reg",
+            "source-us-cap-effective",
             "source-dot-denied"
           ]
         }
       ],
       "sources": [
+        {
+          "_id": "source-us-cap-effective",
+          "_type": "source",
+          "title": "US oversales cap revision: effective January 22, 2025",
+          "url": "https://www.federalregister.gov/citation/89-FR-84818",
+          "publisher": "US Department of Transportation / Federal Register",
+          "authorityTier": 1,
+          "retrievedAt": "2026-10-02T21:44:15.348516+00:00",
+          "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
+          "evidencePath": "data/sources/us-cap-effective.html",
+          "sha256": "005792312154cc7a04fa0ef2fbcb85786158bc8bf440665af2aa10be542efb9c"
+        },
         {
           "_id": "source-us250",
           "_type": "source",
