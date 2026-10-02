@@ -1,0 +1,1859 @@
+[
+  {
+    "id": "scenario-01",
+    "title": "EU short route at three hours",
+    "input": {
+      "departure": "eu",
+      "arrival": "other",
+      "carrier": "eu",
+      "airline": "Unspecified",
+      "flightDate": "2026-10-01",
+      "trigger": "arrival_delay",
+      "distanceKm": 1200,
+      "arrivalDelayMinutes": 180,
+      "departureDelayMinutes": 0,
+      "cause": "operational",
+      "extraordinaryEvidence": "not_proven",
+      "noticeHours": 0,
+      "confirmedBooking": true,
+      "checkedInOnTime": true,
+      "involuntary": true,
+      "deniedReason": "oversales",
+      "aircraftSeats": 180,
+      "fare": 200,
+      "fareCurrency": "USD",
+      "declinedTravelAndBenefits": false,
+      "overnight": false,
+      "reroutingOffered": false,
+      "reroutedArrivalDelayMinutes": 0,
+      "reroutedDepartureEarlyMinutes": 0,
+      "receivedBenefitsAbroad": false,
+      "singleFlight": true
+    },
+    "expected": {
+      "status": "assessed",
+      "regime": "eu",
+      "amount": 250,
+      "currency": "EUR",
+      "entitlements": [
+        "compensation"
+      ]
+    },
+    "verification": "primary_text",
+    "sources": [
+      "source-eu261-original",
+      "source-sturgeon-press"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "scenario-02",
+    "title": "EU at 1500 km",
+    "input": {
+      "departure": "eu",
+      "arrival": "other",
+      "carrier": "eu",
+      "airline": "Unspecified",
+      "flightDate": "2026-10-01",
+      "trigger": "arrival_delay",
+      "distanceKm": 1500,
+      "arrivalDelayMinutes": 180,
+      "departureDelayMinutes": 0,
+      "cause": "operational",
+      "extraordinaryEvidence": "not_proven",
+      "noticeHours": 0,
+      "confirmedBooking": true,
+      "checkedInOnTime": true,
+      "involuntary": true,
+      "deniedReason": "oversales",
+      "aircraftSeats": 180,
+      "fare": 200,
+      "fareCurrency": "USD",
+      "declinedTravelAndBenefits": false,
+      "overnight": false,
+      "reroutingOffered": false,
+      "reroutedArrivalDelayMinutes": 0,
+      "reroutedDepartureEarlyMinutes": 0,
+      "receivedBenefitsAbroad": false,
+      "singleFlight": true
+    },
+    "expected": {
+      "status": "assessed",
+      "regime": "eu",
+      "amount": 250,
+      "currency": "EUR",
+      "entitlements": [
+        "compensation"
+      ]
+    },
+    "verification": "primary_text",
+    "sources": [
+      "source-eu261-original"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "scenario-03",
+    "title": "EU just beyond 1500 km",
+    "input": {
+      "departure": "eu",
+      "arrival": "other",
+      "carrier": "eu",
+      "airline": "Unspecified",
+      "flightDate": "2026-10-01",
+      "trigger": "arrival_delay",
+      "distanceKm": 1501,
+      "arrivalDelayMinutes": 180,
+      "departureDelayMinutes": 0,
+      "cause": "operational",
+      "extraordinaryEvidence": "not_proven",
+      "noticeHours": 0,
+      "confirmedBooking": true,
+      "checkedInOnTime": true,
+      "involuntary": true,
+      "deniedReason": "oversales",
+      "aircraftSeats": 180,
+      "fare": 200,
+      "fareCurrency": "USD",
+      "declinedTravelAndBenefits": false,
+      "overnight": false,
+      "reroutingOffered": false,
+      "reroutedArrivalDelayMinutes": 0,
+      "reroutedDepartureEarlyMinutes": 0,
+      "receivedBenefitsAbroad": false,
+      "singleFlight": true
+    },
+    "expected": {
+      "status": "assessed",
+      "regime": "eu",
+      "amount": 400,
+      "currency": "EUR",
+      "entitlements": [
+        "compensation"
+      ]
+    },
+    "verification": "primary_text",
+    "sources": [
+      "source-eu261-original"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "scenario-04",
+    "title": "EU at 3500 km",
+    "input": {
+      "departure": "eu",
+      "arrival": "other",
+      "carrier": "eu",
+      "airline": "Unspecified",
+      "flightDate": "2026-10-01",
+      "trigger": "arrival_delay",
+      "distanceKm": 3500,
+      "arrivalDelayMinutes": 180,
+      "departureDelayMinutes": 0,
+      "cause": "operational",
+      "extraordinaryEvidence": "not_proven",
+      "noticeHours": 0,
+      "confirmedBooking": true,
+      "checkedInOnTime": true,
+      "involuntary": true,
+      "deniedReason": "oversales",
+      "aircraftSeats": 180,
+      "fare": 200,
+      "fareCurrency": "USD",
+      "declinedTravelAndBenefits": false,
+      "overnight": false,
+      "reroutingOffered": false,
+      "reroutedArrivalDelayMinutes": 0,
+      "reroutedDepartureEarlyMinutes": 0,
+      "receivedBenefitsAbroad": false,
+      "singleFlight": true
+    },
+    "expected": {
+      "status": "assessed",
+      "regime": "eu",
+      "amount": 400,
+      "currency": "EUR",
+      "entitlements": [
+        "compensation"
+      ]
+    },
+    "verification": "primary_text",
+    "sources": [
+      "source-eu261-original"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "scenario-05",
+    "title": "EU long haul four hours",
+    "input": {
+      "departure": "eu",
+      "arrival": "other",
+      "carrier": "eu",
+      "airline": "Unspecified",
+      "flightDate": "2026-10-01",
+      "trigger": "arrival_delay",
+      "distanceKm": 5000,
+      "arrivalDelayMinutes": 240,
+      "departureDelayMinutes": 0,
+      "cause": "operational",
+      "extraordinaryEvidence": "not_proven",
+      "noticeHours": 0,
+      "confirmedBooking": true,
+      "checkedInOnTime": true,
+      "involuntary": true,
+      "deniedReason": "oversales",
+      "aircraftSeats": 180,
+      "fare": 200,
+      "fareCurrency": "USD",
+      "declinedTravelAndBenefits": false,
+      "overnight": false,
+      "reroutingOffered": false,
+      "reroutedArrivalDelayMinutes": 0,
+      "reroutedDepartureEarlyMinutes": 0,
+      "receivedBenefitsAbroad": false,
+      "singleFlight": true
+    },
+    "expected": {
+      "status": "assessed",
+      "regime": "eu",
+      "amount": 600,
+      "currency": "EUR",
+      "entitlements": [
+        "compensation"
+      ]
+    },
+    "verification": "primary_text",
+    "sources": [
+      "source-eu261-original"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "scenario-06",
+    "title": "EU intra-EU long route",
+    "input": {
+      "departure": "eu",
+      "arrival": "eu",
+      "carrier": "eu",
+      "airline": "Unspecified",
+      "flightDate": "2026-10-01",
+      "trigger": "arrival_delay",
+      "distanceKm": 4000,
+      "arrivalDelayMinutes": 240,
+      "departureDelayMinutes": 0,
+      "cause": "operational",
+      "extraordinaryEvidence": "not_proven",
+      "noticeHours": 0,
+      "confirmedBooking": true,
+      "checkedInOnTime": true,
+      "involuntary": true,
+      "deniedReason": "oversales",
+      "aircraftSeats": 180,
+      "fare": 200,
+      "fareCurrency": "USD",
+      "declinedTravelAndBenefits": false,
+      "overnight": false,
+      "reroutingOffered": false,
+      "reroutedArrivalDelayMinutes": 0,
+      "reroutedDepartureEarlyMinutes": 0,
+      "receivedBenefitsAbroad": false,
+      "singleFlight": true
+    },
+    "expected": {
+      "status": "assessed",
+      "regime": "eu",
+      "amount": 400,
+      "currency": "EUR",
+      "entitlements": [
+        "compensation"
+      ]
+    },
+    "verification": "primary_text",
+    "sources": [
+      "source-eu261-original"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "scenario-07",
+    "title": "EU arrival just under three hours",
+    "input": {
+      "departure": "eu",
+      "arrival": "other",
+      "carrier": "eu",
+      "airline": "Unspecified",
+      "flightDate": "2026-10-01",
+      "trigger": "arrival_delay",
+      "distanceKm": 1200,
+      "arrivalDelayMinutes": 179,
+      "departureDelayMinutes": 0,
+      "cause": "operational",
+      "extraordinaryEvidence": "not_proven",
+      "noticeHours": 0,
+      "confirmedBooking": true,
+      "checkedInOnTime": true,
+      "involuntary": true,
+      "deniedReason": "oversales",
+      "aircraftSeats": 180,
+      "fare": 200,
+      "fareCurrency": "USD",
+      "declinedTravelAndBenefits": false,
+      "overnight": false,
+      "reroutingOffered": false,
+      "reroutedArrivalDelayMinutes": 0,
+      "reroutedDepartureEarlyMinutes": 0,
+      "receivedBenefitsAbroad": false,
+      "singleFlight": true
+    },
+    "expected": {
+      "status": "assessed",
+      "regime": "eu",
+      "amount": 0,
+      "currency": "EUR",
+      "entitlements": []
+    },
+    "verification": "primary_text",
+    "sources": [
+      "source-eu261-original"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "scenario-08",
+    "title": "EU weather proven defense retains care",
+    "input": {
+      "departure": "eu",
+      "arrival": "other",
+      "carrier": "eu",
+      "airline": "Unspecified",
+      "flightDate": "2026-10-01",
+      "trigger": "arrival_delay",
+      "distanceKm": 1200,
+      "arrivalDelayMinutes": 180,
+      "departureDelayMinutes": 120,
+      "cause": "weather",
+      "extraordinaryEvidence": "proven",
+      "noticeHours": 0,
+      "confirmedBooking": true,
+      "checkedInOnTime": true,
+      "involuntary": true,
+      "deniedReason": "oversales",
+      "aircraftSeats": 180,
+      "fare": 200,
+      "fareCurrency": "USD",
+      "declinedTravelAndBenefits": false,
+      "overnight": false,
+      "reroutingOffered": false,
+      "reroutedArrivalDelayMinutes": 0,
+      "reroutedDepartureEarlyMinutes": 0,
+      "receivedBenefitsAbroad": false,
+      "singleFlight": true
+    },
+    "expected": {
+      "status": "assessed",
+      "regime": "eu",
+      "amount": 0,
+      "currency": "EUR",
+      "entitlements": [
+        "meals_and_refreshments",
+        "communications"
+      ]
+    },
+    "verification": "primary_text",
+    "sources": [
+      "source-eu261-original"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "scenario-09",
+    "title": "EU cancellation fourteen days notice",
+    "input": {
+      "departure": "eu",
+      "arrival": "other",
+      "carrier": "eu",
+      "airline": "Unspecified",
+      "flightDate": "2026-10-01",
+      "trigger": "cancellation",
+      "distanceKm": 1200,
+      "arrivalDelayMinutes": 180,
+      "departureDelayMinutes": 0,
+      "cause": "operational",
+      "extraordinaryEvidence": "not_proven",
+      "noticeHours": 336,
+      "confirmedBooking": true,
+      "checkedInOnTime": true,
+      "involuntary": true,
+      "deniedReason": "oversales",
+      "aircraftSeats": 180,
+      "fare": 200,
+      "fareCurrency": "USD",
+      "declinedTravelAndBenefits": false,
+      "overnight": false,
+      "reroutingOffered": false,
+      "reroutedArrivalDelayMinutes": 0,
+      "reroutedDepartureEarlyMinutes": 0,
+      "receivedBenefitsAbroad": false,
+      "singleFlight": true
+    },
+    "expected": {
+      "status": "assessed",
+      "regime": "eu",
+      "amount": 0,
+      "currency": "EUR",
+      "entitlements": [
+        "meals_and_refreshments",
+        "communications",
+        "refund_or_rerouting_choice"
+      ]
+    },
+    "verification": "primary_text",
+    "sources": [
+      "source-eu261-original"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "scenario-10",
+    "title": "EU cancellation late notice",
+    "input": {
+      "departure": "eu",
+      "arrival": "other",
+      "carrier": "eu",
+      "airline": "Unspecified",
+      "flightDate": "2026-10-01",
+      "trigger": "cancellation",
+      "distanceKm": 1200,
+      "arrivalDelayMinutes": 180,
+      "departureDelayMinutes": 0,
+      "cause": "operational",
+      "extraordinaryEvidence": "not_proven",
+      "noticeHours": 0,
+      "confirmedBooking": true,
+      "checkedInOnTime": true,
+      "involuntary": true,
+      "deniedReason": "oversales",
+      "aircraftSeats": 180,
+      "fare": 200,
+      "fareCurrency": "USD",
+      "declinedTravelAndBenefits": false,
+      "overnight": false,
+      "reroutingOffered": false,
+      "reroutedArrivalDelayMinutes": 0,
+      "reroutedDepartureEarlyMinutes": 0,
+      "receivedBenefitsAbroad": false,
+      "singleFlight": true
+    },
+    "expected": {
+      "status": "assessed",
+      "regime": "eu",
+      "amount": 250,
+      "currency": "EUR",
+      "entitlements": [
+        "meals_and_refreshments",
+        "communications",
+        "refund_or_rerouting_choice",
+        "compensation"
+      ]
+    },
+    "verification": "primary_text",
+    "sources": [
+      "source-eu261-original"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "scenario-11",
+    "title": "EU cancellation ten days notice with close rerouting",
+    "input": {
+      "departure": "eu",
+      "arrival": "other",
+      "carrier": "eu",
+      "airline": "Unspecified",
+      "flightDate": "2026-10-01",
+      "trigger": "cancellation",
+      "distanceKm": 1200,
+      "arrivalDelayMinutes": 180,
+      "departureDelayMinutes": 0,
+      "cause": "operational",
+      "extraordinaryEvidence": "not_proven",
+      "noticeHours": 240,
+      "confirmedBooking": true,
+      "checkedInOnTime": true,
+      "involuntary": true,
+      "deniedReason": "oversales",
+      "aircraftSeats": 180,
+      "fare": 200,
+      "fareCurrency": "USD",
+      "declinedTravelAndBenefits": false,
+      "overnight": false,
+      "reroutingOffered": true,
+      "reroutedArrivalDelayMinutes": 239,
+      "reroutedDepartureEarlyMinutes": 120,
+      "receivedBenefitsAbroad": false,
+      "singleFlight": true
+    },
+    "expected": {
+      "status": "assessed",
+      "regime": "eu",
+      "amount": 0,
+      "currency": "EUR",
+      "entitlements": [
+        "meals_and_refreshments",
+        "communications",
+        "refund_or_rerouting_choice"
+      ]
+    },
+    "verification": "primary_text",
+    "sources": [
+      "source-eu261-original"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "scenario-12",
+    "title": "EU cancellation exact four-hour exception boundary",
+    "input": {
+      "departure": "eu",
+      "arrival": "other",
+      "carrier": "eu",
+      "airline": "Unspecified",
+      "flightDate": "2026-10-01",
+      "trigger": "cancellation",
+      "distanceKm": 1200,
+      "arrivalDelayMinutes": 180,
+      "departureDelayMinutes": 0,
+      "cause": "operational",
+      "extraordinaryEvidence": "not_proven",
+      "noticeHours": 240,
+      "confirmedBooking": true,
+      "checkedInOnTime": true,
+      "involuntary": true,
+      "deniedReason": "oversales",
+      "aircraftSeats": 180,
+      "fare": 200,
+      "fareCurrency": "USD",
+      "declinedTravelAndBenefits": false,
+      "overnight": false,
+      "reroutingOffered": true,
+      "reroutedArrivalDelayMinutes": 240,
+      "reroutedDepartureEarlyMinutes": 0,
+      "receivedBenefitsAbroad": false,
+      "singleFlight": true
+    },
+    "expected": {
+      "status": "assessed",
+      "regime": "eu",
+      "amount": 250,
+      "currency": "EUR",
+      "entitlements": [
+        "meals_and_refreshments",
+        "communications",
+        "refund_or_rerouting_choice",
+        "compensation"
+      ]
+    },
+    "verification": "primary_text",
+    "sources": [
+      "source-eu261-original"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "scenario-13",
+    "title": "EU denied boarding ordinary oversales",
+    "input": {
+      "departure": "eu",
+      "arrival": "other",
+      "carrier": "eu",
+      "airline": "Unspecified",
+      "flightDate": "2026-10-01",
+      "trigger": "denied_boarding",
+      "distanceKm": 1200,
+      "arrivalDelayMinutes": 180,
+      "departureDelayMinutes": 0,
+      "cause": "operational",
+      "extraordinaryEvidence": "not_proven",
+      "noticeHours": 0,
+      "confirmedBooking": true,
+      "checkedInOnTime": true,
+      "involuntary": true,
+      "deniedReason": "oversales",
+      "aircraftSeats": 180,
+      "fare": 200,
+      "fareCurrency": "USD",
+      "declinedTravelAndBenefits": false,
+      "overnight": false,
+      "reroutingOffered": false,
+      "reroutedArrivalDelayMinutes": 0,
+      "reroutedDepartureEarlyMinutes": 0,
+      "receivedBenefitsAbroad": false,
+      "singleFlight": true
+    },
+    "expected": {
+      "status": "assessed",
+      "regime": "eu",
+      "amount": 250,
+      "currency": "EUR",
+      "entitlements": [
+        "meals_and_refreshments",
+        "communications",
+        "refund_or_rerouting_choice",
+        "compensation"
+      ]
+    },
+    "verification": "primary_text",
+    "sources": [
+      "source-eu261-original"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "scenario-14",
+    "title": "EU denied boarding short rerouting reduction",
+    "input": {
+      "departure": "eu",
+      "arrival": "other",
+      "carrier": "eu",
+      "airline": "Unspecified",
+      "flightDate": "2026-10-01",
+      "trigger": "denied_boarding",
+      "distanceKm": 1200,
+      "arrivalDelayMinutes": 180,
+      "departureDelayMinutes": 0,
+      "cause": "operational",
+      "extraordinaryEvidence": "not_proven",
+      "noticeHours": 0,
+      "confirmedBooking": true,
+      "checkedInOnTime": true,
+      "involuntary": true,
+      "deniedReason": "oversales",
+      "aircraftSeats": 180,
+      "fare": 200,
+      "fareCurrency": "USD",
+      "declinedTravelAndBenefits": false,
+      "overnight": false,
+      "reroutingOffered": true,
+      "reroutedArrivalDelayMinutes": 120,
+      "reroutedDepartureEarlyMinutes": 0,
+      "receivedBenefitsAbroad": false,
+      "singleFlight": true
+    },
+    "expected": {
+      "status": "assessed",
+      "regime": "eu",
+      "amount": 125,
+      "currency": "EUR",
+      "entitlements": [
+        "meals_and_refreshments",
+        "communications",
+        "refund_or_rerouting_choice",
+        "compensation"
+      ]
+    },
+    "verification": "primary_text",
+    "sources": [
+      "source-eu261-original"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "scenario-15",
+    "title": "UK short distance current band",
+    "input": {
+      "departure": "uk",
+      "arrival": "other",
+      "carrier": "uk",
+      "airline": "Unspecified",
+      "flightDate": "2026-10-01",
+      "trigger": "arrival_delay",
+      "distanceKm": 1200,
+      "arrivalDelayMinutes": 180,
+      "departureDelayMinutes": 0,
+      "cause": "operational",
+      "extraordinaryEvidence": "not_proven",
+      "noticeHours": 0,
+      "confirmedBooking": true,
+      "checkedInOnTime": true,
+      "involuntary": true,
+      "deniedReason": "oversales",
+      "aircraftSeats": 180,
+      "fare": 200,
+      "fareCurrency": "USD",
+      "declinedTravelAndBenefits": false,
+      "overnight": false,
+      "reroutingOffered": false,
+      "reroutedArrivalDelayMinutes": 0,
+      "reroutedDepartureEarlyMinutes": 0,
+      "receivedBenefitsAbroad": false,
+      "singleFlight": true
+    },
+    "expected": {
+      "status": "assessed",
+      "regime": "uk",
+      "amount": 220,
+      "currency": "GBP",
+      "entitlements": [
+        "compensation"
+      ]
+    },
+    "verification": "primary_text",
+    "sources": [
+      "source-uk261-xml"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "scenario-16",
+    "title": "UK medium distance current band",
+    "input": {
+      "departure": "uk",
+      "arrival": "other",
+      "carrier": "uk",
+      "airline": "Unspecified",
+      "flightDate": "2026-10-01",
+      "trigger": "arrival_delay",
+      "distanceKm": 2000,
+      "arrivalDelayMinutes": 180,
+      "departureDelayMinutes": 0,
+      "cause": "operational",
+      "extraordinaryEvidence": "not_proven",
+      "noticeHours": 0,
+      "confirmedBooking": true,
+      "checkedInOnTime": true,
+      "involuntary": true,
+      "deniedReason": "oversales",
+      "aircraftSeats": 180,
+      "fare": 200,
+      "fareCurrency": "USD",
+      "declinedTravelAndBenefits": false,
+      "overnight": false,
+      "reroutingOffered": false,
+      "reroutedArrivalDelayMinutes": 0,
+      "reroutedDepartureEarlyMinutes": 0,
+      "receivedBenefitsAbroad": false,
+      "singleFlight": true
+    },
+    "expected": {
+      "status": "assessed",
+      "regime": "uk",
+      "amount": 350,
+      "currency": "GBP",
+      "entitlements": [
+        "compensation"
+      ]
+    },
+    "verification": "primary_text",
+    "sources": [
+      "source-uk261-xml"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "scenario-17",
+    "title": "UK long distance current band",
+    "input": {
+      "departure": "uk",
+      "arrival": "other",
+      "carrier": "uk",
+      "airline": "Unspecified",
+      "flightDate": "2026-10-01",
+      "trigger": "arrival_delay",
+      "distanceKm": 5000,
+      "arrivalDelayMinutes": 240,
+      "departureDelayMinutes": 0,
+      "cause": "operational",
+      "extraordinaryEvidence": "not_proven",
+      "noticeHours": 0,
+      "confirmedBooking": true,
+      "checkedInOnTime": true,
+      "involuntary": true,
+      "deniedReason": "oversales",
+      "aircraftSeats": 180,
+      "fare": 200,
+      "fareCurrency": "USD",
+      "declinedTravelAndBenefits": false,
+      "overnight": false,
+      "reroutingOffered": false,
+      "reroutedArrivalDelayMinutes": 0,
+      "reroutedDepartureEarlyMinutes": 0,
+      "receivedBenefitsAbroad": false,
+      "singleFlight": true
+    },
+    "expected": {
+      "status": "assessed",
+      "regime": "uk",
+      "amount": 520,
+      "currency": "GBP",
+      "entitlements": [
+        "compensation"
+      ]
+    },
+    "verification": "primary_text",
+    "sources": [
+      "source-uk261-xml"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "scenario-18",
+    "title": "US oversales within one hour",
+    "input": {
+      "departure": "us",
+      "arrival": "us",
+      "carrier": "us",
+      "airline": "Unspecified",
+      "flightDate": "2026-10-01",
+      "trigger": "denied_boarding",
+      "distanceKm": 1200,
+      "arrivalDelayMinutes": 180,
+      "departureDelayMinutes": 0,
+      "cause": "operational",
+      "extraordinaryEvidence": "not_proven",
+      "noticeHours": 0,
+      "confirmedBooking": true,
+      "checkedInOnTime": true,
+      "involuntary": true,
+      "deniedReason": "oversales",
+      "aircraftSeats": 180,
+      "fare": 200,
+      "fareCurrency": "USD",
+      "declinedTravelAndBenefits": false,
+      "overnight": false,
+      "reroutingOffered": true,
+      "reroutedArrivalDelayMinutes": 60,
+      "reroutedDepartureEarlyMinutes": 0,
+      "receivedBenefitsAbroad": false,
+      "singleFlight": true
+    },
+    "expected": {
+      "status": "assessed",
+      "regime": "us",
+      "amount": 0,
+      "currency": null,
+      "entitlements": []
+    },
+    "verification": "primary_text",
+    "sources": [
+      "source-us250"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "scenario-19",
+    "title": "US oversales short domestic delay",
+    "input": {
+      "departure": "us",
+      "arrival": "us",
+      "carrier": "us",
+      "airline": "Unspecified",
+      "flightDate": "2026-10-01",
+      "trigger": "denied_boarding",
+      "distanceKm": 1200,
+      "arrivalDelayMinutes": 180,
+      "departureDelayMinutes": 0,
+      "cause": "operational",
+      "extraordinaryEvidence": "not_proven",
+      "noticeHours": 0,
+      "confirmedBooking": true,
+      "checkedInOnTime": true,
+      "involuntary": true,
+      "deniedReason": "oversales",
+      "aircraftSeats": 180,
+      "fare": 200,
+      "fareCurrency": "USD",
+      "declinedTravelAndBenefits": false,
+      "overnight": false,
+      "reroutingOffered": true,
+      "reroutedArrivalDelayMinutes": 90,
+      "reroutedDepartureEarlyMinutes": 0,
+      "receivedBenefitsAbroad": false,
+      "singleFlight": true
+    },
+    "expected": {
+      "status": "assessed",
+      "regime": "us",
+      "amount": 400,
+      "currency": "USD",
+      "entitlements": [
+        "compensation"
+      ]
+    },
+    "verification": "primary_text",
+    "sources": [
+      "source-us250"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "scenario-20",
+    "title": "US domestic exactly two hours",
+    "input": {
+      "departure": "us",
+      "arrival": "us",
+      "carrier": "us",
+      "airline": "Unspecified",
+      "flightDate": "2026-10-01",
+      "trigger": "denied_boarding",
+      "distanceKm": 1200,
+      "arrivalDelayMinutes": 180,
+      "departureDelayMinutes": 0,
+      "cause": "operational",
+      "extraordinaryEvidence": "not_proven",
+      "noticeHours": 0,
+      "confirmedBooking": true,
+      "checkedInOnTime": true,
+      "involuntary": true,
+      "deniedReason": "oversales",
+      "aircraftSeats": 180,
+      "fare": 200,
+      "fareCurrency": "USD",
+      "declinedTravelAndBenefits": false,
+      "overnight": false,
+      "reroutingOffered": true,
+      "reroutedArrivalDelayMinutes": 120,
+      "reroutedDepartureEarlyMinutes": 0,
+      "receivedBenefitsAbroad": false,
+      "singleFlight": true
+    },
+    "expected": {
+      "status": "assessed",
+      "regime": "us",
+      "amount": 800,
+      "currency": "USD",
+      "entitlements": [
+        "compensation"
+      ]
+    },
+    "verification": "primary_text",
+    "sources": [
+      "source-us250"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "scenario-21",
+    "title": "US short band statutory cap",
+    "input": {
+      "departure": "us",
+      "arrival": "us",
+      "carrier": "us",
+      "airline": "Unspecified",
+      "flightDate": "2026-10-01",
+      "trigger": "denied_boarding",
+      "distanceKm": 1200,
+      "arrivalDelayMinutes": 180,
+      "departureDelayMinutes": 0,
+      "cause": "operational",
+      "extraordinaryEvidence": "not_proven",
+      "noticeHours": 0,
+      "confirmedBooking": true,
+      "checkedInOnTime": true,
+      "involuntary": true,
+      "deniedReason": "oversales",
+      "aircraftSeats": 180,
+      "fare": 1000,
+      "fareCurrency": "USD",
+      "declinedTravelAndBenefits": false,
+      "overnight": false,
+      "reroutingOffered": true,
+      "reroutedArrivalDelayMinutes": 90,
+      "reroutedDepartureEarlyMinutes": 0,
+      "receivedBenefitsAbroad": false,
+      "singleFlight": true
+    },
+    "expected": {
+      "status": "assessed",
+      "regime": "us",
+      "amount": 1075,
+      "currency": "USD",
+      "entitlements": [
+        "compensation"
+      ]
+    },
+    "verification": "primary_text",
+    "sources": [
+      "source-us250"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "scenario-22",
+    "title": "US long band statutory cap",
+    "input": {
+      "departure": "us",
+      "arrival": "us",
+      "carrier": "us",
+      "airline": "Unspecified",
+      "flightDate": "2026-10-01",
+      "trigger": "denied_boarding",
+      "distanceKm": 1200,
+      "arrivalDelayMinutes": 180,
+      "departureDelayMinutes": 0,
+      "cause": "operational",
+      "extraordinaryEvidence": "not_proven",
+      "noticeHours": 0,
+      "confirmedBooking": true,
+      "checkedInOnTime": true,
+      "involuntary": true,
+      "deniedReason": "oversales",
+      "aircraftSeats": 180,
+      "fare": 1000,
+      "fareCurrency": "USD",
+      "declinedTravelAndBenefits": false,
+      "overnight": false,
+      "reroutingOffered": true,
+      "reroutedArrivalDelayMinutes": 180,
+      "reroutedDepartureEarlyMinutes": 0,
+      "receivedBenefitsAbroad": false,
+      "singleFlight": true
+    },
+    "expected": {
+      "status": "assessed",
+      "regime": "us",
+      "amount": 2150,
+      "currency": "USD",
+      "entitlements": [
+        "compensation"
+      ]
+    },
+    "verification": "primary_text",
+    "sources": [
+      "source-us250"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "scenario-23",
+    "title": "US international exactly four hours",
+    "input": {
+      "departure": "us",
+      "arrival": "other",
+      "carrier": "us",
+      "airline": "Unspecified",
+      "flightDate": "2026-10-01",
+      "trigger": "denied_boarding",
+      "distanceKm": 1200,
+      "arrivalDelayMinutes": 180,
+      "departureDelayMinutes": 0,
+      "cause": "operational",
+      "extraordinaryEvidence": "not_proven",
+      "noticeHours": 0,
+      "confirmedBooking": true,
+      "checkedInOnTime": true,
+      "involuntary": true,
+      "deniedReason": "oversales",
+      "aircraftSeats": 180,
+      "fare": 200,
+      "fareCurrency": "USD",
+      "declinedTravelAndBenefits": false,
+      "overnight": false,
+      "reroutingOffered": true,
+      "reroutedArrivalDelayMinutes": 240,
+      "reroutedDepartureEarlyMinutes": 0,
+      "receivedBenefitsAbroad": false,
+      "singleFlight": true
+    },
+    "expected": {
+      "status": "assessed",
+      "regime": "us",
+      "amount": 800,
+      "currency": "USD",
+      "entitlements": [
+        "compensation"
+      ]
+    },
+    "verification": "primary_text",
+    "sources": [
+      "source-us250"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "scenario-24",
+    "title": "US cancelled flight declined travel",
+    "input": {
+      "departure": "us",
+      "arrival": "us",
+      "carrier": "us",
+      "airline": "Unspecified",
+      "flightDate": "2026-10-01",
+      "trigger": "cancellation",
+      "distanceKm": 1200,
+      "arrivalDelayMinutes": 180,
+      "departureDelayMinutes": 0,
+      "cause": "operational",
+      "extraordinaryEvidence": "not_proven",
+      "noticeHours": 0,
+      "confirmedBooking": true,
+      "checkedInOnTime": true,
+      "involuntary": true,
+      "deniedReason": "oversales",
+      "aircraftSeats": 180,
+      "fare": 200,
+      "fareCurrency": "USD",
+      "declinedTravelAndBenefits": true,
+      "overnight": false,
+      "reroutingOffered": false,
+      "reroutedArrivalDelayMinutes": 0,
+      "reroutedDepartureEarlyMinutes": 0,
+      "receivedBenefitsAbroad": false,
+      "singleFlight": true
+    },
+    "expected": {
+      "status": "assessed",
+      "regime": "us",
+      "amount": 0,
+      "currency": null,
+      "entitlements": [
+        "unused_ticket_refund"
+      ]
+    },
+    "verification": "primary_text",
+    "sources": [
+      "source-us-refund-reg",
+      "source-dot-refund"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "scenario-25",
+    "title": "US domestic significant delay declined travel",
+    "input": {
+      "departure": "us",
+      "arrival": "us",
+      "carrier": "us",
+      "airline": "Unspecified",
+      "flightDate": "2026-10-01",
+      "trigger": "arrival_delay",
+      "distanceKm": 1200,
+      "arrivalDelayMinutes": 180,
+      "departureDelayMinutes": 0,
+      "cause": "operational",
+      "extraordinaryEvidence": "not_proven",
+      "noticeHours": 0,
+      "confirmedBooking": true,
+      "checkedInOnTime": true,
+      "involuntary": true,
+      "deniedReason": "oversales",
+      "aircraftSeats": 180,
+      "fare": 200,
+      "fareCurrency": "USD",
+      "declinedTravelAndBenefits": true,
+      "overnight": false,
+      "reroutingOffered": false,
+      "reroutedArrivalDelayMinutes": 0,
+      "reroutedDepartureEarlyMinutes": 0,
+      "receivedBenefitsAbroad": false,
+      "singleFlight": true
+    },
+    "expected": {
+      "status": "assessed",
+      "regime": "us",
+      "amount": 0,
+      "currency": null,
+      "entitlements": [
+        "unused_ticket_refund"
+      ]
+    },
+    "verification": "primary_text",
+    "sources": [
+      "source-us-refund-reg",
+      "source-dot-refund"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "scenario-26",
+    "title": "Delhi to Mumbai: current CAR unverified",
+    "input": {
+      "departure": "in",
+      "arrival": "in",
+      "carrier": "in",
+      "airline": "IndiGo",
+      "flightDate": "2026-10-01",
+      "trigger": "arrival_delay",
+      "distanceKm": 1200,
+      "arrivalDelayMinutes": 180,
+      "departureDelayMinutes": 0,
+      "cause": "operational",
+      "extraordinaryEvidence": "not_proven",
+      "noticeHours": 0,
+      "confirmedBooking": true,
+      "checkedInOnTime": true,
+      "involuntary": true,
+      "deniedReason": "oversales",
+      "aircraftSeats": 180,
+      "fare": 200,
+      "fareCurrency": "USD",
+      "declinedTravelAndBenefits": false,
+      "overnight": false,
+      "reroutingOffered": false,
+      "reroutedArrivalDelayMinutes": 0,
+      "reroutedDepartureEarlyMinutes": 0,
+      "receivedBenefitsAbroad": false,
+      "singleFlight": true
+    },
+    "expected": {
+      "status": "abstain",
+      "regime": "in",
+      "amount": null,
+      "currency": null,
+      "entitlements": []
+    },
+    "verification": "agent_inferred",
+    "sources": [
+      "source-eu261-original"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "scenario-27",
+    "title": "Uncovered foreign domestic route",
+    "input": {
+      "departure": "other",
+      "arrival": "other",
+      "carrier": "other",
+      "airline": "Unspecified",
+      "flightDate": "2026-10-01",
+      "trigger": "arrival_delay",
+      "distanceKm": 1200,
+      "arrivalDelayMinutes": 180,
+      "departureDelayMinutes": 0,
+      "cause": "operational",
+      "extraordinaryEvidence": "not_proven",
+      "noticeHours": 0,
+      "confirmedBooking": true,
+      "checkedInOnTime": true,
+      "involuntary": true,
+      "deniedReason": "oversales",
+      "aircraftSeats": 180,
+      "fare": 200,
+      "fareCurrency": "USD",
+      "declinedTravelAndBenefits": false,
+      "overnight": false,
+      "reroutingOffered": false,
+      "reroutedArrivalDelayMinutes": 0,
+      "reroutedDepartureEarlyMinutes": 0,
+      "receivedBenefitsAbroad": false,
+      "singleFlight": true
+    },
+    "expected": {
+      "status": "abstain",
+      "regime": "uncovered",
+      "amount": null,
+      "currency": null,
+      "entitlements": []
+    },
+    "verification": "agent_inferred",
+    "sources": [
+      "source-eu261-original"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "scenario-28",
+    "title": "EU unknown extraordinary circumstances evidence",
+    "input": {
+      "departure": "eu",
+      "arrival": "other",
+      "carrier": "eu",
+      "airline": "Unspecified",
+      "flightDate": "2026-10-01",
+      "trigger": "arrival_delay",
+      "distanceKm": 1200,
+      "arrivalDelayMinutes": 180,
+      "departureDelayMinutes": 0,
+      "cause": "operational",
+      "extraordinaryEvidence": "unknown",
+      "noticeHours": 0,
+      "confirmedBooking": true,
+      "checkedInOnTime": true,
+      "involuntary": true,
+      "deniedReason": "oversales",
+      "aircraftSeats": 180,
+      "fare": 200,
+      "fareCurrency": "USD",
+      "declinedTravelAndBenefits": false,
+      "overnight": false,
+      "reroutingOffered": false,
+      "reroutedArrivalDelayMinutes": 0,
+      "reroutedDepartureEarlyMinutes": 0,
+      "receivedBenefitsAbroad": false,
+      "singleFlight": true
+    },
+    "expected": {
+      "status": "abstain",
+      "regime": "eu",
+      "amount": null,
+      "currency": null,
+      "entitlements": []
+    },
+    "verification": "agent_inferred",
+    "sources": [
+      "source-eu261-original"
+    ],
+    "split": "dev"
+  },
+  {
+    "id": "scenario-29",
+    "title": "UK care overnight",
+    "input": {
+      "departure": "uk",
+      "arrival": "other",
+      "carrier": "uk",
+      "airline": "Unspecified",
+      "flightDate": "2026-10-01",
+      "trigger": "care",
+      "distanceKm": 1200,
+      "arrivalDelayMinutes": 180,
+      "departureDelayMinutes": 120,
+      "cause": "operational",
+      "extraordinaryEvidence": "not_proven",
+      "noticeHours": 0,
+      "confirmedBooking": true,
+      "checkedInOnTime": true,
+      "involuntary": true,
+      "deniedReason": "oversales",
+      "aircraftSeats": 180,
+      "fare": 200,
+      "fareCurrency": "USD",
+      "declinedTravelAndBenefits": false,
+      "overnight": true,
+      "reroutingOffered": false,
+      "reroutedArrivalDelayMinutes": 0,
+      "reroutedDepartureEarlyMinutes": 0,
+      "receivedBenefitsAbroad": false,
+      "singleFlight": true
+    },
+    "expected": {
+      "status": "assessed",
+      "regime": "uk",
+      "amount": null,
+      "currency": "GBP",
+      "entitlements": [
+        "meals_and_refreshments",
+        "communications",
+        "hotel_and_transport"
+      ]
+    },
+    "verification": "primary_text",
+    "sources": [
+      "source-uk261-xml"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "scenario-30",
+    "title": "US no rerouting higher band",
+    "input": {
+      "departure": "us",
+      "arrival": "us",
+      "carrier": "us",
+      "airline": "Unspecified",
+      "flightDate": "2026-10-01",
+      "trigger": "denied_boarding",
+      "distanceKm": 1200,
+      "arrivalDelayMinutes": 180,
+      "departureDelayMinutes": 0,
+      "cause": "operational",
+      "extraordinaryEvidence": "not_proven",
+      "noticeHours": 0,
+      "confirmedBooking": true,
+      "checkedInOnTime": true,
+      "involuntary": true,
+      "deniedReason": "oversales",
+      "aircraftSeats": 180,
+      "fare": 200,
+      "fareCurrency": "USD",
+      "declinedTravelAndBenefits": false,
+      "overnight": false,
+      "reroutingOffered": false,
+      "reroutedArrivalDelayMinutes": 0,
+      "reroutedDepartureEarlyMinutes": 0,
+      "receivedBenefitsAbroad": false,
+      "singleFlight": true
+    },
+    "expected": {
+      "status": "assessed",
+      "regime": "us",
+      "amount": 800,
+      "currency": "USD",
+      "entitlements": [
+        "compensation"
+      ]
+    },
+    "verification": "primary_text",
+    "sources": [
+      "source-us250"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "scenario-31",
+    "title": "EU and UK both scope an EU\u2013UK flight",
+    "input": {
+      "departure": "eu",
+      "arrival": "uk",
+      "carrier": "uk",
+      "airline": "Unspecified",
+      "flightDate": "2026-10-01",
+      "trigger": "arrival_delay",
+      "distanceKm": 1200,
+      "arrivalDelayMinutes": 180,
+      "departureDelayMinutes": 0,
+      "cause": "operational",
+      "extraordinaryEvidence": "not_proven",
+      "noticeHours": 0,
+      "confirmedBooking": true,
+      "checkedInOnTime": true,
+      "involuntary": true,
+      "deniedReason": "oversales",
+      "aircraftSeats": 180,
+      "fare": 200,
+      "fareCurrency": "USD",
+      "declinedTravelAndBenefits": false,
+      "overnight": false,
+      "reroutingOffered": false,
+      "reroutedArrivalDelayMinutes": 0,
+      "reroutedDepartureEarlyMinutes": 0,
+      "receivedBenefitsAbroad": false,
+      "singleFlight": true
+    },
+    "expected": {
+      "status": "assessed",
+      "regime": "eu",
+      "amount": 250,
+      "currency": "EUR",
+      "entitlements": [
+        "compensation"
+      ],
+      "additional": [
+        {
+          "status": "assessed",
+          "regime": "uk",
+          "amount": 220,
+          "currency": "GBP",
+          "entitlements": [
+            "compensation"
+          ]
+        }
+      ]
+    },
+    "verification": "primary_text",
+    "sources": [
+      "source-eu261-original",
+      "source-uk261-xml"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "scenario-32",
+    "title": "India origin arriving EU on EU carrier",
+    "input": {
+      "departure": "in",
+      "arrival": "eu",
+      "carrier": "eu",
+      "airline": "Unspecified",
+      "flightDate": "2026-10-01",
+      "trigger": "arrival_delay",
+      "distanceKm": 1200,
+      "arrivalDelayMinutes": 180,
+      "departureDelayMinutes": 0,
+      "cause": "operational",
+      "extraordinaryEvidence": "not_proven",
+      "noticeHours": 0,
+      "confirmedBooking": true,
+      "checkedInOnTime": true,
+      "involuntary": true,
+      "deniedReason": "oversales",
+      "aircraftSeats": 180,
+      "fare": 200,
+      "fareCurrency": "USD",
+      "declinedTravelAndBenefits": false,
+      "overnight": false,
+      "reroutingOffered": false,
+      "reroutedArrivalDelayMinutes": 0,
+      "reroutedDepartureEarlyMinutes": 0,
+      "receivedBenefitsAbroad": false,
+      "singleFlight": true
+    },
+    "expected": {
+      "status": "partial",
+      "regime": "eu",
+      "amount": 250,
+      "currency": "EUR",
+      "entitlements": [
+        "compensation"
+      ],
+      "additional": [
+        {
+          "status": "abstain",
+          "regime": "in",
+          "amount": null,
+          "currency": null,
+          "entitlements": []
+        }
+      ]
+    },
+    "verification": "primary_text",
+    "sources": [
+      "source-eu261-original"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "scenario-33",
+    "title": "Indian domestic cancellation gap",
+    "input": {
+      "departure": "in",
+      "arrival": "in",
+      "carrier": "in",
+      "airline": "Air India",
+      "flightDate": "2026-10-01",
+      "trigger": "cancellation",
+      "distanceKm": 1200,
+      "arrivalDelayMinutes": 180,
+      "departureDelayMinutes": 0,
+      "cause": "operational",
+      "extraordinaryEvidence": "not_proven",
+      "noticeHours": 0,
+      "confirmedBooking": true,
+      "checkedInOnTime": true,
+      "involuntary": true,
+      "deniedReason": "oversales",
+      "aircraftSeats": 180,
+      "fare": 200,
+      "fareCurrency": "USD",
+      "declinedTravelAndBenefits": false,
+      "overnight": false,
+      "reroutingOffered": false,
+      "reroutedArrivalDelayMinutes": 0,
+      "reroutedDepartureEarlyMinutes": 0,
+      "receivedBenefitsAbroad": false,
+      "singleFlight": true
+    },
+    "expected": {
+      "status": "abstain",
+      "regime": "in",
+      "amount": null,
+      "currency": null,
+      "entitlements": []
+    },
+    "verification": "agent_inferred",
+    "sources": [
+      "source-eu261-original"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "scenario-34",
+    "title": "Baggage outside scope",
+    "input": {
+      "departure": "eu",
+      "arrival": "other",
+      "carrier": "eu",
+      "airline": "Unspecified",
+      "flightDate": "2026-10-01",
+      "trigger": "baggage",
+      "distanceKm": 1200,
+      "arrivalDelayMinutes": 180,
+      "departureDelayMinutes": 0,
+      "cause": "operational",
+      "extraordinaryEvidence": "not_proven",
+      "noticeHours": 0,
+      "confirmedBooking": true,
+      "checkedInOnTime": true,
+      "involuntary": true,
+      "deniedReason": "oversales",
+      "aircraftSeats": 180,
+      "fare": 200,
+      "fareCurrency": "USD",
+      "declinedTravelAndBenefits": false,
+      "overnight": false,
+      "reroutingOffered": false,
+      "reroutedArrivalDelayMinutes": 0,
+      "reroutedDepartureEarlyMinutes": 0,
+      "receivedBenefitsAbroad": false,
+      "singleFlight": true
+    },
+    "expected": {
+      "status": "abstain",
+      "regime": "eu",
+      "amount": null,
+      "currency": null,
+      "entitlements": []
+    },
+    "verification": "agent_inferred",
+    "sources": [
+      "source-eu261-original"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "scenario-35",
+    "title": "Connecting itinerary outside engine scope",
+    "input": {
+      "departure": "eu",
+      "arrival": "other",
+      "carrier": "eu",
+      "airline": "Unspecified",
+      "flightDate": "2026-10-01",
+      "trigger": "arrival_delay",
+      "distanceKm": 1200,
+      "arrivalDelayMinutes": 180,
+      "departureDelayMinutes": 0,
+      "cause": "operational",
+      "extraordinaryEvidence": "not_proven",
+      "noticeHours": 0,
+      "confirmedBooking": true,
+      "checkedInOnTime": true,
+      "involuntary": true,
+      "deniedReason": "oversales",
+      "aircraftSeats": 180,
+      "fare": 200,
+      "fareCurrency": "USD",
+      "declinedTravelAndBenefits": false,
+      "overnight": false,
+      "reroutingOffered": false,
+      "reroutedArrivalDelayMinutes": 0,
+      "reroutedDepartureEarlyMinutes": 0,
+      "receivedBenefitsAbroad": false,
+      "singleFlight": false
+    },
+    "expected": {
+      "status": "abstain",
+      "regime": "eu",
+      "amount": null,
+      "currency": null,
+      "entitlements": []
+    },
+    "verification": "agent_inferred",
+    "sources": [
+      "source-eu261-original"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "scenario-36",
+    "title": "Denied boarding voluntary surrender",
+    "input": {
+      "departure": "eu",
+      "arrival": "other",
+      "carrier": "eu",
+      "airline": "Unspecified",
+      "flightDate": "2026-10-01",
+      "trigger": "denied_boarding",
+      "distanceKm": 1200,
+      "arrivalDelayMinutes": 180,
+      "departureDelayMinutes": 0,
+      "cause": "operational",
+      "extraordinaryEvidence": "not_proven",
+      "noticeHours": 0,
+      "confirmedBooking": true,
+      "checkedInOnTime": true,
+      "involuntary": false,
+      "deniedReason": "oversales",
+      "aircraftSeats": 180,
+      "fare": 200,
+      "fareCurrency": "USD",
+      "declinedTravelAndBenefits": false,
+      "overnight": false,
+      "reroutingOffered": false,
+      "reroutedArrivalDelayMinutes": 0,
+      "reroutedDepartureEarlyMinutes": 0,
+      "receivedBenefitsAbroad": false,
+      "singleFlight": true
+    },
+    "expected": {
+      "status": "abstain",
+      "regime": "eu",
+      "amount": null,
+      "currency": null,
+      "entitlements": []
+    },
+    "verification": "agent_inferred",
+    "sources": [
+      "source-eu261-original"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "scenario-37",
+    "title": "US inbound oversales outside Part 250 scope",
+    "input": {
+      "departure": "other",
+      "arrival": "us",
+      "carrier": "us",
+      "airline": "Unspecified",
+      "flightDate": "2026-10-01",
+      "trigger": "denied_boarding",
+      "distanceKm": 1200,
+      "arrivalDelayMinutes": 180,
+      "departureDelayMinutes": 0,
+      "cause": "operational",
+      "extraordinaryEvidence": "not_proven",
+      "noticeHours": 0,
+      "confirmedBooking": true,
+      "checkedInOnTime": true,
+      "involuntary": true,
+      "deniedReason": "oversales",
+      "aircraftSeats": 180,
+      "fare": 200,
+      "fareCurrency": "USD",
+      "declinedTravelAndBenefits": false,
+      "overnight": false,
+      "reroutingOffered": false,
+      "reroutedArrivalDelayMinutes": 0,
+      "reroutedDepartureEarlyMinutes": 0,
+      "receivedBenefitsAbroad": false,
+      "singleFlight": true
+    },
+    "expected": {
+      "status": "abstain",
+      "regime": "us",
+      "amount": null,
+      "currency": null,
+      "entitlements": []
+    },
+    "verification": "primary_text",
+    "sources": [
+      "source-us250"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "scenario-38",
+    "title": "EU no confirmed reservation",
+    "input": {
+      "departure": "eu",
+      "arrival": "other",
+      "carrier": "eu",
+      "airline": "Unspecified",
+      "flightDate": "2026-10-01",
+      "trigger": "arrival_delay",
+      "distanceKm": 1200,
+      "arrivalDelayMinutes": 180,
+      "departureDelayMinutes": 0,
+      "cause": "operational",
+      "extraordinaryEvidence": "not_proven",
+      "noticeHours": 0,
+      "confirmedBooking": false,
+      "checkedInOnTime": true,
+      "involuntary": true,
+      "deniedReason": "oversales",
+      "aircraftSeats": 180,
+      "fare": 200,
+      "fareCurrency": "USD",
+      "declinedTravelAndBenefits": false,
+      "overnight": false,
+      "reroutingOffered": false,
+      "reroutedArrivalDelayMinutes": 0,
+      "reroutedDepartureEarlyMinutes": 0,
+      "receivedBenefitsAbroad": false,
+      "singleFlight": true
+    },
+    "expected": {
+      "status": "abstain",
+      "regime": "eu",
+      "amount": null,
+      "currency": null,
+      "entitlements": []
+    },
+    "verification": "primary_text",
+    "sources": [
+      "source-eu261-original"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "scenario-39",
+    "title": "UK historical unverified version",
+    "input": {
+      "departure": "uk",
+      "arrival": "other",
+      "carrier": "uk",
+      "airline": "Unspecified",
+      "flightDate": "2020-01-01",
+      "trigger": "arrival_delay",
+      "distanceKm": 1200,
+      "arrivalDelayMinutes": 180,
+      "departureDelayMinutes": 0,
+      "cause": "operational",
+      "extraordinaryEvidence": "not_proven",
+      "noticeHours": 0,
+      "confirmedBooking": true,
+      "checkedInOnTime": true,
+      "involuntary": true,
+      "deniedReason": "oversales",
+      "aircraftSeats": 180,
+      "fare": 200,
+      "fareCurrency": "USD",
+      "declinedTravelAndBenefits": false,
+      "overnight": false,
+      "reroutingOffered": false,
+      "reroutedArrivalDelayMinutes": 0,
+      "reroutedDepartureEarlyMinutes": 0,
+      "receivedBenefitsAbroad": false,
+      "singleFlight": true
+    },
+    "expected": {
+      "status": "abstain",
+      "regime": "uk",
+      "amount": null,
+      "currency": null,
+      "entitlements": []
+    },
+    "verification": "agent_inferred",
+    "sources": [
+      "source-uk261-xml"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "scenario-40",
+    "title": "EU check-in missed",
+    "input": {
+      "departure": "eu",
+      "arrival": "other",
+      "carrier": "eu",
+      "airline": "Unspecified",
+      "flightDate": "2026-10-01",
+      "trigger": "arrival_delay",
+      "distanceKm": 1200,
+      "arrivalDelayMinutes": 180,
+      "departureDelayMinutes": 0,
+      "cause": "operational",
+      "extraordinaryEvidence": "not_proven",
+      "noticeHours": 0,
+      "confirmedBooking": true,
+      "checkedInOnTime": false,
+      "involuntary": true,
+      "deniedReason": "oversales",
+      "aircraftSeats": 180,
+      "fare": 200,
+      "fareCurrency": "USD",
+      "declinedTravelAndBenefits": false,
+      "overnight": false,
+      "reroutingOffered": false,
+      "reroutedArrivalDelayMinutes": 0,
+      "reroutedDepartureEarlyMinutes": 0,
+      "receivedBenefitsAbroad": false,
+      "singleFlight": true
+    },
+    "expected": {
+      "status": "abstain",
+      "regime": "eu",
+      "amount": null,
+      "currency": null,
+      "entitlements": []
+    },
+    "verification": "primary_text",
+    "sources": [
+      "source-eu261-original"
+    ],
+    "split": "test"
+  }
+]
