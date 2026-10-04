@@ -10,9 +10,9 @@
       "Community carrier"
     ],
     "uk261-xml": [
-      "\u00a3220",
-      "\u00a3350",
-      "\u00a3520",
+      "£220",
+      "£350",
+      "£520",
       "three hours or more",
       "UK air carrier"
     ],
@@ -43,8 +43,32 @@
       "$2,150"
     ]
   },
-  "publicDocuments": 57,
-  "privateDocuments": 36,
+  "publicDocuments": 73,
+  "privateDocuments": 42,
   "livePublished": false,
-  "method": "Manual primary-text review with reproducible anchor checks; official court summaries are labeled, not full judgments."
+  "method": "Manual primary-text review with reproducible anchor checks; official court summaries are labeled, not full judgments.",
+  "india": {
+    "checkedAt": "2026-10-04",
+    "partIV": {
+      "revision": 4,
+      "dated": "2023-01-25",
+      "effectiveFrom": "2023-02-15",
+      "paragraphs": [
+        "3.2",
+        "3.3",
+        "3.4",
+        "3.6",
+        "3.8",
+        "3.9",
+        "3.10"
+      ]
+    },
+    "partII": {
+      "revision": 3,
+      "dated": "2026-02-24",
+      "effectiveFrom": "2026-03-26"
+    },
+    "baggage": "Individual loss/scope analysis; caps are not payouts",
+    "published": true
+  }
 }

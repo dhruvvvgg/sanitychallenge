@@ -19,6 +19,15 @@ export const scenarioSchema = z.object({
   reroutingOffered: z.boolean(), reroutedArrivalDelayMinutes: z.number().min(0).max(100000),
   reroutedDepartureEarlyMinutes: z.number().min(0).max(100000),
   receivedBenefitsAbroad: z.boolean(), singleFlight: z.boolean(),
+  blockTimeMinutes: z.number().int().positive().max(2000).optional(),
+  basicFareAndFuelINR: z.number().finite().min(0).max(1000000).optional(),
+  alternateDepartureDelayMinutes: z.number().int().min(0).max(100000).optional(),
+  acceptedAlternate: z.enum(['yes','no','unknown']).default('unknown'),
+  contactProvided: z.enum(['yes','no','unknown']).default('unknown'),
+  scheduledNightDeparture: z.enum(['yes','no','unknown']).default('unknown'),
+  sameTicketConnection: z.enum(['yes','no','unknown']).default('unknown'),
+  disruptedFirstLeg: z.enum(['yes','no','unknown']).default('unknown'),
+  missedConnection: z.enum(['yes','no','unknown']).default('unknown'),
 });
 export type Scenario = z.infer<typeof scenarioSchema>;
 export type Ref = {_type:'reference'; _ref:string};

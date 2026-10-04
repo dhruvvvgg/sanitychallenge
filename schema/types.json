@@ -256,7 +256,8 @@
             "cancellation",
             "denied_boarding",
             "care",
-            "refund"
+            "refund",
+            "baggage"
           ]
         }
       },
@@ -388,6 +389,31 @@
           {
             "name": "internationalRefundMinutes",
             "title": "internationalRefundMinutes",
+            "type": "number"
+          },
+          {
+            "name": "shortBlockMinutes",
+            "title": "shortBlockMinutes",
+            "type": "number"
+          },
+          {
+            "name": "mediumBlockMinutes",
+            "title": "mediumBlockMinutes",
+            "type": "number"
+          },
+          {
+            "name": "hotelMinutes",
+            "title": "hotelMinutes",
+            "type": "number"
+          },
+          {
+            "name": "nightHotelMinutes",
+            "title": "nightHotelMinutes",
+            "type": "number"
+          },
+          {
+            "name": "connectionMinutes",
+            "title": "connectionMinutes",
             "type": "number"
           }
         ]

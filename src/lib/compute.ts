@@ -1,4 +1,5 @@
 import type {Dataset,Scenario,Finding,Ruling,Regime,Rule,Band} from './types';
+import {assessIndia} from './india';
 const anyMatch = (values:string[],v:string) => values.includes('*') || values.includes(v);
 export function applies(regime:Regime,s:Scenario) {
   return regime.applicability.alternatives.some(a=>anyMatch(a.departure,s.departure)&&anyMatch(a.arrival,s.arrival)&&anyMatch(a.carriers,s.carrier));
@@ -22,8 +23,9 @@ export function compute_entitlement(s:Scenario,data:Dataset):Ruling {
  for(const regime of matching) {
   const f:Finding={regime:regime.key,status:'assessed',eligible:false,amount:0,currency:null,amountLabel:'No fixed compensation',entitlements:[],met:[],unmet:[],uncertainties:[],ruleIds:[],sourceIds:regime.sources.map(r=>r._ref)};
   findings.push(f);
-  if(s.trigger==='baggage'||!s.singleFlight) {unknown(f,s.trigger==='baggage'?'Baggage is outside this corpus.':'Connecting itineraries need a separate scope analysis; this engine covers single flights.');continue;}
+  if(regime.key!=='in'&&(s.trigger==='baggage'||!s.singleFlight)) {unknown(f,s.trigger==='baggage'?'Baggage is outside this regime’s calculation; Indian baggage guidance is available for India routes.':'Connecting itineraries outside the supported Indian CAR cases need separate scope analysis.');continue;}
   if(s.flightDate > new Date().toISOString().slice(0,10)) {unknown(f,'Future flight: rules have not been verified for that date.');continue;}
+  if(regime.key==='in') {assessIndia(s,data,f);continue;}
   if(!s.eligibleTicketAndAircraft) {unknown(f,'Non-public concession/staff fares or non-covered aircraft need individual scope review.');continue;}
   if(!s.confirmedBooking || (!s.checkedInOnTime && s.trigger!=='cancellation')) {unknown(f,'Confirmed reservation and applicable check-in conditions are not established.');continue;}
   f.met.push('Route and operating-carrier scope match','Confirmed reservation');
@@ -105,7 +107,7 @@ export function compute_entitlement(s:Scenario,data:Dataset):Ruling {
     f.amountLabel='No general fixed delay award; airline commitments may add rights';
     f.uncertainties.push('Airline-specific care commitments and non-time schedule changes are not adjudicated here.');
    }
-  } else unknown(f,'Current DGCA CAR revision could not be verified; Indian entitlements are not determined.');
+  } else unknown(f,'No supported calculation for this regime.');
  }
  if(!findings.length) findings.push({regime:'uncovered',status:'abstain',eligible:null,amount:null,currency:null,amountLabel:'Not determined',entitlements:[],met:[],unmet:[],uncertainties:['No regime in the verified corpus covers this route and carrier.'],sourceIds:[],ruleIds:[]});
  for(const f of findings) {
