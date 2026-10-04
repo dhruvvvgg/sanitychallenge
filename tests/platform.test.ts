@@ -4,9 +4,15 @@ import {initialContextUrl,SanityContextAdapter} from '../src/lib/context';
 import {readJson,rateLimit} from '../src/lib/guards';
 import {scenarioSchema} from '../src/lib/types';
 import examples from '../data/examples/questions.json';
-import {selectModel,validateAgentObservation} from '../src/lib/agent';
+import {selectModel,validateAgentObservation,providerFailureHints} from '../src/lib/agent';
+import {APICallError} from 'ai';
 afterEach(()=>{vi.unstubAllEnvs();vi.unstubAllGlobals();vi.restoreAllMocks();});
 describe('Capabilities and explicit transport errors',()=>{
+ it('classifies provider failures without returning raw errors or secrets',()=>{
+  const error=new APICallError({message:'Function calling with a response mime type application/json is unsupported: test-secret',url:'https://example.org/?key=test-secret',requestBodyValues:{},statusCode:400});
+  expect(providerFailureHints(error)).toEqual(['structured-output','function-calling','unsupported']);
+  expect(providerFailureHints(new Error('test-secret'))).toEqual([]);
+ });
  it('reads Gemini and FULL bindings from the deployment environment at request time',()=>{
   vi.stubEnv('GOOGLE_GENERATIVE_AI_API_KEY','');
   vi.stubEnv('ANTHROPIC_API_KEY','');

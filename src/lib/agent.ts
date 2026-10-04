@@ -12,6 +12,20 @@ import {getDossier} from './content';
 import type {Scenario,Dataset,Ruling} from './types';
 export const observations=['The structured conditions and source authority were reviewed.','The available evidence leaves a coverage gap.','The carrier defense needs independent evidence.','Overlapping protections require separate claims review.'] as const;
 export function validateAgentObservation(value:unknown):string {return z.enum(observations).parse(value);}
+export function providerFailureHints(error:unknown):string[] {
+ if(!APICallError.isInstance(error))return [];
+ // Classify known provider errors into fixed labels; never emit the message/body.
+ const message=error.message;
+ return [
+  [/response.?mime|response.?schema|structured.?output|application\/json/i,'structured-output'],
+  [/function.?call|tool.?choice|function.?declaration/i,'function-calling'],
+  [/schema|parameters|properties|enum|required/i,'schema'],
+  [/thinking/i,'thinking'],
+  [/max.?output.?tokens|token.?limit/i,'token-limit'],
+  [/quota|resource.?exhausted/i,'quota'],
+  [/unsupported|not supported/i,'unsupported'],
+ ].filter(([pattern])=>(pattern as RegExp).test(message)).map(([,label])=>label as string);
+}
 export function selectModel():LanguageModel {
  const c=getCapabilities();
  if(c.provider==='google')return google(process.env.LLM_MODEL || 'gemini-3.8-flash');
@@ -59,7 +73,7 @@ export async function agentRuling(s:Scenario,adapter?:ContextAdapter):Promise<{r
   if(annotation===observations[1]&&computed.status==='assessed'||annotation===observations[2]&&s.extraordinaryEvidence!=='unknown'||annotation===observations[3]&&computed.findings.length<2)throw new Error('Agent observation disagrees with computed findings');
   return {ruling:computed,annotation,toolCalls:calls};
  } catch(error) {
-  console.error('Ruling agent failed',{stage,statusCode:APICallError.isInstance(error)?error.statusCode:undefined});
+  console.error('Ruling agent failed',{stage,statusCode:APICallError.isInstance(error)?error.statusCode:undefined,hints:providerFailureHints(error)});
   throw error;
  } finally {await session?.close();}
 }
