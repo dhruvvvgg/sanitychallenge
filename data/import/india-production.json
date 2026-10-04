@@ -48,8 +48,10 @@
     "url": "https://www.dgca.gov.in/digigov-portal/Upload?attachId=we1PSlOuQhYdHcwKKrm7ew%3D%3D&flag=iframeAttachView",
     "publisher": "Directorate General of Civil Aviation, India",
     "authorityTier": 1,
-    "retrievedAt": "2026-10-04T14:00:00.000Z",
-    "licenseNote": "Official source reviewed 4 October 2026. The linked version and its effective date control; baggage limits are not automatic awards."
+    "retrievedAt": "2026-10-04T14:06:40.716Z",
+    "licenseNote": "Official source reviewed 4 October 2026. The linked version and its effective date control; baggage limits are not automatic awards.",
+    "sha256": "3b4b50844edc6a46099cce3b94626d29b03f90ccc61318aa1aa2db6d0fa3ff4a",
+    "evidencePath": "data/sources/source-dgca-part-iv.pdf"
   },
   {
     "_id": "source-dgca-part-ii-2026",
@@ -58,8 +60,10 @@
     "url": "https://www.dgca.gov.in/digigov-portal/Upload?attachId=cuYJ%2FdQQ6Gx93z%2Fwchd5xw%3D%3D&flag=iframeAttachView",
     "publisher": "Directorate General of Civil Aviation, India",
     "authorityTier": 1,
-    "retrievedAt": "2026-10-04T14:00:00.000Z",
-    "licenseNote": "Official source reviewed 4 October 2026. The linked version and its effective date control; baggage limits are not automatic awards."
+    "retrievedAt": "2026-10-04T14:06:44.090Z",
+    "licenseNote": "Official source reviewed 4 October 2026. The linked version and its effective date control; baggage limits are not automatic awards.",
+    "sha256": "558ecee1d535b63023dd8bd37f0de10d08e7eb82a37ec48817ec1d613ff09281",
+    "evidencePath": "data/sources/source-dgca-part-ii-2026.pdf"
   },
   {
     "_id": "source-india-carriage-act",
@@ -88,8 +92,10 @@
     "url": "https://www.civilaviation.gov.in/sites/default/files/2025-11/passenger-charter-moca-india-feb-2019-133.pdf",
     "publisher": "Ministry of Civil Aviation, India",
     "authorityTier": 2,
-    "retrievedAt": "2026-10-04T14:00:00.000Z",
-    "licenseNote": "2019 official guidance, still hosted by MoCA. Its international SDR figures are outdated: use the current ICAO revision. Domestic guidance is not a substitute for individual statutory liability analysis."
+    "retrievedAt": "2026-10-04T14:06:44.553Z",
+    "licenseNote": "2019 official guidance, still hosted by MoCA. Its international SDR figures are outdated: use the current ICAO revision. Domestic guidance is not a substitute for individual statutory liability analysis.",
+    "sha256": "a57fbc80eafd38ffa6e0cc264f79b35d9c2563969e3a4d13b50f931e9904f1ac",
+    "evidencePath": "data/sources/source-india-passenger-charter.pdf"
   },
   {
     "_id": "band-in-cancel-0",

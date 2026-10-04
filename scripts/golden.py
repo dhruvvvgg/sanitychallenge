@@ -36,7 +36,7 @@ case('US long band statutory cap', {**us,'reroutedArrivalDelayMinutes':180,'fare
 case('US international exactly four hours', {**us,'arrival':'other','reroutedArrivalDelayMinutes':240},E(800,regime='us',currency='USD'),sources=['source-us250'])
 case('US cancelled flight declined travel', {'departure':'us','arrival':'us','carrier':'us','trigger':'cancellation','declinedTravelAndBenefits':True},E(0,['unused_ticket_refund'],regime='us',currency=None),sources=['source-us-refund-reg','source-dot-refund'])
 case('US domestic significant delay declined travel', {'departure':'us','arrival':'us','carrier':'us','arrivalDelayMinutes':180,'declinedTravelAndBenefits':True},E(0,['unused_ticket_refund'],regime='us',currency=None),sources=['source-us-refund-reg','source-dot-refund'])
-case('Delhi to Mumbai: current CAR unverified',{'departure':'in','arrival':'in','carrier':'in','airline':'IndiGo'},E(None,regime='in',currency=None,status='abstain'),'agent_inferred',[])
+case('Delhi to Mumbai: block time missing',{'departure':'in','arrival':'in','carrier':'in','airline':'IndiGo'},E(None,regime='in',currency=None,status='abstain'),'agent_inferred',[])
 case('Uncovered foreign domestic route',{'departure':'other','arrival':'other','carrier':'other'},E(None,regime='uncovered',currency=None,status='abstain'),'agent_inferred',[])
 case('EU unknown extraordinary circumstances evidence',{'extraordinaryEvidence':'unknown'},E(None,currency=None,status='abstain'),'agent_inferred')
 # Held-out test set: frozen before tests/evaluation. No fitting to observed outputs.
@@ -46,7 +46,8 @@ case('EU and UK both scope an EU–UK flight',{'departure':'eu','arrival':'uk','
 cases[-1]['expected']['additional']=[E(220,regime='uk',currency='GBP')]
 case('India origin arriving EU on EU carrier',{'departure':'in','arrival':'eu','carrier':'eu'},E(250,regime='eu',currency='EUR',status='partial'),'primary_text',['source-eu261-original'])
 cases[-1]['expected']['additional']=[E(None,regime='in',currency=None,status='abstain')]
-case('Indian domestic cancellation gap',{'departure':'in','arrival':'in','carrier':'in','trigger':'cancellation','airline':'Air India'},E(None,regime='in',currency=None,status='abstain'),'agent_inferred',[])
+# CAR coverage extension: refund choice is established; cash facts remain absent.
+case('Indian cancellation: refund choice, missing cash facts',{'departure':'in','arrival':'in','carrier':'in','trigger':'cancellation','airline':'Air India'},E(None,['refund_or_rerouting_choice'],regime='in',currency=None,status='abstain'),'primary_text',['source-dgca-part-iv','source-dgca-part-ii-2026'])
 case('Baggage outside scope',{'trigger':'baggage'},E(None,currency=None,status='abstain'),'agent_inferred')
 case('Connecting itinerary outside engine scope',{'singleFlight':False},E(None,currency=None,status='abstain'),'agent_inferred')
 case('Denied boarding voluntary surrender',{'trigger':'denied_boarding','involuntary':False},E(None,currency=None,status='abstain'),'agent_inferred')

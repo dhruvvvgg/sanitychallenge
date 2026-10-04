@@ -11,6 +11,11 @@ const act=source('source-india-carriage-act','Carriage by Air Act 1972 — Third
 const icao=source('source-montreal-limits-2024','ICAO: Montreal Convention liability limits effective 28 December 2024','https://www.icao.int/sites/default/files/secretariat/legal/LEB%20Treaty%20Collection%20Documents/2024_Revised_Limits_of_Liability_Under_the_Montreal_Convention_of_1999_en.pdf','International Civil Aviation Organization');
 const charter=source('source-india-passenger-charter','Ministry of Civil Aviation Passenger Charter — domestic baggage guidance','https://www.civilaviation.gov.in/sites/default/files/2025-11/passenger-charter-moca-india-feb-2019-133.pdf','Ministry of Civil Aviation, India',2);
 charter.licenseNote='2019 official guidance, still hosted by MoCA. Its international SDR figures are outdated: use the current ICAO revision. Domestic guidance is not a substitute for individual statutory liability analysis.';
+const evidenceRecords=JSON.parse(await readFile(path.join(root,'data/india-retrieval.json'),'utf8').catch(()=>'[]'));
+for(const d of [iv,ii,act,icao,charter]){
+ const record=evidenceRecords.find(r=>r.id===d._id&&r.status==='fetched');
+ if(record)Object.assign(d,{sha256:record.sha256,evidencePath:record.path,retrievedAt:record.retrievedAt});
+}
 const band=(id,dimension,min,max,value,extra={})=>({_id:id,_type:'entitlementBand',regime:ref('regime-in'),dimension,min,max,value,currency:'INR',source:ref(iv._id),...extra});
 const bands=[band('band-in-cancel-0','block_time_minutes',0,60,5000),band('band-in-cancel-1','block_time_minutes',60,120,7500),band('band-in-cancel-2','block_time_minutes',120,null,10000),band('band-in-denied-0','fare_percentage',0,null,200,{multiplier:2,cap:10000}),band('band-in-denied-1','fare_percentage',0,null,400,{multiplier:4,cap:20000})];
 const rule=(trigger,paraphrase,thresholds={},ids=[],sources=[iv._id],effectiveFrom='2023-02-15')=>({_id:`rule-in-${trigger}`,_type:'rule',title:`India: ${trigger.replaceAll('_',' ')}`,regime:ref('regime-in'),trigger,algorithm:`in_${trigger}`,verified:true,verificationStatus:'primary_text_reviewed_2026-10-04',effectiveFrom,paraphrase,thresholds,conditions:['Covered India route','Confirmed reservation and applicable check-in','Basic fare plus fuel charge, not total tax-inclusive fare','Specific CAR conditions; foreign-carrier and damages claims may require review'],entitlements:[],bands:ids.map(ref),sources:sources.map(ref),claimDeadline:'CAR redress: airline, nodal/appellate officer, AirSewa, then competent statutory body/court. Limitation depends on remedy; no universal deadline asserted.'});
@@ -37,5 +42,11 @@ export async function prepareIndia(){
  }
  await writeFile(path.join(root,'data/import/india-production.json'),JSON.stringify([indiaRegime,...indiaDocuments],null,2)+'\n');
  await writeFile(path.join(root,'data/import/india-corpus.json'),JSON.stringify(indiaCorpus,null,2)+'\n');
+ const file=path.join(root,'data/verification.json');
+ const verification=JSON.parse(await readFile(file,'utf8'));
+ verification.india={checkedAt:'2026-10-04',partIV:{revision:4,dated:'2023-01-25',effectiveFrom:'2023-02-15',paragraphs:['3.2','3.3','3.4','3.6','3.8','3.9','3.10']},partII:{revision:3,dated:'2026-02-24',effectiveFrom:'2026-03-26'},baggage:'Individual loss/scope analysis; caps are not payouts'};
+ verification.publicDocuments=JSON.parse(await readFile(path.join(root,'data/production.json'),'utf8')).length;
+ verification.privateDocuments=JSON.parse(await readFile(path.join(root,'data/corpus.json'),'utf8')).length;
+ await writeFile(file,JSON.stringify(verification,null,2)+'\n');
 }
 if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url)){await prepareIndia();console.log('Prepared verified Indian sources, bands, rules and corpus summaries.');}

@@ -9,7 +9,7 @@ async function main(){
  const html=await (await request('/')).text();if(!html.includes('Disruption')||!html.includes('DETERMINISTIC')&&!html.includes('STRUCTURED')&&!html.includes('FULL'))throw new Error('Missing app/mode badge');
  const source=examples[0];const result=await (await request('/api/ruling',scenarioSchema.parse(source.input))).json();
  if(result.ruling.findings[0].amount!==250||result.ruling.sources.length===0)throw new Error('Expected sourced short-route EU ruling');
- const gap=await (await request('/api/ruling',examples.find(e=>e.input.departure==='in')!.input)).json();if(gap.ruling.status!=='abstain')throw new Error('Missing Indian conditions must abstain');
+ const gap=await (await request('/api/ruling',scenarioSchema.parse({...source.input,departure:'in',arrival:'in',carrier:'in',trigger:'cancellation'}))).json();if(gap.ruling.status!=='abstain')throw new Error('Missing Indian conditions must abstain');
  const india=scenarioSchema.parse({...source.input,departure:'in',arrival:'in',carrier:'in',trigger:'cancellation',blockTimeMinutes:60,basicFareAndFuelINR:6000,contactProvided:'yes',acceptedAlternate:'no'});
  const indian=await (await request('/api/ruling',india)).json();if(indian.ruling.findings[0].amount!==5000)throw new Error('Verified CAR cancellation calculation failed');
  const search=await (await request('/api/search',{query:'refund'})).json();if(!search.matches.length)throw new Error('No refund search results');

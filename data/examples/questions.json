@@ -30,7 +30,13 @@
       "reroutedArrivalDelayMinutes": 0,
       "reroutedDepartureEarlyMinutes": 0,
       "receivedBenefitsAbroad": false,
-      "singleFlight": true
+      "singleFlight": true,
+      "acceptedAlternate": "unknown",
+      "contactProvided": "unknown",
+      "scheduledNightDeparture": "unknown",
+      "sameTicketConnection": "unknown",
+      "disruptedFirstLeg": "unknown",
+      "missedConnection": "unknown"
     },
     "ruling": {
       "status": "assessed",
@@ -154,7 +160,13 @@
       "reroutedArrivalDelayMinutes": 0,
       "reroutedDepartureEarlyMinutes": 0,
       "receivedBenefitsAbroad": false,
-      "singleFlight": true
+      "singleFlight": true,
+      "acceptedAlternate": "unknown",
+      "contactProvided": "unknown",
+      "scheduledNightDeparture": "unknown",
+      "sameTicketConnection": "unknown",
+      "disruptedFirstLeg": "unknown",
+      "missedConnection": "unknown"
     },
     "ruling": {
       "status": "assessed",
@@ -280,7 +292,13 @@
       "reroutedArrivalDelayMinutes": 0,
       "reroutedDepartureEarlyMinutes": 0,
       "receivedBenefitsAbroad": false,
-      "singleFlight": true
+      "singleFlight": true,
+      "acceptedAlternate": "unknown",
+      "contactProvided": "unknown",
+      "scheduledNightDeparture": "unknown",
+      "sameTicketConnection": "unknown",
+      "disruptedFirstLeg": "unknown",
+      "missedConnection": "unknown"
     },
     "ruling": {
       "status": "assessed",
@@ -367,7 +385,13 @@
       "reroutedArrivalDelayMinutes": 0,
       "reroutedDepartureEarlyMinutes": 0,
       "receivedBenefitsAbroad": false,
-      "singleFlight": true
+      "singleFlight": true,
+      "acceptedAlternate": "unknown",
+      "contactProvided": "unknown",
+      "scheduledNightDeparture": "unknown",
+      "sameTicketConnection": "unknown",
+      "disruptedFirstLeg": "unknown",
+      "missedConnection": "unknown"
     },
     "ruling": {
       "status": "assessed",
@@ -452,7 +476,13 @@
       "reroutedArrivalDelayMinutes": 120,
       "reroutedDepartureEarlyMinutes": 0,
       "receivedBenefitsAbroad": false,
-      "singleFlight": true
+      "singleFlight": true,
+      "acceptedAlternate": "unknown",
+      "contactProvided": "unknown",
+      "scheduledNightDeparture": "unknown",
+      "sameTicketConnection": "unknown",
+      "disruptedFirstLeg": "unknown",
+      "missedConnection": "unknown"
     },
     "ruling": {
       "status": "assessed",
@@ -607,7 +637,13 @@
       "reroutedArrivalDelayMinutes": 0,
       "reroutedDepartureEarlyMinutes": 0,
       "receivedBenefitsAbroad": false,
-      "singleFlight": true
+      "singleFlight": true,
+      "acceptedAlternate": "unknown",
+      "contactProvided": "unknown",
+      "scheduledNightDeparture": "unknown",
+      "sameTicketConnection": "unknown",
+      "disruptedFirstLeg": "unknown",
+      "missedConnection": "unknown"
     },
     "ruling": {
       "status": "assessed",
@@ -700,7 +736,7 @@
   },
   {
     "id": "scenario-26",
-    "question": "Delhi to Mumbai: current CAR unverified",
+    "question": "Delhi to Mumbai: late cancellation",
     "label": "precomputed",
     "input": {
       "departure": "in",
@@ -708,7 +744,7 @@
       "carrier": "in",
       "airline": "IndiGo",
       "flightDate": "2026-10-01",
-      "trigger": "arrival_delay",
+      "trigger": "cancellation",
       "distanceKm": 1200,
       "arrivalDelayMinutes": 180,
       "departureDelayMinutes": 0,
@@ -729,33 +765,76 @@
       "reroutedArrivalDelayMinutes": 0,
       "reroutedDepartureEarlyMinutes": 0,
       "receivedBenefitsAbroad": false,
-      "singleFlight": true
+      "singleFlight": true,
+      "blockTimeMinutes": 60,
+      "basicFareAndFuelINR": 6000,
+      "acceptedAlternate": "no",
+      "contactProvided": "yes",
+      "scheduledNightDeparture": "unknown",
+      "sameTicketConnection": "unknown",
+      "disruptedFirstLeg": "unknown",
+      "missedConnection": "unknown"
     },
     "ruling": {
-      "status": "abstain",
+      "status": "assessed",
       "findings": [
         {
           "regime": "in",
-          "status": "abstain",
-          "eligible": null,
-          "amount": null,
-          "currency": null,
-          "amountLabel": "Not determined",
-          "entitlements": [],
+          "status": "assessed",
+          "eligible": true,
+          "amount": 5000,
+          "currency": "INR",
+          "amountLabel": "CAR compensation; ticket refund is separate",
+          "entitlements": [
+            "refund_or_rerouting_choice",
+            "unused_ticket_refund",
+            "compensation"
+          ],
           "met": [
-            "Route and operating-carrier scope match",
-            "Confirmed reservation",
-            "Check-in deadline met"
+            "India route within CAR scope",
+            "Confirmed reservation"
           ],
           "unmet": [],
           "uncertainties": [
-            "No verified rule for this disruption and date in the current corpus."
+            "Claim with the operating airline first; escalate to its nodal/appellate officer and AirSewa. Statutory bodies or courts remain available under applicable law.",
+            "Refund process: credit-card refunds within seven days; cash immediately at the selling airline office; agent/portal refunds within 14 working days. Credit shells are the passenger’s choice. Refundable statutory taxes/airport charges apply even to non-refundable fares."
           ],
-          "ruleIds": [],
-          "sourceIds": []
+          "ruleIds": [
+            "rule-in-cancellation",
+            "rule-in-refund"
+          ],
+          "sourceIds": [
+            "source-dgca-part-iv",
+            "source-dgca-part-ii-2026"
+          ]
         }
       ],
-      "sources": [],
+      "sources": [
+        {
+          "_id": "source-dgca-part-iv",
+          "_type": "source",
+          "title": "DGCA CAR Section 3 Series M Part IV, Rev.4 (25 January 2023), effective 15 February 2023",
+          "url": "https://www.dgca.gov.in/digigov-portal/Upload?attachId=we1PSlOuQhYdHcwKKrm7ew%3D%3D&flag=iframeAttachView",
+          "publisher": "Directorate General of Civil Aviation, India",
+          "authorityTier": 1,
+          "retrievedAt": "2026-10-04T14:06:40.716Z",
+          "licenseNote": "Official source reviewed 4 October 2026. The linked version and its effective date control; baggage limits are not automatic awards.",
+          "sha256": "3b4b50844edc6a46099cce3b94626d29b03f90ccc61318aa1aa2db6d0fa3ff4a",
+          "evidencePath": "data/sources/source-dgca-part-iv.pdf"
+        },
+        {
+          "_id": "source-dgca-part-ii-2026",
+          "_type": "source",
+          "title": "DGCA ticket refunds, Part II Rev.3 (24 February 2026), effective 26 March 2026",
+          "url": "https://www.dgca.gov.in/digigov-portal/Upload?attachId=cuYJ%2FdQQ6Gx93z%2Fwchd5xw%3D%3D&flag=iframeAttachView",
+          "publisher": "Directorate General of Civil Aviation, India",
+          "authorityTier": 1,
+          "retrievedAt": "2026-10-04T14:06:44.090Z",
+          "licenseNote": "Official source reviewed 4 October 2026. The linked version and its effective date control; baggage limits are not automatic awards.",
+          "sha256": "558ecee1d535b63023dd8bd37f0de10d08e7eb82a37ec48817ec1d613ff09281",
+          "evidencePath": "data/sources/source-dgca-part-ii-2026.pdf"
+        }
+      ],
       "conflicts": [],
       "computedBy": "compute_entitlement",
       "notice": "Information, not legal advice. Conditional on the facts supplied. Separate overlapping regimes are not additive; do not recover twice for the same loss."
@@ -792,7 +871,13 @@
       "reroutedArrivalDelayMinutes": 0,
       "reroutedDepartureEarlyMinutes": 0,
       "receivedBenefitsAbroad": false,
-      "singleFlight": true
+      "singleFlight": true,
+      "acceptedAlternate": "unknown",
+      "contactProvided": "unknown",
+      "scheduledNightDeparture": "unknown",
+      "sameTicketConnection": "unknown",
+      "disruptedFirstLeg": "unknown",
+      "missedConnection": "unknown"
     },
     "ruling": {
       "status": "assessed",

@@ -1,0 +1,44 @@
+[
+  {
+    "id": "source-dgca-part-iv",
+    "url": "https://www.dgca.gov.in/digigov-portal/Upload?attachId=we1PSlOuQhYdHcwKKrm7ew%3D%3D&flag=iframeAttachView",
+    "resolvedUrl": "https://www.dgca.gov.in/digigov-portal/Upload?attachId=we1PSlOuQhYdHcwKKrm7ew%3D%3D&flag=iframeAttachView",
+    "status": "fetched",
+    "bytes": 285108,
+    "sha256": "3b4b50844edc6a46099cce3b94626d29b03f90ccc61318aa1aa2db6d0fa3ff4a",
+    "contentType": "application/pdf",
+    "path": "data/sources/source-dgca-part-iv.pdf",
+    "retrievedAt": "2026-10-04T14:06:40.716Z"
+  },
+  {
+    "id": "source-dgca-part-ii-2026",
+    "url": "https://www.dgca.gov.in/digigov-portal/Upload?attachId=cuYJ%2FdQQ6Gx93z%2Fwchd5xw%3D%3D&flag=iframeAttachView",
+    "resolvedUrl": "https://www.dgca.gov.in/digigov-portal/Upload?attachId=cuYJ%2FdQQ6Gx93z%2Fwchd5xw%3D%3D&flag=iframeAttachView",
+    "status": "fetched",
+    "bytes": 2754578,
+    "sha256": "558ecee1d535b63023dd8bd37f0de10d08e7eb82a37ec48817ec1d613ff09281",
+    "contentType": "application/pdf",
+    "path": "data/sources/source-dgca-part-ii-2026.pdf",
+    "retrievedAt": "2026-10-04T14:06:44.090Z"
+  },
+  {
+    "id": "source-india-carriage-act",
+    "status": "TimeoutError"
+  },
+  {
+    "id": "source-montreal-limits-2024",
+    "status": "not_downloaded",
+    "http": 403
+  },
+  {
+    "id": "source-india-passenger-charter",
+    "url": "https://www.civilaviation.gov.in/sites/default/files/2025-11/passenger-charter-moca-india-feb-2019-133.pdf",
+    "resolvedUrl": "https://www.civilaviation.gov.in/sites/default/files/2025-11/passenger-charter-moca-india-feb-2019-133.pdf",
+    "status": "fetched",
+    "bytes": 1838840,
+    "sha256": "a57fbc80eafd38ffa6e0cc264f79b35d9c2563969e3a4d13b50f931e9904f1ac",
+    "contentType": "application/pdf",
+    "path": "data/sources/source-india-passenger-charter.pdf",
+    "retrievedAt": "2026-10-04T14:06:44.553Z"
+  }
+]

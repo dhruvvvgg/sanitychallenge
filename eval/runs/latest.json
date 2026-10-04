@@ -1,6 +1,6 @@
 {
   "summary": {
-    "time": "2026-10-02T21:44:18.659Z",
+    "time": "2026-10-04T14:09:29.104Z",
     "capabilities": {
       "mode": "DETERMINISTIC",
       "provider": null,
@@ -15,15 +15,15 @@
     },
     "expectedAbstentions": 12,
     "hashes": {
-      "scenarios": "76b973e089fc7e7ab7a2f06eb1b9a87b4ab50b7130a0c157fc4e717f26b53f37",
-      "production": "540f76cbf39d342fccb0668c04e568d7c30b7198d3d78d0c23e0de9147eb86e7",
-      "corpus": "a5c36fb0f7ae0d8f64eb1a6e6aa7ec0cc0d1a31e5de984cbfb1d4a71770f20e0"
+      "scenarios": "03ccd1bbe53dc52002dc0f24d2dedf3f59d0eb05382e90382f926657b87278e0",
+      "production": "632c3cf97867c2aca9e036061b4d78257dbf8152eb71869711c478f6434fb62e",
+      "corpus": "57caec281e91279fb5fab436dfb2d94b7b5f95a8838c1404bea4552c3ba5cea9"
     },
     "modes": {
       "D": {
         "status": "ran",
         "backend": "LOCAL_SNAPSHOT",
-        "primaryCount": 32,
+        "primaryCount": 33,
         "eligibility": 1,
         "amount": 1,
         "entitlementF1": 1,
@@ -40,7 +40,7 @@
           "allCaseCorrectAbstention": 1
         },
         "test": {
-          "primaryCount": 7,
+          "primaryCount": 8,
           "eligibility": 1,
           "amount": 1,
           "entitlementF1": 1,
@@ -53,50 +53,48 @@
       "B1": {
         "status": "ran",
         "backend": "LOCAL_SNAPSHOT",
-        "primaryCount": 32,
-        "eligibility": 0.46875,
-        "amount": 0.4375,
-        "entitlementF1": 0.484375,
+        "primaryCount": 33,
+        "eligibility": 0.6060606060606061,
+        "amount": 0.5757575757575758,
+        "entitlementF1": 0.5303030303030303,
         "citationValidity": 1,
-        "correctAbstention": 0.46875,
-        "allCaseCorrectAbstention": 0.575,
+        "correctAbstention": 0.5757575757575758,
+        "allCaseCorrectAbstention": 0.65,
         "dev": {
           "primaryCount": 25,
-          "eligibility": 0.4,
-          "amount": 0.4,
-          "entitlementF1": 0.44,
+          "eligibility": 0.52,
+          "amount": 0.52,
+          "entitlementF1": 0.48,
           "citationValidity": 1,
-          "correctAbstention": 0.4,
-          "allCaseCorrectAbstention": 0.4642857142857143
+          "correctAbstention": 0.52,
+          "allCaseCorrectAbstention": 0.5714285714285714
         },
         "test": {
-          "primaryCount": 7,
-          "eligibility": 0.7142857142857143,
-          "amount": 0.5714285714285714,
-          "entitlementF1": 0.6428571428571429,
+          "primaryCount": 8,
+          "eligibility": 0.875,
+          "amount": 0.75,
+          "entitlementF1": 0.6875,
           "citationValidity": 1,
-          "correctAbstention": 0.7142857142857143,
+          "correctAbstention": 0.75,
           "allCaseCorrectAbstention": 0.8333333333333334
         },
         "failures": [
-          "scenario-02",
-          "scenario-03",
-          "scenario-04",
-          "scenario-05",
-          "scenario-06",
-          "scenario-07",
           "scenario-08",
+          "scenario-09",
           "scenario-10",
-          "scenario-11",
+          "scenario-12",
           "scenario-13",
           "scenario-14",
           "scenario-15",
           "scenario-16",
           "scenario-17",
-          "scenario-24",
+          "scenario-20",
+          "scenario-21",
+          "scenario-22",
+          "scenario-23",
           "scenario-29",
           "scenario-31",
-          "scenario-32"
+          "scenario-33"
         ]
       }
     },
@@ -2403,19 +2401,52 @@
               "amountLabel": "Not determined",
               "entitlements": [],
               "met": [
-                "Route and operating-carrier scope match",
-                "Confirmed reservation",
-                "Check-in deadline met"
+                "India route within CAR scope",
+                "Confirmed reservation"
               ],
               "unmet": [],
               "uncertainties": [
-                "No verified rule for this disruption and date in the current corpus."
+                "Claim with the operating airline first; escalate to its nodal/appellate officer and AirSewa. Statutory bodies or courts remain available under applicable law.",
+                "Refund process: credit-card refunds within seven days; cash immediately at the selling airline office; agent/portal refunds within 14 working days. Credit shells are the passenger’s choice. Refundable statutory taxes/airport charges apply even to non-refundable fares.",
+                "Supply scheduled block time to assess the departure-delay care threshold."
               ],
-              "ruleIds": [],
-              "sourceIds": []
+              "ruleIds": [
+                "rule-in-arrival_delay",
+                "rule-in-refund",
+                "rule-in-care"
+              ],
+              "sourceIds": [
+                "source-dgca-part-iv",
+                "source-dgca-part-ii-2026"
+              ]
             }
           ],
-          "sources": [],
+          "sources": [
+            {
+              "_id": "source-dgca-part-iv",
+              "_type": "source",
+              "title": "DGCA CAR Section 3 Series M Part IV, Rev.4 (25 January 2023), effective 15 February 2023",
+              "url": "https://www.dgca.gov.in/digigov-portal/Upload?attachId=we1PSlOuQhYdHcwKKrm7ew%3D%3D&flag=iframeAttachView",
+              "publisher": "Directorate General of Civil Aviation, India",
+              "authorityTier": 1,
+              "retrievedAt": "2026-10-04T14:06:40.716Z",
+              "licenseNote": "Official source reviewed 4 October 2026. The linked version and its effective date control; baggage limits are not automatic awards.",
+              "sha256": "3b4b50844edc6a46099cce3b94626d29b03f90ccc61318aa1aa2db6d0fa3ff4a",
+              "evidencePath": "data/sources/source-dgca-part-iv.pdf"
+            },
+            {
+              "_id": "source-dgca-part-ii-2026",
+              "_type": "source",
+              "title": "DGCA ticket refunds, Part II Rev.3 (24 February 2026), effective 26 March 2026",
+              "url": "https://www.dgca.gov.in/digigov-portal/Upload?attachId=cuYJ%2FdQQ6Gx93z%2Fwchd5xw%3D%3D&flag=iframeAttachView",
+              "publisher": "Directorate General of Civil Aviation, India",
+              "authorityTier": 1,
+              "retrievedAt": "2026-10-04T14:06:44.090Z",
+              "licenseNote": "Official source reviewed 4 October 2026. The linked version and its effective date control; baggage limits are not automatic awards.",
+              "sha256": "558ecee1d535b63023dd8bd37f0de10d08e7eb82a37ec48817ec1d613ff09281",
+              "evidencePath": "data/sources/source-dgca-part-ii-2026.pdf"
+            }
+          ],
           "conflicts": [],
           "computedBy": "compute_entitlement",
           "notice": "Information, not legal advice. Conditional on the facts supplied. Separate overlapping regimes are not additive; do not recover twice for the same loss."
@@ -2424,7 +2455,7 @@
           "eligibility": true,
           "amount": true,
           "entitlementF1": 1,
-          "citationValidity": null,
+          "citationValidity": 1,
           "abstention": true,
           "status": true
         }
@@ -2923,16 +2954,24 @@
               "amountLabel": "Not determined",
               "entitlements": [],
               "met": [
-                "Route and operating-carrier scope match",
-                "Confirmed reservation",
-                "Check-in deadline met"
+                "India route within CAR scope",
+                "Confirmed reservation"
               ],
               "unmet": [],
               "uncertainties": [
-                "No verified rule for this disruption and date in the current corpus."
+                "Claim with the operating airline first; escalate to its nodal/appellate officer and AirSewa. Statutory bodies or courts remain available under applicable law.",
+                "Refund process: credit-card refunds within seven days; cash immediately at the selling airline office; agent/portal refunds within 14 working days. Credit shells are the passenger’s choice. Refundable statutory taxes/airport charges apply even to non-refundable fares.",
+                "Supply scheduled block time to assess the departure-delay care threshold."
               ],
-              "ruleIds": [],
-              "sourceIds": []
+              "ruleIds": [
+                "rule-in-arrival_delay",
+                "rule-in-refund",
+                "rule-in-care"
+              ],
+              "sourceIds": [
+                "source-dgca-part-iv",
+                "source-dgca-part-ii-2026"
+              ]
             }
           ],
           "sources": [
@@ -2983,6 +3022,30 @@
               "licenseNote": "Official court press summary; not full judgment. Full judgment could not be retrieved.",
               "evidencePath": "data/sources/nelson-press.pdf",
               "sha256": "14fed6111575541526ec9c8c4239ecbca695acbcb0fc2b94b92d838d0edc7620"
+            },
+            {
+              "_id": "source-dgca-part-iv",
+              "_type": "source",
+              "title": "DGCA CAR Section 3 Series M Part IV, Rev.4 (25 January 2023), effective 15 February 2023",
+              "url": "https://www.dgca.gov.in/digigov-portal/Upload?attachId=we1PSlOuQhYdHcwKKrm7ew%3D%3D&flag=iframeAttachView",
+              "publisher": "Directorate General of Civil Aviation, India",
+              "authorityTier": 1,
+              "retrievedAt": "2026-10-04T14:06:40.716Z",
+              "licenseNote": "Official source reviewed 4 October 2026. The linked version and its effective date control; baggage limits are not automatic awards.",
+              "sha256": "3b4b50844edc6a46099cce3b94626d29b03f90ccc61318aa1aa2db6d0fa3ff4a",
+              "evidencePath": "data/sources/source-dgca-part-iv.pdf"
+            },
+            {
+              "_id": "source-dgca-part-ii-2026",
+              "_type": "source",
+              "title": "DGCA ticket refunds, Part II Rev.3 (24 February 2026), effective 26 March 2026",
+              "url": "https://www.dgca.gov.in/digigov-portal/Upload?attachId=cuYJ%2FdQQ6Gx93z%2Fwchd5xw%3D%3D&flag=iframeAttachView",
+              "publisher": "Directorate General of Civil Aviation, India",
+              "authorityTier": 1,
+              "retrievedAt": "2026-10-04T14:06:44.090Z",
+              "licenseNote": "Official source reviewed 4 October 2026. The linked version and its effective date control; baggage limits are not automatic awards.",
+              "sha256": "558ecee1d535b63023dd8bd37f0de10d08e7eb82a37ec48817ec1d613ff09281",
+              "evidencePath": "data/sources/source-dgca-part-ii-2026.pdf"
             }
           ],
           "conflicts": [],
@@ -3001,7 +3064,7 @@
       {
         "id": "scenario-33",
         "split": "test",
-        "verification": "agent_inferred",
+        "verification": "primary_text",
         "ruling": {
           "status": "abstain",
           "findings": [
@@ -3012,20 +3075,55 @@
               "amount": null,
               "currency": null,
               "amountLabel": "Not determined",
-              "entitlements": [],
+              "entitlements": [
+                "refund_or_rerouting_choice"
+              ],
               "met": [
-                "Route and operating-carrier scope match",
+                "India route within CAR scope",
                 "Confirmed reservation"
               ],
               "unmet": [],
               "uncertainties": [
-                "No verified rule for this disruption and date in the current corpus."
+                "Claim with the operating airline first; escalate to its nodal/appellate officer and AirSewa. Statutory bodies or courts remain available under applicable law.",
+                "Refund process: credit-card refunds within seven days; cash immediately at the selling airline office; agent/portal refunds within 14 working days. Credit shells are the passenger’s choice. Refundable statutory taxes/airport charges apply even to non-refundable fares.",
+                "Confirm booking contact information and whether you chose an alternative flight."
               ],
-              "ruleIds": [],
-              "sourceIds": []
+              "ruleIds": [
+                "rule-in-cancellation",
+                "rule-in-refund"
+              ],
+              "sourceIds": [
+                "source-dgca-part-iv",
+                "source-dgca-part-ii-2026"
+              ]
             }
           ],
-          "sources": [],
+          "sources": [
+            {
+              "_id": "source-dgca-part-iv",
+              "_type": "source",
+              "title": "DGCA CAR Section 3 Series M Part IV, Rev.4 (25 January 2023), effective 15 February 2023",
+              "url": "https://www.dgca.gov.in/digigov-portal/Upload?attachId=we1PSlOuQhYdHcwKKrm7ew%3D%3D&flag=iframeAttachView",
+              "publisher": "Directorate General of Civil Aviation, India",
+              "authorityTier": 1,
+              "retrievedAt": "2026-10-04T14:06:40.716Z",
+              "licenseNote": "Official source reviewed 4 October 2026. The linked version and its effective date control; baggage limits are not automatic awards.",
+              "sha256": "3b4b50844edc6a46099cce3b94626d29b03f90ccc61318aa1aa2db6d0fa3ff4a",
+              "evidencePath": "data/sources/source-dgca-part-iv.pdf"
+            },
+            {
+              "_id": "source-dgca-part-ii-2026",
+              "_type": "source",
+              "title": "DGCA ticket refunds, Part II Rev.3 (24 February 2026), effective 26 March 2026",
+              "url": "https://www.dgca.gov.in/digigov-portal/Upload?attachId=cuYJ%2FdQQ6Gx93z%2Fwchd5xw%3D%3D&flag=iframeAttachView",
+              "publisher": "Directorate General of Civil Aviation, India",
+              "authorityTier": 1,
+              "retrievedAt": "2026-10-04T14:06:44.090Z",
+              "licenseNote": "Official source reviewed 4 October 2026. The linked version and its effective date control; baggage limits are not automatic awards.",
+              "sha256": "558ecee1d535b63023dd8bd37f0de10d08e7eb82a37ec48817ec1d613ff09281",
+              "evidencePath": "data/sources/source-dgca-part-ii-2026.pdf"
+            }
+          ],
           "conflicts": [],
           "computedBy": "compute_entitlement",
           "notice": "Information, not legal advice. Conditional on the facts supplied. Separate overlapping regimes are not additive; do not recover twice for the same loss."
@@ -3034,7 +3132,7 @@
           "eligibility": true,
           "amount": true,
           "entitlementF1": 1,
-          "citationValidity": null,
+          "citationValidity": 1,
           "abstention": true,
           "status": true
         }
@@ -3057,7 +3155,7 @@
               "met": [],
               "unmet": [],
               "uncertainties": [
-                "Baggage is outside this corpus."
+                "Baggage is outside this regime’s calculation; Indian baggage guidance is available for India routes."
               ],
               "ruleIds": [],
               "sourceIds": [
@@ -3110,7 +3208,7 @@
               "met": [],
               "unmet": [],
               "uncertainties": [
-                "Connecting itineraries need a separate scope analysis; this engine covers single flights."
+                "Connecting itineraries outside the supported Indian CAR cases need separate scope analysis."
               ],
               "ruleIds": [],
               "sourceIds": [
@@ -3571,28 +3669,34 @@
         "split": "dev",
         "verification": "primary_text",
         "ruling": {
-          "status": "abstain",
+          "status": "assessed",
           "findings": [
             {
               "regime": "eu",
-              "status": "abstain",
-              "eligible": null,
-              "amount": null,
-              "currency": null,
-              "amountLabel": "Not determined",
-              "entitlements": [],
+              "status": "assessed",
+              "eligible": true,
+              "amount": 250,
+              "currency": "EUR",
+              "amountLabel": "Statutory compensation",
+              "entitlements": [
+                "compensation"
+              ],
               "met": [
                 "Route and operating-carrier scope match",
                 "Confirmed reservation",
-                "Check-in deadline met"
+                "Check-in deadline met",
+                "No proven extraordinary-circumstances defense"
               ],
               "unmet": [],
-              "uncertainties": [
-                "No verified rule for this disruption and date in the current corpus."
+              "uncertainties": [],
+              "ruleIds": [
+                "rule-eu-arrival_delay"
               ],
-              "ruleIds": [],
               "sourceIds": [
-                "source-eu261-original"
+                "source-eu261-original",
+                "source-sturgeon-press",
+                "source-nelson-press",
+                "source-eu-your-europe"
               ]
             }
           ],
@@ -3608,6 +3712,42 @@
               "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
               "evidencePath": "data/sources/eu261-original.html",
               "sha256": "ff76adac01a5dab1985da50820c5b9fb588f2c3cfa93e50171690ba55f76f601"
+            },
+            {
+              "_id": "source-eu-your-europe",
+              "_type": "source",
+              "title": "Your Europe: air passenger rights",
+              "url": "https://europa.eu/youreurope/citizens/travel/passenger-rights/air/index_en.htm",
+              "publisher": "European Commission",
+              "authorityTier": 2,
+              "retrievedAt": "2026-10-02T20:57:34.735914+00:00",
+              "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
+              "evidencePath": "data/sources/eu-your-europe.html",
+              "sha256": "8ec534d7b4dae1a868071149ecd32dfd6515d260b6ab981b6d873c960a210387"
+            },
+            {
+              "_id": "source-sturgeon-press",
+              "_type": "source",
+              "title": "Sturgeon, C-402/07 and C-432/07 — official court announcement",
+              "url": "https://curia.europa.eu/jcms/upload/docs/application/pdf/2009-11/cp090102en.pdf",
+              "publisher": "Court of Justice of the European Union",
+              "authorityTier": 3,
+              "retrievedAt": "2026-10-02T21:00:09.904863+00:00",
+              "licenseNote": "Official court press summary; not full judgment. Full judgment could not be retrieved.",
+              "evidencePath": "data/sources/sturgeon-press.pdf",
+              "sha256": "76c87515b41782c6b1090999beaf6758eb613231de5bdba1a94343a5589bb718"
+            },
+            {
+              "_id": "source-nelson-press",
+              "_type": "source",
+              "title": "Nelson, C-581/10 and C-629/10 — official court announcement",
+              "url": "https://curia.europa.eu/jcms/upload/docs/application/pdf/2012-10/cp120135en.pdf",
+              "publisher": "Court of Justice of the European Union",
+              "authorityTier": 3,
+              "retrievedAt": "2026-10-02T21:00:09.690270+00:00",
+              "licenseNote": "Official court press summary; not full judgment. Full judgment could not be retrieved.",
+              "evidencePath": "data/sources/nelson-press.pdf",
+              "sha256": "14fed6111575541526ec9c8c4239ecbca695acbcb0fc2b94b92d838d0edc7620"
             }
           ],
           "conflicts": [],
@@ -3615,12 +3755,12 @@
           "notice": "Information, not legal advice. Conditional on the facts supplied. Separate overlapping regimes are not additive; do not recover twice for the same loss."
         },
         "metrics": {
-          "eligibility": false,
-          "amount": false,
-          "entitlementF1": 0,
+          "eligibility": true,
+          "amount": true,
+          "entitlementF1": 1,
           "citationValidity": 1,
-          "abstention": false,
-          "status": false
+          "abstention": true,
+          "status": true
         }
       },
       {
@@ -3628,28 +3768,34 @@
         "split": "dev",
         "verification": "primary_text",
         "ruling": {
-          "status": "abstain",
+          "status": "assessed",
           "findings": [
             {
               "regime": "eu",
-              "status": "abstain",
-              "eligible": null,
-              "amount": null,
-              "currency": null,
-              "amountLabel": "Not determined",
-              "entitlements": [],
+              "status": "assessed",
+              "eligible": true,
+              "amount": 400,
+              "currency": "EUR",
+              "amountLabel": "Statutory compensation",
+              "entitlements": [
+                "compensation"
+              ],
               "met": [
                 "Route and operating-carrier scope match",
                 "Confirmed reservation",
-                "Check-in deadline met"
+                "Check-in deadline met",
+                "No proven extraordinary-circumstances defense"
               ],
               "unmet": [],
-              "uncertainties": [
-                "No verified rule for this disruption and date in the current corpus."
+              "uncertainties": [],
+              "ruleIds": [
+                "rule-eu-arrival_delay"
               ],
-              "ruleIds": [],
               "sourceIds": [
-                "source-eu261-original"
+                "source-eu261-original",
+                "source-sturgeon-press",
+                "source-nelson-press",
+                "source-eu-your-europe"
               ]
             }
           ],
@@ -3665,6 +3811,42 @@
               "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
               "evidencePath": "data/sources/eu261-original.html",
               "sha256": "ff76adac01a5dab1985da50820c5b9fb588f2c3cfa93e50171690ba55f76f601"
+            },
+            {
+              "_id": "source-eu-your-europe",
+              "_type": "source",
+              "title": "Your Europe: air passenger rights",
+              "url": "https://europa.eu/youreurope/citizens/travel/passenger-rights/air/index_en.htm",
+              "publisher": "European Commission",
+              "authorityTier": 2,
+              "retrievedAt": "2026-10-02T20:57:34.735914+00:00",
+              "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
+              "evidencePath": "data/sources/eu-your-europe.html",
+              "sha256": "8ec534d7b4dae1a868071149ecd32dfd6515d260b6ab981b6d873c960a210387"
+            },
+            {
+              "_id": "source-sturgeon-press",
+              "_type": "source",
+              "title": "Sturgeon, C-402/07 and C-432/07 — official court announcement",
+              "url": "https://curia.europa.eu/jcms/upload/docs/application/pdf/2009-11/cp090102en.pdf",
+              "publisher": "Court of Justice of the European Union",
+              "authorityTier": 3,
+              "retrievedAt": "2026-10-02T21:00:09.904863+00:00",
+              "licenseNote": "Official court press summary; not full judgment. Full judgment could not be retrieved.",
+              "evidencePath": "data/sources/sturgeon-press.pdf",
+              "sha256": "76c87515b41782c6b1090999beaf6758eb613231de5bdba1a94343a5589bb718"
+            },
+            {
+              "_id": "source-nelson-press",
+              "_type": "source",
+              "title": "Nelson, C-581/10 and C-629/10 — official court announcement",
+              "url": "https://curia.europa.eu/jcms/upload/docs/application/pdf/2012-10/cp120135en.pdf",
+              "publisher": "Court of Justice of the European Union",
+              "authorityTier": 3,
+              "retrievedAt": "2026-10-02T21:00:09.690270+00:00",
+              "licenseNote": "Official court press summary; not full judgment. Full judgment could not be retrieved.",
+              "evidencePath": "data/sources/nelson-press.pdf",
+              "sha256": "14fed6111575541526ec9c8c4239ecbca695acbcb0fc2b94b92d838d0edc7620"
             }
           ],
           "conflicts": [],
@@ -3672,12 +3854,12 @@
           "notice": "Information, not legal advice. Conditional on the facts supplied. Separate overlapping regimes are not additive; do not recover twice for the same loss."
         },
         "metrics": {
-          "eligibility": false,
-          "amount": false,
-          "entitlementF1": 0,
+          "eligibility": true,
+          "amount": true,
+          "entitlementF1": 1,
           "citationValidity": 1,
-          "abstention": false,
-          "status": false
+          "abstention": true,
+          "status": true
         }
       },
       {
@@ -3685,28 +3867,34 @@
         "split": "dev",
         "verification": "primary_text",
         "ruling": {
-          "status": "abstain",
+          "status": "assessed",
           "findings": [
             {
               "regime": "eu",
-              "status": "abstain",
-              "eligible": null,
-              "amount": null,
-              "currency": null,
-              "amountLabel": "Not determined",
-              "entitlements": [],
+              "status": "assessed",
+              "eligible": true,
+              "amount": 400,
+              "currency": "EUR",
+              "amountLabel": "Statutory compensation",
+              "entitlements": [
+                "compensation"
+              ],
               "met": [
                 "Route and operating-carrier scope match",
                 "Confirmed reservation",
-                "Check-in deadline met"
+                "Check-in deadline met",
+                "No proven extraordinary-circumstances defense"
               ],
               "unmet": [],
-              "uncertainties": [
-                "No verified rule for this disruption and date in the current corpus."
+              "uncertainties": [],
+              "ruleIds": [
+                "rule-eu-arrival_delay"
               ],
-              "ruleIds": [],
               "sourceIds": [
-                "source-eu261-original"
+                "source-eu261-original",
+                "source-sturgeon-press",
+                "source-nelson-press",
+                "source-eu-your-europe"
               ]
             }
           ],
@@ -3722,6 +3910,42 @@
               "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
               "evidencePath": "data/sources/eu261-original.html",
               "sha256": "ff76adac01a5dab1985da50820c5b9fb588f2c3cfa93e50171690ba55f76f601"
+            },
+            {
+              "_id": "source-eu-your-europe",
+              "_type": "source",
+              "title": "Your Europe: air passenger rights",
+              "url": "https://europa.eu/youreurope/citizens/travel/passenger-rights/air/index_en.htm",
+              "publisher": "European Commission",
+              "authorityTier": 2,
+              "retrievedAt": "2026-10-02T20:57:34.735914+00:00",
+              "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
+              "evidencePath": "data/sources/eu-your-europe.html",
+              "sha256": "8ec534d7b4dae1a868071149ecd32dfd6515d260b6ab981b6d873c960a210387"
+            },
+            {
+              "_id": "source-sturgeon-press",
+              "_type": "source",
+              "title": "Sturgeon, C-402/07 and C-432/07 — official court announcement",
+              "url": "https://curia.europa.eu/jcms/upload/docs/application/pdf/2009-11/cp090102en.pdf",
+              "publisher": "Court of Justice of the European Union",
+              "authorityTier": 3,
+              "retrievedAt": "2026-10-02T21:00:09.904863+00:00",
+              "licenseNote": "Official court press summary; not full judgment. Full judgment could not be retrieved.",
+              "evidencePath": "data/sources/sturgeon-press.pdf",
+              "sha256": "76c87515b41782c6b1090999beaf6758eb613231de5bdba1a94343a5589bb718"
+            },
+            {
+              "_id": "source-nelson-press",
+              "_type": "source",
+              "title": "Nelson, C-581/10 and C-629/10 — official court announcement",
+              "url": "https://curia.europa.eu/jcms/upload/docs/application/pdf/2012-10/cp120135en.pdf",
+              "publisher": "Court of Justice of the European Union",
+              "authorityTier": 3,
+              "retrievedAt": "2026-10-02T21:00:09.690270+00:00",
+              "licenseNote": "Official court press summary; not full judgment. Full judgment could not be retrieved.",
+              "evidencePath": "data/sources/nelson-press.pdf",
+              "sha256": "14fed6111575541526ec9c8c4239ecbca695acbcb0fc2b94b92d838d0edc7620"
             }
           ],
           "conflicts": [],
@@ -3729,12 +3953,12 @@
           "notice": "Information, not legal advice. Conditional on the facts supplied. Separate overlapping regimes are not additive; do not recover twice for the same loss."
         },
         "metrics": {
-          "eligibility": false,
-          "amount": false,
-          "entitlementF1": 0,
+          "eligibility": true,
+          "amount": true,
+          "entitlementF1": 1,
           "citationValidity": 1,
-          "abstention": false,
-          "status": false
+          "abstention": true,
+          "status": true
         }
       },
       {
@@ -3742,28 +3966,34 @@
         "split": "dev",
         "verification": "primary_text",
         "ruling": {
-          "status": "abstain",
+          "status": "assessed",
           "findings": [
             {
               "regime": "eu",
-              "status": "abstain",
-              "eligible": null,
-              "amount": null,
-              "currency": null,
-              "amountLabel": "Not determined",
-              "entitlements": [],
+              "status": "assessed",
+              "eligible": true,
+              "amount": 600,
+              "currency": "EUR",
+              "amountLabel": "Statutory compensation",
+              "entitlements": [
+                "compensation"
+              ],
               "met": [
                 "Route and operating-carrier scope match",
                 "Confirmed reservation",
-                "Check-in deadline met"
+                "Check-in deadline met",
+                "No proven extraordinary-circumstances defense"
               ],
               "unmet": [],
-              "uncertainties": [
-                "No verified rule for this disruption and date in the current corpus."
+              "uncertainties": [],
+              "ruleIds": [
+                "rule-eu-arrival_delay"
               ],
-              "ruleIds": [],
               "sourceIds": [
-                "source-eu261-original"
+                "source-eu261-original",
+                "source-sturgeon-press",
+                "source-nelson-press",
+                "source-eu-your-europe"
               ]
             }
           ],
@@ -3779,6 +4009,42 @@
               "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
               "evidencePath": "data/sources/eu261-original.html",
               "sha256": "ff76adac01a5dab1985da50820c5b9fb588f2c3cfa93e50171690ba55f76f601"
+            },
+            {
+              "_id": "source-eu-your-europe",
+              "_type": "source",
+              "title": "Your Europe: air passenger rights",
+              "url": "https://europa.eu/youreurope/citizens/travel/passenger-rights/air/index_en.htm",
+              "publisher": "European Commission",
+              "authorityTier": 2,
+              "retrievedAt": "2026-10-02T20:57:34.735914+00:00",
+              "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
+              "evidencePath": "data/sources/eu-your-europe.html",
+              "sha256": "8ec534d7b4dae1a868071149ecd32dfd6515d260b6ab981b6d873c960a210387"
+            },
+            {
+              "_id": "source-sturgeon-press",
+              "_type": "source",
+              "title": "Sturgeon, C-402/07 and C-432/07 — official court announcement",
+              "url": "https://curia.europa.eu/jcms/upload/docs/application/pdf/2009-11/cp090102en.pdf",
+              "publisher": "Court of Justice of the European Union",
+              "authorityTier": 3,
+              "retrievedAt": "2026-10-02T21:00:09.904863+00:00",
+              "licenseNote": "Official court press summary; not full judgment. Full judgment could not be retrieved.",
+              "evidencePath": "data/sources/sturgeon-press.pdf",
+              "sha256": "76c87515b41782c6b1090999beaf6758eb613231de5bdba1a94343a5589bb718"
+            },
+            {
+              "_id": "source-nelson-press",
+              "_type": "source",
+              "title": "Nelson, C-581/10 and C-629/10 — official court announcement",
+              "url": "https://curia.europa.eu/jcms/upload/docs/application/pdf/2012-10/cp120135en.pdf",
+              "publisher": "Court of Justice of the European Union",
+              "authorityTier": 3,
+              "retrievedAt": "2026-10-02T21:00:09.690270+00:00",
+              "licenseNote": "Official court press summary; not full judgment. Full judgment could not be retrieved.",
+              "evidencePath": "data/sources/nelson-press.pdf",
+              "sha256": "14fed6111575541526ec9c8c4239ecbca695acbcb0fc2b94b92d838d0edc7620"
             }
           ],
           "conflicts": [],
@@ -3786,12 +4052,12 @@
           "notice": "Information, not legal advice. Conditional on the facts supplied. Separate overlapping regimes are not additive; do not recover twice for the same loss."
         },
         "metrics": {
-          "eligibility": false,
-          "amount": false,
-          "entitlementF1": 0,
+          "eligibility": true,
+          "amount": true,
+          "entitlementF1": 1,
           "citationValidity": 1,
-          "abstention": false,
-          "status": false
+          "abstention": true,
+          "status": true
         }
       },
       {
@@ -3799,28 +4065,34 @@
         "split": "dev",
         "verification": "primary_text",
         "ruling": {
-          "status": "abstain",
+          "status": "assessed",
           "findings": [
             {
               "regime": "eu",
-              "status": "abstain",
-              "eligible": null,
-              "amount": null,
-              "currency": null,
-              "amountLabel": "Not determined",
-              "entitlements": [],
+              "status": "assessed",
+              "eligible": true,
+              "amount": 400,
+              "currency": "EUR",
+              "amountLabel": "Statutory compensation",
+              "entitlements": [
+                "compensation"
+              ],
               "met": [
                 "Route and operating-carrier scope match",
                 "Confirmed reservation",
-                "Check-in deadline met"
+                "Check-in deadline met",
+                "No proven extraordinary-circumstances defense"
               ],
               "unmet": [],
-              "uncertainties": [
-                "No verified rule for this disruption and date in the current corpus."
+              "uncertainties": [],
+              "ruleIds": [
+                "rule-eu-arrival_delay"
               ],
-              "ruleIds": [],
               "sourceIds": [
-                "source-eu261-original"
+                "source-eu261-original",
+                "source-sturgeon-press",
+                "source-nelson-press",
+                "source-eu-your-europe"
               ]
             }
           ],
@@ -3836,6 +4108,42 @@
               "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
               "evidencePath": "data/sources/eu261-original.html",
               "sha256": "ff76adac01a5dab1985da50820c5b9fb588f2c3cfa93e50171690ba55f76f601"
+            },
+            {
+              "_id": "source-eu-your-europe",
+              "_type": "source",
+              "title": "Your Europe: air passenger rights",
+              "url": "https://europa.eu/youreurope/citizens/travel/passenger-rights/air/index_en.htm",
+              "publisher": "European Commission",
+              "authorityTier": 2,
+              "retrievedAt": "2026-10-02T20:57:34.735914+00:00",
+              "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
+              "evidencePath": "data/sources/eu-your-europe.html",
+              "sha256": "8ec534d7b4dae1a868071149ecd32dfd6515d260b6ab981b6d873c960a210387"
+            },
+            {
+              "_id": "source-sturgeon-press",
+              "_type": "source",
+              "title": "Sturgeon, C-402/07 and C-432/07 — official court announcement",
+              "url": "https://curia.europa.eu/jcms/upload/docs/application/pdf/2009-11/cp090102en.pdf",
+              "publisher": "Court of Justice of the European Union",
+              "authorityTier": 3,
+              "retrievedAt": "2026-10-02T21:00:09.904863+00:00",
+              "licenseNote": "Official court press summary; not full judgment. Full judgment could not be retrieved.",
+              "evidencePath": "data/sources/sturgeon-press.pdf",
+              "sha256": "76c87515b41782c6b1090999beaf6758eb613231de5bdba1a94343a5589bb718"
+            },
+            {
+              "_id": "source-nelson-press",
+              "_type": "source",
+              "title": "Nelson, C-581/10 and C-629/10 — official court announcement",
+              "url": "https://curia.europa.eu/jcms/upload/docs/application/pdf/2012-10/cp120135en.pdf",
+              "publisher": "Court of Justice of the European Union",
+              "authorityTier": 3,
+              "retrievedAt": "2026-10-02T21:00:09.690270+00:00",
+              "licenseNote": "Official court press summary; not full judgment. Full judgment could not be retrieved.",
+              "evidencePath": "data/sources/nelson-press.pdf",
+              "sha256": "14fed6111575541526ec9c8c4239ecbca695acbcb0fc2b94b92d838d0edc7620"
             }
           ],
           "conflicts": [],
@@ -3843,12 +4151,12 @@
           "notice": "Information, not legal advice. Conditional on the facts supplied. Separate overlapping regimes are not additive; do not recover twice for the same loss."
         },
         "metrics": {
-          "eligibility": false,
-          "amount": false,
-          "entitlementF1": 0,
+          "eligibility": true,
+          "amount": true,
+          "entitlementF1": 1,
           "citationValidity": 1,
-          "abstention": false,
-          "status": false
+          "abstention": true,
+          "status": true
         }
       },
       {
@@ -3856,28 +4164,33 @@
         "split": "dev",
         "verification": "primary_text",
         "ruling": {
-          "status": "abstain",
+          "status": "assessed",
           "findings": [
             {
               "regime": "eu",
-              "status": "abstain",
-              "eligible": null,
-              "amount": null,
-              "currency": null,
-              "amountLabel": "Not determined",
+              "status": "assessed",
+              "eligible": false,
+              "amount": 0,
+              "currency": "EUR",
+              "amountLabel": "No fixed compensation",
               "entitlements": [],
               "met": [
                 "Route and operating-carrier scope match",
                 "Confirmed reservation",
                 "Check-in deadline met"
               ],
-              "unmet": [],
-              "uncertainties": [
-                "No verified rule for this disruption and date in the current corpus."
+              "unmet": [
+                "Arrival delay below compensation threshold"
               ],
-              "ruleIds": [],
+              "uncertainties": [],
+              "ruleIds": [
+                "rule-eu-arrival_delay"
+              ],
               "sourceIds": [
-                "source-eu261-original"
+                "source-eu261-original",
+                "source-sturgeon-press",
+                "source-nelson-press",
+                "source-eu-your-europe"
               ]
             }
           ],
@@ -3893,6 +4206,42 @@
               "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
               "evidencePath": "data/sources/eu261-original.html",
               "sha256": "ff76adac01a5dab1985da50820c5b9fb588f2c3cfa93e50171690ba55f76f601"
+            },
+            {
+              "_id": "source-eu-your-europe",
+              "_type": "source",
+              "title": "Your Europe: air passenger rights",
+              "url": "https://europa.eu/youreurope/citizens/travel/passenger-rights/air/index_en.htm",
+              "publisher": "European Commission",
+              "authorityTier": 2,
+              "retrievedAt": "2026-10-02T20:57:34.735914+00:00",
+              "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
+              "evidencePath": "data/sources/eu-your-europe.html",
+              "sha256": "8ec534d7b4dae1a868071149ecd32dfd6515d260b6ab981b6d873c960a210387"
+            },
+            {
+              "_id": "source-sturgeon-press",
+              "_type": "source",
+              "title": "Sturgeon, C-402/07 and C-432/07 — official court announcement",
+              "url": "https://curia.europa.eu/jcms/upload/docs/application/pdf/2009-11/cp090102en.pdf",
+              "publisher": "Court of Justice of the European Union",
+              "authorityTier": 3,
+              "retrievedAt": "2026-10-02T21:00:09.904863+00:00",
+              "licenseNote": "Official court press summary; not full judgment. Full judgment could not be retrieved.",
+              "evidencePath": "data/sources/sturgeon-press.pdf",
+              "sha256": "76c87515b41782c6b1090999beaf6758eb613231de5bdba1a94343a5589bb718"
+            },
+            {
+              "_id": "source-nelson-press",
+              "_type": "source",
+              "title": "Nelson, C-581/10 and C-629/10 — official court announcement",
+              "url": "https://curia.europa.eu/jcms/upload/docs/application/pdf/2012-10/cp120135en.pdf",
+              "publisher": "Court of Justice of the European Union",
+              "authorityTier": 3,
+              "retrievedAt": "2026-10-02T21:00:09.690270+00:00",
+              "licenseNote": "Official court press summary; not full judgment. Full judgment could not be retrieved.",
+              "evidencePath": "data/sources/nelson-press.pdf",
+              "sha256": "14fed6111575541526ec9c8c4239ecbca695acbcb0fc2b94b92d838d0edc7620"
             }
           ],
           "conflicts": [],
@@ -3900,16 +4249,114 @@
           "notice": "Information, not legal advice. Conditional on the facts supplied. Separate overlapping regimes are not additive; do not recover twice for the same loss."
         },
         "metrics": {
-          "eligibility": false,
-          "amount": false,
+          "eligibility": true,
+          "amount": true,
           "entitlementF1": 1,
           "citationValidity": 1,
-          "abstention": false,
-          "status": false
+          "abstention": true,
+          "status": true
         }
       },
       {
         "id": "scenario-08",
+        "split": "dev",
+        "verification": "primary_text",
+        "ruling": {
+          "status": "assessed",
+          "findings": [
+            {
+              "regime": "eu",
+              "status": "assessed",
+              "eligible": false,
+              "amount": 0,
+              "currency": "EUR",
+              "amountLabel": "No fixed compensation",
+              "entitlements": [],
+              "met": [
+                "Route and operating-carrier scope match",
+                "Confirmed reservation",
+                "Check-in deadline met"
+              ],
+              "unmet": [
+                "Carrier extraordinary-circumstances defense proven, including reasonable measures"
+              ],
+              "uncertainties": [],
+              "ruleIds": [
+                "rule-eu-arrival_delay"
+              ],
+              "sourceIds": [
+                "source-eu261-original",
+                "source-sturgeon-press",
+                "source-nelson-press",
+                "source-eu-your-europe"
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "_id": "source-eu261-original",
+              "_type": "source",
+              "title": "EU261 original legal text (National Archives mirror)",
+              "url": "https://www.legislation.gov.uk/eur/2004/261/adopted/data.xml",
+              "publisher": "EU legislature / UK National Archives",
+              "authorityTier": 1,
+              "retrievedAt": "2026-10-02T21:00:08.730986+00:00",
+              "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
+              "evidencePath": "data/sources/eu261-original.html",
+              "sha256": "ff76adac01a5dab1985da50820c5b9fb588f2c3cfa93e50171690ba55f76f601"
+            },
+            {
+              "_id": "source-eu-your-europe",
+              "_type": "source",
+              "title": "Your Europe: air passenger rights",
+              "url": "https://europa.eu/youreurope/citizens/travel/passenger-rights/air/index_en.htm",
+              "publisher": "European Commission",
+              "authorityTier": 2,
+              "retrievedAt": "2026-10-02T20:57:34.735914+00:00",
+              "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
+              "evidencePath": "data/sources/eu-your-europe.html",
+              "sha256": "8ec534d7b4dae1a868071149ecd32dfd6515d260b6ab981b6d873c960a210387"
+            },
+            {
+              "_id": "source-sturgeon-press",
+              "_type": "source",
+              "title": "Sturgeon, C-402/07 and C-432/07 — official court announcement",
+              "url": "https://curia.europa.eu/jcms/upload/docs/application/pdf/2009-11/cp090102en.pdf",
+              "publisher": "Court of Justice of the European Union",
+              "authorityTier": 3,
+              "retrievedAt": "2026-10-02T21:00:09.904863+00:00",
+              "licenseNote": "Official court press summary; not full judgment. Full judgment could not be retrieved.",
+              "evidencePath": "data/sources/sturgeon-press.pdf",
+              "sha256": "76c87515b41782c6b1090999beaf6758eb613231de5bdba1a94343a5589bb718"
+            },
+            {
+              "_id": "source-nelson-press",
+              "_type": "source",
+              "title": "Nelson, C-581/10 and C-629/10 — official court announcement",
+              "url": "https://curia.europa.eu/jcms/upload/docs/application/pdf/2012-10/cp120135en.pdf",
+              "publisher": "Court of Justice of the European Union",
+              "authorityTier": 3,
+              "retrievedAt": "2026-10-02T21:00:09.690270+00:00",
+              "licenseNote": "Official court press summary; not full judgment. Full judgment could not be retrieved.",
+              "evidencePath": "data/sources/nelson-press.pdf",
+              "sha256": "14fed6111575541526ec9c8c4239ecbca695acbcb0fc2b94b92d838d0edc7620"
+            }
+          ],
+          "conflicts": [],
+          "computedBy": "compute_entitlement",
+          "notice": "Information, not legal advice. Conditional on the facts supplied. Separate overlapping regimes are not additive; do not recover twice for the same loss."
+        },
+        "metrics": {
+          "eligibility": true,
+          "amount": true,
+          "entitlementF1": 0,
+          "citationValidity": 1,
+          "abstention": true,
+          "status": true
+        }
+      },
+      {
+        "id": "scenario-09",
         "split": "dev",
         "verification": "primary_text",
         "ruling": {
@@ -3925,8 +4372,7 @@
               "entitlements": [],
               "met": [
                 "Route and operating-carrier scope match",
-                "Confirmed reservation",
-                "Check-in deadline met"
+                "Confirmed reservation"
               ],
               "unmet": [],
               "uncertainties": [
@@ -3966,7 +4412,63 @@
         }
       },
       {
-        "id": "scenario-09",
+        "id": "scenario-10",
+        "split": "dev",
+        "verification": "primary_text",
+        "ruling": {
+          "status": "abstain",
+          "findings": [
+            {
+              "regime": "eu",
+              "status": "abstain",
+              "eligible": null,
+              "amount": null,
+              "currency": null,
+              "amountLabel": "Not determined",
+              "entitlements": [],
+              "met": [
+                "Route and operating-carrier scope match",
+                "Confirmed reservation"
+              ],
+              "unmet": [],
+              "uncertainties": [
+                "No verified rule for this disruption and date in the current corpus."
+              ],
+              "ruleIds": [],
+              "sourceIds": [
+                "source-eu261-original"
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "_id": "source-eu261-original",
+              "_type": "source",
+              "title": "EU261 original legal text (National Archives mirror)",
+              "url": "https://www.legislation.gov.uk/eur/2004/261/adopted/data.xml",
+              "publisher": "EU legislature / UK National Archives",
+              "authorityTier": 1,
+              "retrievedAt": "2026-10-02T21:00:08.730986+00:00",
+              "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
+              "evidencePath": "data/sources/eu261-original.html",
+              "sha256": "ff76adac01a5dab1985da50820c5b9fb588f2c3cfa93e50171690ba55f76f601"
+            }
+          ],
+          "conflicts": [],
+          "computedBy": "compute_entitlement",
+          "notice": "Information, not legal advice. Conditional on the facts supplied. Separate overlapping regimes are not additive; do not recover twice for the same loss."
+        },
+        "metrics": {
+          "eligibility": false,
+          "amount": false,
+          "entitlementF1": 0,
+          "citationValidity": 1,
+          "abstention": false,
+          "status": false
+        }
+      },
+      {
+        "id": "scenario-11",
         "split": "dev",
         "verification": "primary_text",
         "ruling": {
@@ -4031,151 +4533,29 @@
         }
       },
       {
-        "id": "scenario-10",
-        "split": "dev",
-        "verification": "primary_text",
-        "ruling": {
-          "status": "abstain",
-          "findings": [
-            {
-              "regime": "eu",
-              "status": "abstain",
-              "eligible": null,
-              "amount": null,
-              "currency": null,
-              "amountLabel": "Not determined",
-              "entitlements": [],
-              "met": [
-                "Route and operating-carrier scope match",
-                "Confirmed reservation"
-              ],
-              "unmet": [],
-              "uncertainties": [
-                "No verified rule for this disruption and date in the current corpus."
-              ],
-              "ruleIds": [],
-              "sourceIds": [
-                "source-eu261-original"
-              ]
-            }
-          ],
-          "sources": [
-            {
-              "_id": "source-eu261-original",
-              "_type": "source",
-              "title": "EU261 original legal text (National Archives mirror)",
-              "url": "https://www.legislation.gov.uk/eur/2004/261/adopted/data.xml",
-              "publisher": "EU legislature / UK National Archives",
-              "authorityTier": 1,
-              "retrievedAt": "2026-10-02T21:00:08.730986+00:00",
-              "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
-              "evidencePath": "data/sources/eu261-original.html",
-              "sha256": "ff76adac01a5dab1985da50820c5b9fb588f2c3cfa93e50171690ba55f76f601"
-            }
-          ],
-          "conflicts": [],
-          "computedBy": "compute_entitlement",
-          "notice": "Information, not legal advice. Conditional on the facts supplied. Separate overlapping regimes are not additive; do not recover twice for the same loss."
-        },
-        "metrics": {
-          "eligibility": false,
-          "amount": false,
-          "entitlementF1": 0,
-          "citationValidity": 1,
-          "abstention": false,
-          "status": false
-        }
-      },
-      {
-        "id": "scenario-11",
-        "split": "dev",
-        "verification": "primary_text",
-        "ruling": {
-          "status": "abstain",
-          "findings": [
-            {
-              "regime": "eu",
-              "status": "abstain",
-              "eligible": null,
-              "amount": null,
-              "currency": null,
-              "amountLabel": "Not determined",
-              "entitlements": [],
-              "met": [
-                "Route and operating-carrier scope match",
-                "Confirmed reservation"
-              ],
-              "unmet": [],
-              "uncertainties": [
-                "No verified rule for this disruption and date in the current corpus."
-              ],
-              "ruleIds": [],
-              "sourceIds": [
-                "source-eu261-original"
-              ]
-            }
-          ],
-          "sources": [
-            {
-              "_id": "source-eu261-original",
-              "_type": "source",
-              "title": "EU261 original legal text (National Archives mirror)",
-              "url": "https://www.legislation.gov.uk/eur/2004/261/adopted/data.xml",
-              "publisher": "EU legislature / UK National Archives",
-              "authorityTier": 1,
-              "retrievedAt": "2026-10-02T21:00:08.730986+00:00",
-              "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
-              "evidencePath": "data/sources/eu261-original.html",
-              "sha256": "ff76adac01a5dab1985da50820c5b9fb588f2c3cfa93e50171690ba55f76f601"
-            }
-          ],
-          "conflicts": [],
-          "computedBy": "compute_entitlement",
-          "notice": "Information, not legal advice. Conditional on the facts supplied. Separate overlapping regimes are not additive; do not recover twice for the same loss."
-        },
-        "metrics": {
-          "eligibility": false,
-          "amount": false,
-          "entitlementF1": 0,
-          "citationValidity": 1,
-          "abstention": false,
-          "status": false
-        }
-      },
-      {
         "id": "scenario-12",
         "split": "dev",
         "verification": "primary_text",
         "ruling": {
-          "status": "assessed",
+          "status": "abstain",
           "findings": [
             {
               "regime": "eu",
-              "status": "assessed",
-              "eligible": true,
-              "amount": 250,
-              "currency": "EUR",
-              "amountLabel": "Statutory compensation",
-              "entitlements": [
-                "meals_and_refreshments",
-                "communications",
-                "refund_or_rerouting_choice",
-                "compensation"
-              ],
+              "status": "abstain",
+              "eligible": null,
+              "amount": null,
+              "currency": null,
+              "amountLabel": "Not determined",
+              "entitlements": [],
               "met": [
                 "Route and operating-carrier scope match",
-                "Confirmed reservation",
-                "Care trigger met; reasonable waiting-time assistance",
-                "Notice and rerouting do not meet a compensation exception",
-                "No proven extraordinary-circumstances defense"
+                "Confirmed reservation"
               ],
               "unmet": [],
-              "uncertainties": [],
-              "ruleIds": [
-                "rule-eu-cancellation",
-                "rule-eu-care",
-                "rule-eu-refund"
+              "uncertainties": [
+                "No verified rule for this disruption and date in the current corpus."
               ],
+              "ruleIds": [],
               "sourceIds": [
                 "source-eu261-original"
               ]
@@ -4200,12 +4580,12 @@
           "notice": "Information, not legal advice. Conditional on the facts supplied. Separate overlapping regimes are not additive; do not recover twice for the same loss."
         },
         "metrics": {
-          "eligibility": true,
-          "amount": true,
-          "entitlementF1": 1,
+          "eligibility": false,
+          "amount": false,
+          "entitlementF1": 0,
           "citationValidity": 1,
-          "abstention": true,
-          "status": true
+          "abstention": false,
+          "status": false
         }
       },
       {
@@ -4696,472 +5076,6 @@
         "split": "dev",
         "verification": "primary_text",
         "ruling": {
-          "status": "assessed",
-          "findings": [
-            {
-              "regime": "us",
-              "status": "assessed",
-              "eligible": true,
-              "amount": 800,
-              "currency": "USD",
-              "amountLabel": "Statutory minimum (carrier may pay more)",
-              "entitlements": [
-                "compensation"
-              ],
-              "met": [
-                "Route and operating-carrier scope match",
-                "Confirmed reservation",
-                "Check-in deadline met",
-                "US-origin involuntary oversales; covered aircraft; fare supplied"
-              ],
-              "unmet": [],
-              "uncertainties": [],
-              "ruleIds": [
-                "rule-us-denied_boarding"
-              ],
-              "sourceIds": [
-                "source-us250",
-                "source-us-refund-reg",
-                "source-us-cap-effective",
-                "source-dot-denied"
-              ]
-            }
-          ],
-          "sources": [
-            {
-              "_id": "source-us-cap-effective",
-              "_type": "source",
-              "title": "US oversales cap revision: effective January 22, 2025",
-              "url": "https://www.federalregister.gov/citation/89-FR-84818",
-              "publisher": "US Department of Transportation / Federal Register",
-              "authorityTier": 1,
-              "retrievedAt": "2026-10-02T21:44:15.348516+00:00",
-              "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
-              "evidencePath": "data/sources/us-cap-effective.html",
-              "sha256": "005792312154cc7a04fa0ef2fbcb85786158bc8bf440665af2aa10be542efb9c"
-            },
-            {
-              "_id": "source-us250",
-              "_type": "source",
-              "title": "14 CFR Part 250: oversales, sections 250.2–250.6",
-              "url": "https://www.ecfr.gov/current/title-14/chapter-II/subchapter-A/part-250",
-              "publisher": "US eCFR / Department of Transportation",
-              "authorityTier": 1,
-              "retrievedAt": "2026-10-02T20:56:05.612526+00:00",
-              "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
-              "evidencePath": "data/sources/us250.html",
-              "sha256": "961fa201fee37cf083dcb2a138c7dd194e0f1b5a813db7bc78a2ca21ed0d1a7e"
-            },
-            {
-              "_id": "source-us-refund-reg",
-              "_type": "source",
-              "title": "14 CFR Part 260: refunds",
-              "url": "https://www.ecfr.gov/current/title-14/chapter-II/subchapter-F/part-260",
-              "publisher": "US eCFR / Department of Transportation",
-              "authorityTier": 1,
-              "retrievedAt": "2026-10-02T21:00:09.419237+00:00",
-              "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
-              "evidencePath": "data/sources/us-refund-reg.html",
-              "sha256": "a2171c86f221bcc8a12751c0e5a34467357446ef1b98e5c54a93f03f8b86aeee"
-            },
-            {
-              "_id": "source-dot-denied",
-              "_type": "source",
-              "title": "DOT bumping / oversales guidance",
-              "url": "https://www.transportation.gov/individuals/aviation-consumer-protection/bumping-oversales",
-              "publisher": "US Department of Transportation",
-              "authorityTier": 2,
-              "retrievedAt": "2026-10-02T20:56:05.681383+00:00",
-              "licenseNote": "Official consumer guidance. Boundary wording is less precise than the regulation.",
-              "evidencePath": "data/sources/dot-denied.html",
-              "sha256": "92348861e9938f18c46a4bcc88b7137ebb1a837c088c99d204878aab310659b9"
-            }
-          ],
-          "conflicts": [
-            {
-              "topic": "Exact rerouting-delay boundary",
-              "left": {
-                "claim": "Regulation puts exactly two hours domestic / four hours international in the higher band.",
-                "source": {
-                  "_id": "source-us250",
-                  "_type": "source",
-                  "title": "14 CFR Part 250: oversales, sections 250.2–250.6",
-                  "url": "https://www.ecfr.gov/current/title-14/chapter-II/subchapter-A/part-250",
-                  "publisher": "US eCFR / Department of Transportation",
-                  "authorityTier": 1,
-                  "retrievedAt": "2026-10-02T20:56:05.612526+00:00",
-                  "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
-                  "evidencePath": "data/sources/us250.html",
-                  "sha256": "961fa201fee37cf083dcb2a138c7dd194e0f1b5a813db7bc78a2ca21ed0d1a7e"
-                }
-              },
-              "right": {
-                "claim": "DOT consumer table says “1 to 2” / “1 to 4” and “over”, which obscures the exact boundary.",
-                "source": {
-                  "_id": "source-dot-denied",
-                  "_type": "source",
-                  "title": "DOT bumping / oversales guidance",
-                  "url": "https://www.transportation.gov/individuals/aviation-consumer-protection/bumping-oversales",
-                  "publisher": "US Department of Transportation",
-                  "authorityTier": 2,
-                  "retrievedAt": "2026-10-02T20:56:05.681383+00:00",
-                  "licenseNote": "Official consumer guidance. Boundary wording is less precise than the regulation.",
-                  "evidencePath": "data/sources/dot-denied.html",
-                  "sha256": "92348861e9938f18c46a4bcc88b7137ebb1a837c088c99d204878aab310659b9"
-                }
-              },
-              "resolution": "Use 14 CFR 250.5, the higher-authority operative rule."
-            }
-          ],
-          "computedBy": "compute_entitlement",
-          "notice": "Information, not legal advice. Conditional on the facts supplied. Separate overlapping regimes are not additive; do not recover twice for the same loss."
-        },
-        "metrics": {
-          "eligibility": true,
-          "amount": true,
-          "entitlementF1": 1,
-          "citationValidity": 1,
-          "abstention": true,
-          "status": true
-        }
-      },
-      {
-        "id": "scenario-21",
-        "split": "dev",
-        "verification": "primary_text",
-        "ruling": {
-          "status": "assessed",
-          "findings": [
-            {
-              "regime": "us",
-              "status": "assessed",
-              "eligible": true,
-              "amount": 1075,
-              "currency": "USD",
-              "amountLabel": "Statutory minimum (carrier may pay more)",
-              "entitlements": [
-                "compensation"
-              ],
-              "met": [
-                "Route and operating-carrier scope match",
-                "Confirmed reservation",
-                "Check-in deadline met",
-                "US-origin involuntary oversales; covered aircraft; fare supplied"
-              ],
-              "unmet": [],
-              "uncertainties": [],
-              "ruleIds": [
-                "rule-us-denied_boarding"
-              ],
-              "sourceIds": [
-                "source-us250",
-                "source-us-refund-reg",
-                "source-us-cap-effective",
-                "source-dot-denied"
-              ]
-            }
-          ],
-          "sources": [
-            {
-              "_id": "source-us-cap-effective",
-              "_type": "source",
-              "title": "US oversales cap revision: effective January 22, 2025",
-              "url": "https://www.federalregister.gov/citation/89-FR-84818",
-              "publisher": "US Department of Transportation / Federal Register",
-              "authorityTier": 1,
-              "retrievedAt": "2026-10-02T21:44:15.348516+00:00",
-              "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
-              "evidencePath": "data/sources/us-cap-effective.html",
-              "sha256": "005792312154cc7a04fa0ef2fbcb85786158bc8bf440665af2aa10be542efb9c"
-            },
-            {
-              "_id": "source-us250",
-              "_type": "source",
-              "title": "14 CFR Part 250: oversales, sections 250.2–250.6",
-              "url": "https://www.ecfr.gov/current/title-14/chapter-II/subchapter-A/part-250",
-              "publisher": "US eCFR / Department of Transportation",
-              "authorityTier": 1,
-              "retrievedAt": "2026-10-02T20:56:05.612526+00:00",
-              "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
-              "evidencePath": "data/sources/us250.html",
-              "sha256": "961fa201fee37cf083dcb2a138c7dd194e0f1b5a813db7bc78a2ca21ed0d1a7e"
-            },
-            {
-              "_id": "source-us-refund-reg",
-              "_type": "source",
-              "title": "14 CFR Part 260: refunds",
-              "url": "https://www.ecfr.gov/current/title-14/chapter-II/subchapter-F/part-260",
-              "publisher": "US eCFR / Department of Transportation",
-              "authorityTier": 1,
-              "retrievedAt": "2026-10-02T21:00:09.419237+00:00",
-              "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
-              "evidencePath": "data/sources/us-refund-reg.html",
-              "sha256": "a2171c86f221bcc8a12751c0e5a34467357446ef1b98e5c54a93f03f8b86aeee"
-            },
-            {
-              "_id": "source-dot-denied",
-              "_type": "source",
-              "title": "DOT bumping / oversales guidance",
-              "url": "https://www.transportation.gov/individuals/aviation-consumer-protection/bumping-oversales",
-              "publisher": "US Department of Transportation",
-              "authorityTier": 2,
-              "retrievedAt": "2026-10-02T20:56:05.681383+00:00",
-              "licenseNote": "Official consumer guidance. Boundary wording is less precise than the regulation.",
-              "evidencePath": "data/sources/dot-denied.html",
-              "sha256": "92348861e9938f18c46a4bcc88b7137ebb1a837c088c99d204878aab310659b9"
-            }
-          ],
-          "conflicts": [],
-          "computedBy": "compute_entitlement",
-          "notice": "Information, not legal advice. Conditional on the facts supplied. Separate overlapping regimes are not additive; do not recover twice for the same loss."
-        },
-        "metrics": {
-          "eligibility": true,
-          "amount": true,
-          "entitlementF1": 1,
-          "citationValidity": 1,
-          "abstention": true,
-          "status": true
-        }
-      },
-      {
-        "id": "scenario-22",
-        "split": "dev",
-        "verification": "primary_text",
-        "ruling": {
-          "status": "assessed",
-          "findings": [
-            {
-              "regime": "us",
-              "status": "assessed",
-              "eligible": true,
-              "amount": 2150,
-              "currency": "USD",
-              "amountLabel": "Statutory minimum (carrier may pay more)",
-              "entitlements": [
-                "compensation"
-              ],
-              "met": [
-                "Route and operating-carrier scope match",
-                "Confirmed reservation",
-                "Check-in deadline met",
-                "US-origin involuntary oversales; covered aircraft; fare supplied"
-              ],
-              "unmet": [],
-              "uncertainties": [],
-              "ruleIds": [
-                "rule-us-denied_boarding"
-              ],
-              "sourceIds": [
-                "source-us250",
-                "source-us-refund-reg",
-                "source-us-cap-effective",
-                "source-dot-denied"
-              ]
-            }
-          ],
-          "sources": [
-            {
-              "_id": "source-us-cap-effective",
-              "_type": "source",
-              "title": "US oversales cap revision: effective January 22, 2025",
-              "url": "https://www.federalregister.gov/citation/89-FR-84818",
-              "publisher": "US Department of Transportation / Federal Register",
-              "authorityTier": 1,
-              "retrievedAt": "2026-10-02T21:44:15.348516+00:00",
-              "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
-              "evidencePath": "data/sources/us-cap-effective.html",
-              "sha256": "005792312154cc7a04fa0ef2fbcb85786158bc8bf440665af2aa10be542efb9c"
-            },
-            {
-              "_id": "source-us250",
-              "_type": "source",
-              "title": "14 CFR Part 250: oversales, sections 250.2–250.6",
-              "url": "https://www.ecfr.gov/current/title-14/chapter-II/subchapter-A/part-250",
-              "publisher": "US eCFR / Department of Transportation",
-              "authorityTier": 1,
-              "retrievedAt": "2026-10-02T20:56:05.612526+00:00",
-              "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
-              "evidencePath": "data/sources/us250.html",
-              "sha256": "961fa201fee37cf083dcb2a138c7dd194e0f1b5a813db7bc78a2ca21ed0d1a7e"
-            },
-            {
-              "_id": "source-us-refund-reg",
-              "_type": "source",
-              "title": "14 CFR Part 260: refunds",
-              "url": "https://www.ecfr.gov/current/title-14/chapter-II/subchapter-F/part-260",
-              "publisher": "US eCFR / Department of Transportation",
-              "authorityTier": 1,
-              "retrievedAt": "2026-10-02T21:00:09.419237+00:00",
-              "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
-              "evidencePath": "data/sources/us-refund-reg.html",
-              "sha256": "a2171c86f221bcc8a12751c0e5a34467357446ef1b98e5c54a93f03f8b86aeee"
-            },
-            {
-              "_id": "source-dot-denied",
-              "_type": "source",
-              "title": "DOT bumping / oversales guidance",
-              "url": "https://www.transportation.gov/individuals/aviation-consumer-protection/bumping-oversales",
-              "publisher": "US Department of Transportation",
-              "authorityTier": 2,
-              "retrievedAt": "2026-10-02T20:56:05.681383+00:00",
-              "licenseNote": "Official consumer guidance. Boundary wording is less precise than the regulation.",
-              "evidencePath": "data/sources/dot-denied.html",
-              "sha256": "92348861e9938f18c46a4bcc88b7137ebb1a837c088c99d204878aab310659b9"
-            }
-          ],
-          "conflicts": [],
-          "computedBy": "compute_entitlement",
-          "notice": "Information, not legal advice. Conditional on the facts supplied. Separate overlapping regimes are not additive; do not recover twice for the same loss."
-        },
-        "metrics": {
-          "eligibility": true,
-          "amount": true,
-          "entitlementF1": 1,
-          "citationValidity": 1,
-          "abstention": true,
-          "status": true
-        }
-      },
-      {
-        "id": "scenario-23",
-        "split": "dev",
-        "verification": "primary_text",
-        "ruling": {
-          "status": "assessed",
-          "findings": [
-            {
-              "regime": "us",
-              "status": "assessed",
-              "eligible": true,
-              "amount": 800,
-              "currency": "USD",
-              "amountLabel": "Statutory minimum (carrier may pay more)",
-              "entitlements": [
-                "compensation"
-              ],
-              "met": [
-                "Route and operating-carrier scope match",
-                "Confirmed reservation",
-                "Check-in deadline met",
-                "US-origin involuntary oversales; covered aircraft; fare supplied"
-              ],
-              "unmet": [],
-              "uncertainties": [],
-              "ruleIds": [
-                "rule-us-denied_boarding"
-              ],
-              "sourceIds": [
-                "source-us250",
-                "source-us-refund-reg",
-                "source-us-cap-effective",
-                "source-dot-denied"
-              ]
-            }
-          ],
-          "sources": [
-            {
-              "_id": "source-us-cap-effective",
-              "_type": "source",
-              "title": "US oversales cap revision: effective January 22, 2025",
-              "url": "https://www.federalregister.gov/citation/89-FR-84818",
-              "publisher": "US Department of Transportation / Federal Register",
-              "authorityTier": 1,
-              "retrievedAt": "2026-10-02T21:44:15.348516+00:00",
-              "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
-              "evidencePath": "data/sources/us-cap-effective.html",
-              "sha256": "005792312154cc7a04fa0ef2fbcb85786158bc8bf440665af2aa10be542efb9c"
-            },
-            {
-              "_id": "source-us250",
-              "_type": "source",
-              "title": "14 CFR Part 250: oversales, sections 250.2–250.6",
-              "url": "https://www.ecfr.gov/current/title-14/chapter-II/subchapter-A/part-250",
-              "publisher": "US eCFR / Department of Transportation",
-              "authorityTier": 1,
-              "retrievedAt": "2026-10-02T20:56:05.612526+00:00",
-              "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
-              "evidencePath": "data/sources/us250.html",
-              "sha256": "961fa201fee37cf083dcb2a138c7dd194e0f1b5a813db7bc78a2ca21ed0d1a7e"
-            },
-            {
-              "_id": "source-us-refund-reg",
-              "_type": "source",
-              "title": "14 CFR Part 260: refunds",
-              "url": "https://www.ecfr.gov/current/title-14/chapter-II/subchapter-F/part-260",
-              "publisher": "US eCFR / Department of Transportation",
-              "authorityTier": 1,
-              "retrievedAt": "2026-10-02T21:00:09.419237+00:00",
-              "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
-              "evidencePath": "data/sources/us-refund-reg.html",
-              "sha256": "a2171c86f221bcc8a12751c0e5a34467357446ef1b98e5c54a93f03f8b86aeee"
-            },
-            {
-              "_id": "source-dot-denied",
-              "_type": "source",
-              "title": "DOT bumping / oversales guidance",
-              "url": "https://www.transportation.gov/individuals/aviation-consumer-protection/bumping-oversales",
-              "publisher": "US Department of Transportation",
-              "authorityTier": 2,
-              "retrievedAt": "2026-10-02T20:56:05.681383+00:00",
-              "licenseNote": "Official consumer guidance. Boundary wording is less precise than the regulation.",
-              "evidencePath": "data/sources/dot-denied.html",
-              "sha256": "92348861e9938f18c46a4bcc88b7137ebb1a837c088c99d204878aab310659b9"
-            }
-          ],
-          "conflicts": [
-            {
-              "topic": "Exact rerouting-delay boundary",
-              "left": {
-                "claim": "Regulation puts exactly two hours domestic / four hours international in the higher band.",
-                "source": {
-                  "_id": "source-us250",
-                  "_type": "source",
-                  "title": "14 CFR Part 250: oversales, sections 250.2–250.6",
-                  "url": "https://www.ecfr.gov/current/title-14/chapter-II/subchapter-A/part-250",
-                  "publisher": "US eCFR / Department of Transportation",
-                  "authorityTier": 1,
-                  "retrievedAt": "2026-10-02T20:56:05.612526+00:00",
-                  "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
-                  "evidencePath": "data/sources/us250.html",
-                  "sha256": "961fa201fee37cf083dcb2a138c7dd194e0f1b5a813db7bc78a2ca21ed0d1a7e"
-                }
-              },
-              "right": {
-                "claim": "DOT consumer table says “1 to 2” / “1 to 4” and “over”, which obscures the exact boundary.",
-                "source": {
-                  "_id": "source-dot-denied",
-                  "_type": "source",
-                  "title": "DOT bumping / oversales guidance",
-                  "url": "https://www.transportation.gov/individuals/aviation-consumer-protection/bumping-oversales",
-                  "publisher": "US Department of Transportation",
-                  "authorityTier": 2,
-                  "retrievedAt": "2026-10-02T20:56:05.681383+00:00",
-                  "licenseNote": "Official consumer guidance. Boundary wording is less precise than the regulation.",
-                  "evidencePath": "data/sources/dot-denied.html",
-                  "sha256": "92348861e9938f18c46a4bcc88b7137ebb1a837c088c99d204878aab310659b9"
-                }
-              },
-              "resolution": "Use 14 CFR 250.5, the higher-authority operative rule."
-            }
-          ],
-          "computedBy": "compute_entitlement",
-          "notice": "Information, not legal advice. Conditional on the facts supplied. Separate overlapping regimes are not additive; do not recover twice for the same loss."
-        },
-        "metrics": {
-          "eligibility": true,
-          "amount": true,
-          "entitlementF1": 1,
-          "citationValidity": 1,
-          "abstention": true,
-          "status": true
-        }
-      },
-      {
-        "id": "scenario-24",
-        "split": "dev",
-        "verification": "primary_text",
-        "ruling": {
           "status": "abstain",
           "findings": [
             {
@@ -5174,7 +5088,8 @@
               "entitlements": [],
               "met": [
                 "Route and operating-carrier scope match",
-                "Confirmed reservation"
+                "Confirmed reservation",
+                "Check-in deadline met"
               ],
               "unmet": [],
               "uncertainties": [
@@ -5224,6 +5139,317 @@
           "citationValidity": 1,
           "abstention": false,
           "status": false
+        }
+      },
+      {
+        "id": "scenario-21",
+        "split": "dev",
+        "verification": "primary_text",
+        "ruling": {
+          "status": "abstain",
+          "findings": [
+            {
+              "regime": "us",
+              "status": "abstain",
+              "eligible": null,
+              "amount": null,
+              "currency": null,
+              "amountLabel": "Not determined",
+              "entitlements": [],
+              "met": [
+                "Route and operating-carrier scope match",
+                "Confirmed reservation",
+                "Check-in deadline met"
+              ],
+              "unmet": [],
+              "uncertainties": [
+                "No verified rule for this disruption and date in the current corpus."
+              ],
+              "ruleIds": [],
+              "sourceIds": [
+                "source-us250",
+                "source-us-refund-reg"
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "_id": "source-us250",
+              "_type": "source",
+              "title": "14 CFR Part 250: oversales, sections 250.2–250.6",
+              "url": "https://www.ecfr.gov/current/title-14/chapter-II/subchapter-A/part-250",
+              "publisher": "US eCFR / Department of Transportation",
+              "authorityTier": 1,
+              "retrievedAt": "2026-10-02T20:56:05.612526+00:00",
+              "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
+              "evidencePath": "data/sources/us250.html",
+              "sha256": "961fa201fee37cf083dcb2a138c7dd194e0f1b5a813db7bc78a2ca21ed0d1a7e"
+            },
+            {
+              "_id": "source-us-refund-reg",
+              "_type": "source",
+              "title": "14 CFR Part 260: refunds",
+              "url": "https://www.ecfr.gov/current/title-14/chapter-II/subchapter-F/part-260",
+              "publisher": "US eCFR / Department of Transportation",
+              "authorityTier": 1,
+              "retrievedAt": "2026-10-02T21:00:09.419237+00:00",
+              "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
+              "evidencePath": "data/sources/us-refund-reg.html",
+              "sha256": "a2171c86f221bcc8a12751c0e5a34467357446ef1b98e5c54a93f03f8b86aeee"
+            }
+          ],
+          "conflicts": [],
+          "computedBy": "compute_entitlement",
+          "notice": "Information, not legal advice. Conditional on the facts supplied. Separate overlapping regimes are not additive; do not recover twice for the same loss."
+        },
+        "metrics": {
+          "eligibility": false,
+          "amount": false,
+          "entitlementF1": 0,
+          "citationValidity": 1,
+          "abstention": false,
+          "status": false
+        }
+      },
+      {
+        "id": "scenario-22",
+        "split": "dev",
+        "verification": "primary_text",
+        "ruling": {
+          "status": "abstain",
+          "findings": [
+            {
+              "regime": "us",
+              "status": "abstain",
+              "eligible": null,
+              "amount": null,
+              "currency": null,
+              "amountLabel": "Not determined",
+              "entitlements": [],
+              "met": [
+                "Route and operating-carrier scope match",
+                "Confirmed reservation",
+                "Check-in deadline met"
+              ],
+              "unmet": [],
+              "uncertainties": [
+                "No verified rule for this disruption and date in the current corpus."
+              ],
+              "ruleIds": [],
+              "sourceIds": [
+                "source-us250",
+                "source-us-refund-reg"
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "_id": "source-us250",
+              "_type": "source",
+              "title": "14 CFR Part 250: oversales, sections 250.2–250.6",
+              "url": "https://www.ecfr.gov/current/title-14/chapter-II/subchapter-A/part-250",
+              "publisher": "US eCFR / Department of Transportation",
+              "authorityTier": 1,
+              "retrievedAt": "2026-10-02T20:56:05.612526+00:00",
+              "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
+              "evidencePath": "data/sources/us250.html",
+              "sha256": "961fa201fee37cf083dcb2a138c7dd194e0f1b5a813db7bc78a2ca21ed0d1a7e"
+            },
+            {
+              "_id": "source-us-refund-reg",
+              "_type": "source",
+              "title": "14 CFR Part 260: refunds",
+              "url": "https://www.ecfr.gov/current/title-14/chapter-II/subchapter-F/part-260",
+              "publisher": "US eCFR / Department of Transportation",
+              "authorityTier": 1,
+              "retrievedAt": "2026-10-02T21:00:09.419237+00:00",
+              "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
+              "evidencePath": "data/sources/us-refund-reg.html",
+              "sha256": "a2171c86f221bcc8a12751c0e5a34467357446ef1b98e5c54a93f03f8b86aeee"
+            }
+          ],
+          "conflicts": [],
+          "computedBy": "compute_entitlement",
+          "notice": "Information, not legal advice. Conditional on the facts supplied. Separate overlapping regimes are not additive; do not recover twice for the same loss."
+        },
+        "metrics": {
+          "eligibility": false,
+          "amount": false,
+          "entitlementF1": 0,
+          "citationValidity": 1,
+          "abstention": false,
+          "status": false
+        }
+      },
+      {
+        "id": "scenario-23",
+        "split": "dev",
+        "verification": "primary_text",
+        "ruling": {
+          "status": "abstain",
+          "findings": [
+            {
+              "regime": "us",
+              "status": "abstain",
+              "eligible": null,
+              "amount": null,
+              "currency": null,
+              "amountLabel": "Not determined",
+              "entitlements": [],
+              "met": [
+                "Route and operating-carrier scope match",
+                "Confirmed reservation",
+                "Check-in deadline met"
+              ],
+              "unmet": [],
+              "uncertainties": [
+                "No verified rule for this disruption and date in the current corpus."
+              ],
+              "ruleIds": [],
+              "sourceIds": [
+                "source-us250",
+                "source-us-refund-reg"
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "_id": "source-us250",
+              "_type": "source",
+              "title": "14 CFR Part 250: oversales, sections 250.2–250.6",
+              "url": "https://www.ecfr.gov/current/title-14/chapter-II/subchapter-A/part-250",
+              "publisher": "US eCFR / Department of Transportation",
+              "authorityTier": 1,
+              "retrievedAt": "2026-10-02T20:56:05.612526+00:00",
+              "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
+              "evidencePath": "data/sources/us250.html",
+              "sha256": "961fa201fee37cf083dcb2a138c7dd194e0f1b5a813db7bc78a2ca21ed0d1a7e"
+            },
+            {
+              "_id": "source-us-refund-reg",
+              "_type": "source",
+              "title": "14 CFR Part 260: refunds",
+              "url": "https://www.ecfr.gov/current/title-14/chapter-II/subchapter-F/part-260",
+              "publisher": "US eCFR / Department of Transportation",
+              "authorityTier": 1,
+              "retrievedAt": "2026-10-02T21:00:09.419237+00:00",
+              "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
+              "evidencePath": "data/sources/us-refund-reg.html",
+              "sha256": "a2171c86f221bcc8a12751c0e5a34467357446ef1b98e5c54a93f03f8b86aeee"
+            }
+          ],
+          "conflicts": [],
+          "computedBy": "compute_entitlement",
+          "notice": "Information, not legal advice. Conditional on the facts supplied. Separate overlapping regimes are not additive; do not recover twice for the same loss."
+        },
+        "metrics": {
+          "eligibility": false,
+          "amount": false,
+          "entitlementF1": 0,
+          "citationValidity": 1,
+          "abstention": false,
+          "status": false
+        }
+      },
+      {
+        "id": "scenario-24",
+        "split": "dev",
+        "verification": "primary_text",
+        "ruling": {
+          "status": "assessed",
+          "findings": [
+            {
+              "regime": "us",
+              "status": "assessed",
+              "eligible": false,
+              "amount": 0,
+              "currency": null,
+              "amountLabel": "No general fixed delay award; airline commitments may add rights",
+              "entitlements": [
+                "unused_ticket_refund"
+              ],
+              "met": [
+                "Route and operating-carrier scope match",
+                "Confirmed reservation"
+              ],
+              "unmet": [
+                "No general federal fixed compensation mandate for ordinary flight delay or cancellation"
+              ],
+              "uncertainties": [
+                "Airline-specific care commitments and non-time schedule changes are not adjudicated here."
+              ],
+              "ruleIds": [
+                "rule-us-cancellation"
+              ],
+              "sourceIds": [
+                "source-us250",
+                "source-us-refund-reg",
+                "source-dot-refund",
+                "source-dot-delay-alt"
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "_id": "source-us250",
+              "_type": "source",
+              "title": "14 CFR Part 250: oversales, sections 250.2–250.6",
+              "url": "https://www.ecfr.gov/current/title-14/chapter-II/subchapter-A/part-250",
+              "publisher": "US eCFR / Department of Transportation",
+              "authorityTier": 1,
+              "retrievedAt": "2026-10-02T20:56:05.612526+00:00",
+              "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
+              "evidencePath": "data/sources/us250.html",
+              "sha256": "961fa201fee37cf083dcb2a138c7dd194e0f1b5a813db7bc78a2ca21ed0d1a7e"
+            },
+            {
+              "_id": "source-us-refund-reg",
+              "_type": "source",
+              "title": "14 CFR Part 260: refunds",
+              "url": "https://www.ecfr.gov/current/title-14/chapter-II/subchapter-F/part-260",
+              "publisher": "US eCFR / Department of Transportation",
+              "authorityTier": 1,
+              "retrievedAt": "2026-10-02T21:00:09.419237+00:00",
+              "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
+              "evidencePath": "data/sources/us-refund-reg.html",
+              "sha256": "a2171c86f221bcc8a12751c0e5a34467357446ef1b98e5c54a93f03f8b86aeee"
+            },
+            {
+              "_id": "source-dot-refund",
+              "_type": "source",
+              "title": "DOT refunds guidance",
+              "url": "https://www.transportation.gov/individuals/aviation-consumer-protection/refunds",
+              "publisher": "US Department of Transportation",
+              "authorityTier": 2,
+              "retrievedAt": "2026-10-02T20:56:05.237934+00:00",
+              "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
+              "evidencePath": "data/sources/dot-refund.html",
+              "sha256": "8a5fa92921c59cc20b88fea7a812a42ca365f3dd98979672de5919645e868fc0"
+            },
+            {
+              "_id": "source-dot-delay-alt",
+              "_type": "source",
+              "title": "DOT Fly Rights: delayed and cancelled flights",
+              "url": "https://www.transportation.gov/airconsumer/fly-rights",
+              "publisher": "US Department of Transportation",
+              "authorityTier": 2,
+              "retrievedAt": "2026-10-02T20:57:33.445485+00:00",
+              "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
+              "evidencePath": "data/sources/dot-delay-alt.html",
+              "sha256": "799583c9208d2dc928425007a34408e1f2015470c711aca350ea8efc4a45d518"
+            }
+          ],
+          "conflicts": [],
+          "computedBy": "compute_entitlement",
+          "notice": "Information, not legal advice. Conditional on the facts supplied. Separate overlapping regimes are not additive; do not recover twice for the same loss."
+        },
+        "metrics": {
+          "eligibility": true,
+          "amount": true,
+          "entitlementF1": 1,
+          "citationValidity": 1,
+          "abstention": true,
+          "status": true
         }
       },
       {
@@ -5344,20 +5570,31 @@
               "currency": null,
               "amountLabel": "Not determined",
               "entitlements": [],
-              "met": [
-                "Route and operating-carrier scope match",
-                "Confirmed reservation",
-                "Check-in deadline met"
-              ],
+              "met": [],
               "unmet": [],
               "uncertainties": [
-                "No verified rule for this disruption and date in the current corpus."
+                "No verified Indian rule for this disruption and flight date."
               ],
               "ruleIds": [],
-              "sourceIds": []
+              "sourceIds": [
+                "source-dgca-part-iv"
+              ]
             }
           ],
-          "sources": [],
+          "sources": [
+            {
+              "_id": "source-dgca-part-iv",
+              "_type": "source",
+              "title": "DGCA CAR Section 3 Series M Part IV, Rev.4 (25 January 2023), effective 15 February 2023",
+              "url": "https://www.dgca.gov.in/digigov-portal/Upload?attachId=we1PSlOuQhYdHcwKKrm7ew%3D%3D&flag=iframeAttachView",
+              "publisher": "Directorate General of Civil Aviation, India",
+              "authorityTier": 1,
+              "retrievedAt": "2026-10-04T14:06:40.716Z",
+              "licenseNote": "Official source reviewed 4 October 2026. The linked version and its effective date control; baggage limits are not automatic awards.",
+              "sha256": "3b4b50844edc6a46099cce3b94626d29b03f90ccc61318aa1aa2db6d0fa3ff4a",
+              "evidencePath": "data/sources/source-dgca-part-iv.pdf"
+            }
+          ],
           "conflicts": [],
           "computedBy": "compute_entitlement",
           "notice": "Information, not legal advice. Conditional on the facts supplied. Separate overlapping regimes are not additive; do not recover twice for the same loss."
@@ -5366,7 +5603,7 @@
           "eligibility": true,
           "amount": true,
           "entitlementF1": 1,
-          "citationValidity": null,
+          "citationValidity": 1,
           "abstention": true,
           "status": true
         }
@@ -5668,28 +5905,34 @@
         "split": "test",
         "verification": "primary_text",
         "ruling": {
-          "status": "abstain",
+          "status": "partial",
           "findings": [
             {
               "regime": "eu",
-              "status": "abstain",
-              "eligible": null,
-              "amount": null,
-              "currency": null,
-              "amountLabel": "Not determined",
-              "entitlements": [],
+              "status": "assessed",
+              "eligible": true,
+              "amount": 250,
+              "currency": "EUR",
+              "amountLabel": "Statutory compensation",
+              "entitlements": [
+                "compensation"
+              ],
               "met": [
                 "Route and operating-carrier scope match",
                 "Confirmed reservation",
-                "Check-in deadline met"
+                "Check-in deadline met",
+                "No proven extraordinary-circumstances defense"
               ],
               "unmet": [],
-              "uncertainties": [
-                "No verified rule for this disruption and date in the current corpus."
+              "uncertainties": [],
+              "ruleIds": [
+                "rule-eu-arrival_delay"
               ],
-              "ruleIds": [],
               "sourceIds": [
-                "source-eu261-original"
+                "source-eu261-original",
+                "source-sturgeon-press",
+                "source-nelson-press",
+                "source-eu-your-europe"
               ]
             },
             {
@@ -5739,6 +5982,42 @@
               "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
               "evidencePath": "data/sources/uk261-xml.html",
               "sha256": "98d134e2e63863cbafbe4532f89a6897eea46064d6d10e1a73fc980835c360bf"
+            },
+            {
+              "_id": "source-eu-your-europe",
+              "_type": "source",
+              "title": "Your Europe: air passenger rights",
+              "url": "https://europa.eu/youreurope/citizens/travel/passenger-rights/air/index_en.htm",
+              "publisher": "European Commission",
+              "authorityTier": 2,
+              "retrievedAt": "2026-10-02T20:57:34.735914+00:00",
+              "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
+              "evidencePath": "data/sources/eu-your-europe.html",
+              "sha256": "8ec534d7b4dae1a868071149ecd32dfd6515d260b6ab981b6d873c960a210387"
+            },
+            {
+              "_id": "source-sturgeon-press",
+              "_type": "source",
+              "title": "Sturgeon, C-402/07 and C-432/07 — official court announcement",
+              "url": "https://curia.europa.eu/jcms/upload/docs/application/pdf/2009-11/cp090102en.pdf",
+              "publisher": "Court of Justice of the European Union",
+              "authorityTier": 3,
+              "retrievedAt": "2026-10-02T21:00:09.904863+00:00",
+              "licenseNote": "Official court press summary; not full judgment. Full judgment could not be retrieved.",
+              "evidencePath": "data/sources/sturgeon-press.pdf",
+              "sha256": "76c87515b41782c6b1090999beaf6758eb613231de5bdba1a94343a5589bb718"
+            },
+            {
+              "_id": "source-nelson-press",
+              "_type": "source",
+              "title": "Nelson, C-581/10 and C-629/10 — official court announcement",
+              "url": "https://curia.europa.eu/jcms/upload/docs/application/pdf/2012-10/cp120135en.pdf",
+              "publisher": "Court of Justice of the European Union",
+              "authorityTier": 3,
+              "retrievedAt": "2026-10-02T21:00:09.690270+00:00",
+              "licenseNote": "Official court press summary; not full judgment. Full judgment could not be retrieved.",
+              "evidencePath": "data/sources/nelson-press.pdf",
+              "sha256": "14fed6111575541526ec9c8c4239ecbca695acbcb0fc2b94b92d838d0edc7620"
             }
           ],
           "conflicts": [],
@@ -5748,7 +6027,7 @@
         "metrics": {
           "eligibility": false,
           "amount": false,
-          "entitlementF1": 0,
+          "entitlementF1": 0.5,
           "citationValidity": 1,
           "abstention": false,
           "status": false
@@ -5759,28 +6038,34 @@
         "split": "test",
         "verification": "primary_text",
         "ruling": {
-          "status": "abstain",
+          "status": "partial",
           "findings": [
             {
               "regime": "eu",
-              "status": "abstain",
-              "eligible": null,
-              "amount": null,
-              "currency": null,
-              "amountLabel": "Not determined",
-              "entitlements": [],
+              "status": "assessed",
+              "eligible": true,
+              "amount": 250,
+              "currency": "EUR",
+              "amountLabel": "Statutory compensation",
+              "entitlements": [
+                "compensation"
+              ],
               "met": [
                 "Route and operating-carrier scope match",
                 "Confirmed reservation",
-                "Check-in deadline met"
+                "Check-in deadline met",
+                "No proven extraordinary-circumstances defense"
               ],
               "unmet": [],
-              "uncertainties": [
-                "No verified rule for this disruption and date in the current corpus."
+              "uncertainties": [],
+              "ruleIds": [
+                "rule-eu-arrival_delay"
               ],
-              "ruleIds": [],
               "sourceIds": [
-                "source-eu261-original"
+                "source-eu261-original",
+                "source-sturgeon-press",
+                "source-nelson-press",
+                "source-eu-your-europe"
               ]
             },
             {
@@ -5791,17 +6076,15 @@
               "currency": null,
               "amountLabel": "Not determined",
               "entitlements": [],
-              "met": [
-                "Route and operating-carrier scope match",
-                "Confirmed reservation",
-                "Check-in deadline met"
-              ],
+              "met": [],
               "unmet": [],
               "uncertainties": [
-                "No verified rule for this disruption and date in the current corpus."
+                "No verified Indian rule for this disruption and flight date."
               ],
               "ruleIds": [],
-              "sourceIds": []
+              "sourceIds": [
+                "source-dgca-part-iv"
+              ]
             }
           ],
           "sources": [
@@ -5816,6 +6099,54 @@
               "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
               "evidencePath": "data/sources/eu261-original.html",
               "sha256": "ff76adac01a5dab1985da50820c5b9fb588f2c3cfa93e50171690ba55f76f601"
+            },
+            {
+              "_id": "source-eu-your-europe",
+              "_type": "source",
+              "title": "Your Europe: air passenger rights",
+              "url": "https://europa.eu/youreurope/citizens/travel/passenger-rights/air/index_en.htm",
+              "publisher": "European Commission",
+              "authorityTier": 2,
+              "retrievedAt": "2026-10-02T20:57:34.735914+00:00",
+              "licenseNote": "Primary legal text / official evidence; retrieved during this build.",
+              "evidencePath": "data/sources/eu-your-europe.html",
+              "sha256": "8ec534d7b4dae1a868071149ecd32dfd6515d260b6ab981b6d873c960a210387"
+            },
+            {
+              "_id": "source-sturgeon-press",
+              "_type": "source",
+              "title": "Sturgeon, C-402/07 and C-432/07 — official court announcement",
+              "url": "https://curia.europa.eu/jcms/upload/docs/application/pdf/2009-11/cp090102en.pdf",
+              "publisher": "Court of Justice of the European Union",
+              "authorityTier": 3,
+              "retrievedAt": "2026-10-02T21:00:09.904863+00:00",
+              "licenseNote": "Official court press summary; not full judgment. Full judgment could not be retrieved.",
+              "evidencePath": "data/sources/sturgeon-press.pdf",
+              "sha256": "76c87515b41782c6b1090999beaf6758eb613231de5bdba1a94343a5589bb718"
+            },
+            {
+              "_id": "source-nelson-press",
+              "_type": "source",
+              "title": "Nelson, C-581/10 and C-629/10 — official court announcement",
+              "url": "https://curia.europa.eu/jcms/upload/docs/application/pdf/2012-10/cp120135en.pdf",
+              "publisher": "Court of Justice of the European Union",
+              "authorityTier": 3,
+              "retrievedAt": "2026-10-02T21:00:09.690270+00:00",
+              "licenseNote": "Official court press summary; not full judgment. Full judgment could not be retrieved.",
+              "evidencePath": "data/sources/nelson-press.pdf",
+              "sha256": "14fed6111575541526ec9c8c4239ecbca695acbcb0fc2b94b92d838d0edc7620"
+            },
+            {
+              "_id": "source-dgca-part-iv",
+              "_type": "source",
+              "title": "DGCA CAR Section 3 Series M Part IV, Rev.4 (25 January 2023), effective 15 February 2023",
+              "url": "https://www.dgca.gov.in/digigov-portal/Upload?attachId=we1PSlOuQhYdHcwKKrm7ew%3D%3D&flag=iframeAttachView",
+              "publisher": "Directorate General of Civil Aviation, India",
+              "authorityTier": 1,
+              "retrievedAt": "2026-10-04T14:06:40.716Z",
+              "licenseNote": "Official source reviewed 4 October 2026. The linked version and its effective date control; baggage limits are not automatic awards.",
+              "sha256": "3b4b50844edc6a46099cce3b94626d29b03f90ccc61318aa1aa2db6d0fa3ff4a",
+              "evidencePath": "data/sources/source-dgca-part-iv.pdf"
             }
           ],
           "conflicts": [],
@@ -5823,18 +6154,18 @@
           "notice": "Information, not legal advice. Conditional on the facts supplied. Separate overlapping regimes are not additive; do not recover twice for the same loss."
         },
         "metrics": {
-          "eligibility": false,
-          "amount": false,
-          "entitlementF1": 0.5,
+          "eligibility": true,
+          "amount": true,
+          "entitlementF1": 1,
           "citationValidity": 1,
           "abstention": true,
-          "status": false
+          "status": true
         }
       },
       {
         "id": "scenario-33",
         "split": "test",
-        "verification": "agent_inferred",
+        "verification": "primary_text",
         "ruling": {
           "status": "abstain",
           "findings": [
@@ -5846,19 +6177,31 @@
               "currency": null,
               "amountLabel": "Not determined",
               "entitlements": [],
-              "met": [
-                "Route and operating-carrier scope match",
-                "Confirmed reservation"
-              ],
+              "met": [],
               "unmet": [],
               "uncertainties": [
-                "No verified rule for this disruption and date in the current corpus."
+                "No verified Indian rule for this disruption and flight date."
               ],
               "ruleIds": [],
-              "sourceIds": []
+              "sourceIds": [
+                "source-dgca-part-iv"
+              ]
             }
           ],
-          "sources": [],
+          "sources": [
+            {
+              "_id": "source-dgca-part-iv",
+              "_type": "source",
+              "title": "DGCA CAR Section 3 Series M Part IV, Rev.4 (25 January 2023), effective 15 February 2023",
+              "url": "https://www.dgca.gov.in/digigov-portal/Upload?attachId=we1PSlOuQhYdHcwKKrm7ew%3D%3D&flag=iframeAttachView",
+              "publisher": "Directorate General of Civil Aviation, India",
+              "authorityTier": 1,
+              "retrievedAt": "2026-10-04T14:06:40.716Z",
+              "licenseNote": "Official source reviewed 4 October 2026. The linked version and its effective date control; baggage limits are not automatic awards.",
+              "sha256": "3b4b50844edc6a46099cce3b94626d29b03f90ccc61318aa1aa2db6d0fa3ff4a",
+              "evidencePath": "data/sources/source-dgca-part-iv.pdf"
+            }
+          ],
           "conflicts": [],
           "computedBy": "compute_entitlement",
           "notice": "Information, not legal advice. Conditional on the facts supplied. Separate overlapping regimes are not additive; do not recover twice for the same loss."
@@ -5866,8 +6209,8 @@
         "metrics": {
           "eligibility": true,
           "amount": true,
-          "entitlementF1": 1,
-          "citationValidity": null,
+          "entitlementF1": 0,
+          "citationValidity": 1,
           "abstention": true,
           "status": true
         }
@@ -5890,7 +6233,7 @@
               "met": [],
               "unmet": [],
               "uncertainties": [
-                "Baggage is outside this corpus."
+                "Baggage is outside this regime’s calculation; Indian baggage guidance is available for India routes."
               ],
               "ruleIds": [],
               "sourceIds": [
@@ -5943,7 +6286,7 @@
               "met": [],
               "unmet": [],
               "uncertainties": [
-                "Connecting itineraries need a separate scope analysis; this engine covers single flights."
+                "Connecting itineraries outside the supported Indian CAR cases need separate scope analysis."
               ],
               "ruleIds": [],
               "sourceIds": [

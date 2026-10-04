@@ -1167,7 +1167,7 @@
   },
   {
     "id": "scenario-26",
-    "title": "Delhi to Mumbai: current CAR unverified",
+    "title": "Delhi to Mumbai: block time missing",
     "input": {
       "departure": "in",
       "arrival": "in",
@@ -1506,7 +1506,7 @@
   },
   {
     "id": "scenario-33",
-    "title": "Indian domestic cancellation gap",
+    "title": "Indian cancellation: refund choice, missing cash facts",
     "input": {
       "departure": "in",
       "arrival": "in",
@@ -1540,11 +1540,14 @@
       "regime": "in",
       "amount": null,
       "currency": null,
-      "entitlements": []
+      "entitlements": [
+        "refund_or_rerouting_choice"
+      ]
     },
-    "verification": "agent_inferred",
+    "verification": "primary_text",
     "sources": [
-      "source-eu261-original"
+      "source-dgca-part-iv",
+      "source-dgca-part-ii-2026"
     ],
     "split": "test"
   },
