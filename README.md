@@ -32,7 +32,7 @@ The existing server code reads deployment environment variables on each request.
 | `SANITY_DATA_MCP_URL` | `https://api.sanity.io/v1/context/organizations/o7zotfmdd/mcp/disruption-data` |
 | `GAP_STORAGE_DIR` | `/tmp/disruption-desk-gaps` |
 
-Optional Insights bindings: `SANITY_ORGANIZATION_ID=o7zotfmdd` and `SANITY_CONTEXT_ENDPOINT_NAMES=disruption-kb,disruption-data`. `SANITY_WRITE_TOKEN` is optional and separate; without it, gap records are temporary diagnostics. Leave `LLM_MODEL` unset to use the existing Gemini 2.5 Flash default, or set a Gemini model ID. Gemini takes priority over other configured providers.
+Optional Insights bindings: `SANITY_ORGANIZATION_ID=o7zotfmdd` and `SANITY_CONTEXT_ENDPOINT_NAMES=disruption-kb,disruption-data`. `SANITY_WRITE_TOKEN` is optional and separate; without it, gap records are temporary diagnostics. Leave `LLM_MODEL` unset to use the existing Gemini 3.8 Flash default, or set a Gemini model ID. Gemini takes priority over other configured providers.
 
 Redeploy after saving variables: [Vercel applies environment changes only to new deployments](https://vercel.com/docs/environment-variables). No credential download or local environment file is required. The existing `/api/ruling` Node.js route owns the request, authenticates both MCP clients with `SANITY_ORGANIZATION_TOKEN`, and returns actual tool names in `toolCalls`. Retain the dataset endpoint filter:
 
@@ -101,7 +101,7 @@ One `getCapabilities()` owns mode selection; no client secret inspection.
 
 The evaluation CLI loads an ignored `.env.local` when present; secure process variables can also supply bindings. Next.js loads `.env.local` for its server.
 
-Provider priority: `GOOGLE_GENERATIVE_AI_API_KEY`, then `ANTHROPIC_API_KEY`, then `OPENAI_API_KEY`. Default models: Gemini 2.5 Flash, Claude Sonnet 4.6, GPT-4.1 mini. `LLM_MODEL` overrides the chosen provider's model. `ai@6` and `@ai-sdk/mcp@^1` are intentionally compatible.
+Provider priority: `GOOGLE_GENERATIVE_AI_API_KEY`, then `ANTHROPIC_API_KEY`, then `OPENAI_API_KEY`. Default models: Gemini 3.8 Flash, Claude Sonnet 4.6, GPT-4.1 mini. `LLM_MODEL` overrides the chosen provider's model. `ai@6` and `@ai-sdk/mcp@^1` are intentionally compatible.
 
 Content backend is a separate badge: `SANITY_PROJECT_ID` selects **SANITY_LIVE**, otherwise **LOCAL_SNAPSHOT**. Agent modes reject the local backend rather than simulate a live agent. Read failures are errors.
 

@@ -20,7 +20,7 @@ describe('Capabilities and explicit transport errors',()=>{
   vi.stubEnv('SANITY_ORGANIZATION_TOKEN','test-presence-only');
   vi.stubEnv('LLM_MODEL','');
   expect(getCapabilities()).toMatchObject({mode:'FULL',provider:'google',backend:'SANITY_LIVE'});
-  expect(selectModel()).toMatchObject({modelId:'gemini-2.5-flash'});
+  expect(selectModel()).toMatchObject({modelId:'gemini-3.8-flash'});
   vi.stubEnv('LLM_MODEL','gemini-test-override');
   expect(selectModel()).toMatchObject({modelId:'gemini-test-override'});
   vi.stubEnv('SANITY_ORGANIZATION_TOKEN','');
