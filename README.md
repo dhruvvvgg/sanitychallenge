@@ -16,7 +16,33 @@ pnpm build
 pnpm start
 ```
 
-The app listens on port 3000. Copy `env.example` to `.env.local` only when configuring external services; all `.env*` files are ignored. No keys are needed for the local deterministic workflow. The local package cache lives under `.local/`; the cloud workspace's pnpm store setting can be overridden with `pnpm install --store-dir .local/pnpm-store` on another machine. Only esbuild's dependency build is approved; artifact verification is kept enabled.
+The app listens on port 3000. Configure production credentials in the Vercel Dashboard as described below; no `.env.local` is needed. `env.example` is a variable-name reference. No keys are needed for the local deterministic workflow. The local package cache lives under `.local/`; the cloud workspace's pnpm store setting can be overridden with `pnpm install --store-dir .local/pnpm-store` on another machine. Only esbuild's dependency build is approved; artifact verification is kept enabled.
+
+## Vercel deployment with Gemini
+
+The existing server code reads deployment environment variables on each request. In Vercel **Settings → Environment Variables**, set the following for **Production** (and **Preview** if testing a preview). Keep credentials server-side without a `NEXT_PUBLIC_` prefix.
+
+| Variable | Value |
+|---|---|
+| `GOOGLE_GENERATIVE_AI_API_KEY` | Your Gemini API key, entered privately in Vercel |
+| `SANITY_ORGANIZATION_TOKEN` | Your organization Context Viewer token, entered privately in Vercel |
+| `SANITY_PROJECT_ID` | `ro8wcpqg` |
+| `SANITY_DATASET` | `production` |
+| `SANITY_KB_MCP_URL` | `https://api.sanity.io/v1/context/organizations/o7zotfmdd/mcp/disruption-kb` |
+| `SANITY_DATA_MCP_URL` | `https://api.sanity.io/v1/context/organizations/o7zotfmdd/mcp/disruption-data` |
+| `GAP_STORAGE_DIR` | `/tmp/disruption-desk-gaps` |
+
+Optional Insights bindings: `SANITY_ORGANIZATION_ID=o7zotfmdd` and `SANITY_CONTEXT_ENDPOINT_NAMES=disruption-kb,disruption-data`. `SANITY_WRITE_TOKEN` is optional and separate; without it, gap records are temporary diagnostics. Leave `LLM_MODEL` unset to use the existing Gemini 2.5 Flash default, or set a Gemini model ID. Gemini takes priority over other configured providers.
+
+Redeploy after saving variables: [Vercel applies environment changes only to new deployments](https://vercel.com/docs/environment-variables). No credential download or local environment file is required. The existing `/api/ruling` Node.js route owns the request, authenticates both MCP clients with `SANITY_ORGANIZATION_TOKEN`, and returns actual tool names in `toolCalls`. Retain the dataset endpoint filter:
+
+```text
+_type in ["source","regime","entitlementBand","rule","cause","causeStance","caseLaw","airlinePolicy"]
+```
+
+`scenario` and `gap` remain excluded; the fixed dossier and search queries are unchanged.
+
+For live verification, ask: **“My 1,200 km EU flight arrived three hours late because of an operational problem, with no proven extraordinary circumstances. What compensation applies?”** Submit the existing form using the facts in `data/examples/questions.json`'s first input (flight date October 1, 2026), or POST that input to `/api/ruling`. Check HTTP 200, `capabilities.mode=FULL`, `capabilities.provider=google`, `capabilities.backend=SANITY_LIVE`, and `toolCalls` containing `kb_knowledge_base_read`, `data_groq_query`, `query_rules`, and `compute_entitlement`. Inspect the returned ruling's sources and conditions alongside the live Sanity records; the fixture's expected amount is EUR 250, but that expectation is not a live result. Successful FULL requests require both MCP retrievals; endpoint authentication/discovery failures return an error instead of a fallback ruling. Confirm both endpoint retrieval results in server-side tool traces before claiming source grounding. Credentials and raw SDK errors must not be logged.
 
 ```sh
 pnpm test       # 54 meaningful unit/boundary/guard tests
