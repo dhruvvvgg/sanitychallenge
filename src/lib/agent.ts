@@ -28,7 +28,7 @@ export function providerFailureHints(error:unknown):string[] {
 }
 export function selectModel():LanguageModel {
  const c=getCapabilities();
- if(c.provider==='google')return google(process.env.LLM_MODEL || 'gemini-3.8-flash');
+ if(c.provider==='google')return google(process.env.LLM_MODEL || 'gemini-3.5-flash-lite');
  if(c.provider==='anthropic')return anthropic(process.env.LLM_MODEL || 'claude-sonnet-4-6');
  if(c.provider==='openai')return openai(process.env.LLM_MODEL || 'gpt-4.1-mini');
  throw new Error('No LLM provider configured');
