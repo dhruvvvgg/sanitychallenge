@@ -1,0 +1,62 @@
+[
+  {
+    "_id": "corpus-rule-in-cancellation",
+    "_type": "corpusDoc",
+    "title": "India: cancellation",
+    "url": "https://www.dgca.gov.in/digigov-portal/Upload?attachId=we1PSlOuQhYdHcwKKrm7ew%3D%3D&flag=iframeAttachView",
+    "publisher": "Directorate General of Civil Aviation, India",
+    "tier": 1,
+    "markdown": "CAR 3.3: alternate flight or refund. Late notice or missed same-ticket connection may bring compensation plus refund, subject to contact information and extraordinary-circumstances defenses.",
+    "retrievedAt": "2026-10-04T14:00:00.000Z"
+  },
+  {
+    "_id": "corpus-rule-in-denied_boarding",
+    "_type": "corpusDoc",
+    "title": "India: denied boarding",
+    "url": "https://www.dgca.gov.in/digigov-portal/Upload?attachId=we1PSlOuQhYdHcwKKrm7ew%3D%3D&flag=iframeAttachView",
+    "publisher": "Directorate General of Civil Aviation, India",
+    "tier": 1,
+    "markdown": "CAR 3.2: involuntary oversales compensation uses basic fare plus fuel charge, alternative departure timing and passenger choice. First-leg connection claims require final arrival at least three hours late.",
+    "retrievedAt": "2026-10-04T14:00:00.000Z"
+  },
+  {
+    "_id": "corpus-rule-in-arrival_delay",
+    "_type": "corpusDoc",
+    "title": "India: arrival delay",
+    "url": "https://www.dgca.gov.in/digigov-portal/Upload?attachId=we1PSlOuQhYdHcwKKrm7ew%3D%3D&flag=iframeAttachView",
+    "publisher": "Directorate General of Civil Aviation, India",
+    "tier": 1,
+    "markdown": "CAR 3.4 provides specified assistance and domestic refund/alternate choices; no general fixed arrival-delay award.",
+    "retrievedAt": "2026-10-04T14:00:00.000Z"
+  },
+  {
+    "_id": "corpus-rule-in-care",
+    "_type": "corpusDoc",
+    "title": "India: care",
+    "url": "https://www.dgca.gov.in/digigov-portal/Upload?attachId=we1PSlOuQhYdHcwKKrm7ew%3D%3D&flag=iframeAttachView",
+    "publisher": "Directorate General of Civil Aviation, India",
+    "tier": 1,
+    "markdown": "CAR 3.4 and 3.8: block-time meal thresholds, long/night-delay hotel assistance, and an unavoidable-extraordinary-circumstances exception.",
+    "retrievedAt": "2026-10-04T14:00:00.000Z"
+  },
+  {
+    "_id": "corpus-rule-in-refund",
+    "_type": "corpusDoc",
+    "title": "India: refund",
+    "url": "https://www.dgca.gov.in/digigov-portal/Upload?attachId=cuYJ%2FdQQ6Gx93z%2Fwchd5xw%3D%3D&flag=iframeAttachView",
+    "publisher": "Directorate General of Civil Aviation, India",
+    "tier": 1,
+    "markdown": "Part II Rev.3: credit card seven days, cash immediately, agents/portals fourteen working days. Credit shell by passenger choice; refundable taxes and airport charges on unused tickets. Part IV creates disruption refund choices.",
+    "retrievedAt": "2026-10-04T14:00:00.000Z"
+  },
+  {
+    "_id": "corpus-rule-in-baggage",
+    "_type": "corpusDoc",
+    "title": "India: baggage",
+    "url": "https://www.indiacode.nic.in/bitstream/123456789/1658/2/A1972-69.pdf",
+    "publisher": "Directorate General of Civil Aviation, India",
+    "tier": 1,
+    "markdown": "Baggage claims need evidence, applicable carriage regime and complaint checks. Montreal baggage liability limit is 1,519 SDR per passenger from 28 December 2024, not a guaranteed payment. The 2019 MoCA charter describes domestic INR 20,000 guidance; its old international figure is superseded.",
+    "retrievedAt": "2026-10-04T14:00:00.000Z"
+  }
+]

@@ -14,7 +14,7 @@
   {
     "_id": "source-uk261-xml",
     "_type": "source",
-    "title": "UK261 consolidated text, Articles 3\u20139",
+    "title": "UK261 consolidated text, Articles 3–9",
     "url": "https://www.legislation.gov.uk/eur/2004/261/data.xml",
     "publisher": "UK National Archives",
     "authorityTier": 1,
@@ -38,7 +38,7 @@
   {
     "_id": "source-us250",
     "_type": "source",
-    "title": "14 CFR Part 250: oversales, sections 250.2\u2013250.6",
+    "title": "14 CFR Part 250: oversales, sections 250.2–250.6",
     "url": "https://www.ecfr.gov/current/title-14/chapter-II/subchapter-A/part-250",
     "publisher": "US eCFR / Department of Transportation",
     "authorityTier": 1,
@@ -110,7 +110,7 @@
   {
     "_id": "source-sturgeon-press",
     "_type": "source",
-    "title": "Sturgeon, C-402/07 and C-432/07 \u2014 official court announcement",
+    "title": "Sturgeon, C-402/07 and C-432/07 — official court announcement",
     "url": "https://curia.europa.eu/jcms/upload/docs/application/pdf/2009-11/cp090102en.pdf",
     "publisher": "Court of Justice of the European Union",
     "authorityTier": 3,
@@ -122,7 +122,7 @@
   {
     "_id": "source-nelson-press",
     "_type": "source",
-    "title": "Nelson, C-581/10 and C-629/10 \u2014 official court announcement",
+    "title": "Nelson, C-581/10 and C-629/10 — official court announcement",
     "url": "https://curia.europa.eu/jcms/upload/docs/application/pdf/2012-10/cp120135en.pdf",
     "publisher": "Court of Justice of the European Union",
     "authorityTier": 3,
@@ -307,42 +307,6 @@
         "_key": "k1"
       }
     ]
-  },
-  {
-    "_id": "regime-in",
-    "_type": "regime",
-    "key": "in",
-    "instrument": "DGCA CAR Section 3 Series M Part IV \u2014 revision unverified",
-    "applicability": {
-      "alternatives": [
-        {
-          "departure": [
-            "in"
-          ],
-          "arrival": [
-            "*"
-          ],
-          "carriers": [
-            "*"
-          ],
-          "_key": "k0"
-        },
-        {
-          "departure": [
-            "*"
-          ],
-          "arrival": [
-            "in"
-          ],
-          "carriers": [
-            "*"
-          ],
-          "_key": "k1"
-        }
-      ]
-    },
-    "effectiveFrom": null,
-    "sources": []
   },
   {
     "_id": "band-eu-0",
@@ -1617,5 +1581,452 @@
       }
     ],
     "verified": true
+  },
+  {
+    "_id": "regime-in",
+    "_type": "regime",
+    "key": "in",
+    "instrument": "DGCA CAR Part IV Rev.4 + refund Part II Rev.3 (2026); baggage claims guidance",
+    "effectiveFrom": "2023-02-15",
+    "applicability": {
+      "alternatives": [
+        {
+          "departure": [
+            "in"
+          ],
+          "arrival": [
+            "*"
+          ],
+          "carriers": [
+            "*"
+          ],
+          "_key": "k0"
+        },
+        {
+          "departure": [
+            "*"
+          ],
+          "arrival": [
+            "in"
+          ],
+          "carriers": [
+            "*"
+          ],
+          "_key": "k1"
+        }
+      ]
+    },
+    "sources": [
+      {
+        "_type": "reference",
+        "_ref": "source-dgca-part-iv",
+        "_key": "k0"
+      }
+    ]
+  },
+  {
+    "_id": "source-dgca-part-iv",
+    "_type": "source",
+    "title": "DGCA CAR Section 3 Series M Part IV, Rev.4 (25 January 2023), effective 15 February 2023",
+    "url": "https://www.dgca.gov.in/digigov-portal/Upload?attachId=we1PSlOuQhYdHcwKKrm7ew%3D%3D&flag=iframeAttachView",
+    "publisher": "Directorate General of Civil Aviation, India",
+    "authorityTier": 1,
+    "retrievedAt": "2026-10-04T14:06:40.716Z",
+    "licenseNote": "Official source reviewed 4 October 2026. The linked version and its effective date control; baggage limits are not automatic awards.",
+    "sha256": "3b4b50844edc6a46099cce3b94626d29b03f90ccc61318aa1aa2db6d0fa3ff4a",
+    "evidencePath": "data/sources/source-dgca-part-iv.pdf"
+  },
+  {
+    "_id": "source-dgca-part-ii-2026",
+    "_type": "source",
+    "title": "DGCA ticket refunds, Part II Rev.3 (24 February 2026), effective 26 March 2026",
+    "url": "https://www.dgca.gov.in/digigov-portal/Upload?attachId=cuYJ%2FdQQ6Gx93z%2Fwchd5xw%3D%3D&flag=iframeAttachView",
+    "publisher": "Directorate General of Civil Aviation, India",
+    "authorityTier": 1,
+    "retrievedAt": "2026-10-04T14:06:44.090Z",
+    "licenseNote": "Official source reviewed 4 October 2026. The linked version and its effective date control; baggage limits are not automatic awards.",
+    "sha256": "558ecee1d535b63023dd8bd37f0de10d08e7eb82a37ec48817ec1d613ff09281",
+    "evidencePath": "data/sources/source-dgca-part-ii-2026.pdf"
+  },
+  {
+    "_id": "source-india-carriage-act",
+    "_type": "source",
+    "title": "Carriage by Air Act 1972 — Third Schedule: baggage liability and complaints",
+    "url": "https://www.indiacode.nic.in/bitstream/123456789/1658/2/A1972-69.pdf",
+    "publisher": "India Code / Ministry of Law and Justice",
+    "authorityTier": 1,
+    "retrievedAt": "2026-10-04T14:00:00.000Z",
+    "licenseNote": "Official source reviewed 4 October 2026. The linked version and its effective date control; baggage limits are not automatic awards."
+  },
+  {
+    "_id": "source-montreal-limits-2024",
+    "_type": "source",
+    "title": "ICAO: Montreal Convention liability limits effective 28 December 2024",
+    "url": "https://www.icao.int/sites/default/files/secretariat/legal/LEB%20Treaty%20Collection%20Documents/2024_Revised_Limits_of_Liability_Under_the_Montreal_Convention_of_1999_en.pdf",
+    "publisher": "International Civil Aviation Organization",
+    "authorityTier": 1,
+    "retrievedAt": "2026-10-04T14:00:00.000Z",
+    "licenseNote": "Official source reviewed 4 October 2026. The linked version and its effective date control; baggage limits are not automatic awards."
+  },
+  {
+    "_id": "source-india-passenger-charter",
+    "_type": "source",
+    "title": "Ministry of Civil Aviation Passenger Charter — domestic baggage guidance",
+    "url": "https://www.civilaviation.gov.in/sites/default/files/2025-11/passenger-charter-moca-india-feb-2019-133.pdf",
+    "publisher": "Ministry of Civil Aviation, India",
+    "authorityTier": 2,
+    "retrievedAt": "2026-10-04T14:06:44.553Z",
+    "licenseNote": "2019 official guidance, still hosted by MoCA. Its international SDR figures are outdated: use the current ICAO revision. Domestic guidance is not a substitute for individual statutory liability analysis.",
+    "sha256": "a57fbc80eafd38ffa6e0cc264f79b35d9c2563969e3a4d13b50f931e9904f1ac",
+    "evidencePath": "data/sources/source-india-passenger-charter.pdf"
+  },
+  {
+    "_id": "band-in-cancel-0",
+    "_type": "entitlementBand",
+    "regime": {
+      "_type": "reference",
+      "_ref": "regime-in"
+    },
+    "dimension": "block_time_minutes",
+    "min": 0,
+    "max": 60,
+    "value": 5000,
+    "currency": "INR",
+    "source": {
+      "_type": "reference",
+      "_ref": "source-dgca-part-iv"
+    }
+  },
+  {
+    "_id": "band-in-cancel-1",
+    "_type": "entitlementBand",
+    "regime": {
+      "_type": "reference",
+      "_ref": "regime-in"
+    },
+    "dimension": "block_time_minutes",
+    "min": 60,
+    "max": 120,
+    "value": 7500,
+    "currency": "INR",
+    "source": {
+      "_type": "reference",
+      "_ref": "source-dgca-part-iv"
+    }
+  },
+  {
+    "_id": "band-in-cancel-2",
+    "_type": "entitlementBand",
+    "regime": {
+      "_type": "reference",
+      "_ref": "regime-in"
+    },
+    "dimension": "block_time_minutes",
+    "min": 120,
+    "max": null,
+    "value": 10000,
+    "currency": "INR",
+    "source": {
+      "_type": "reference",
+      "_ref": "source-dgca-part-iv"
+    }
+  },
+  {
+    "_id": "band-in-denied-0",
+    "_type": "entitlementBand",
+    "regime": {
+      "_type": "reference",
+      "_ref": "regime-in"
+    },
+    "dimension": "fare_percentage",
+    "min": 0,
+    "max": null,
+    "value": 200,
+    "currency": "INR",
+    "source": {
+      "_type": "reference",
+      "_ref": "source-dgca-part-iv"
+    },
+    "multiplier": 2,
+    "cap": 10000
+  },
+  {
+    "_id": "band-in-denied-1",
+    "_type": "entitlementBand",
+    "regime": {
+      "_type": "reference",
+      "_ref": "regime-in"
+    },
+    "dimension": "fare_percentage",
+    "min": 0,
+    "max": null,
+    "value": 400,
+    "currency": "INR",
+    "source": {
+      "_type": "reference",
+      "_ref": "source-dgca-part-iv"
+    },
+    "multiplier": 4,
+    "cap": 20000
+  },
+  {
+    "_id": "rule-in-cancellation",
+    "_type": "rule",
+    "title": "India: cancellation",
+    "regime": {
+      "_type": "reference",
+      "_ref": "regime-in"
+    },
+    "trigger": "cancellation",
+    "algorithm": "in_cancellation",
+    "verified": true,
+    "verificationStatus": "primary_text_reviewed_2026-10-04",
+    "effectiveFrom": "2023-02-15",
+    "paraphrase": "CAR 3.3: alternate flight or refund. Late notice or missed same-ticket connection may bring compensation plus refund, subject to contact information and extraordinary-circumstances defenses.",
+    "thresholds": {
+      "noticeMediumHours": 24
+    },
+    "conditions": [
+      "Covered India route",
+      "Confirmed reservation and applicable check-in",
+      "Basic fare plus fuel charge, not total tax-inclusive fare",
+      "Specific CAR conditions; foreign-carrier and damages claims may require review"
+    ],
+    "entitlements": [],
+    "bands": [
+      {
+        "_type": "reference",
+        "_ref": "band-in-cancel-0",
+        "_key": "k0"
+      },
+      {
+        "_type": "reference",
+        "_ref": "band-in-cancel-1",
+        "_key": "k1"
+      },
+      {
+        "_type": "reference",
+        "_ref": "band-in-cancel-2",
+        "_key": "k2"
+      }
+    ],
+    "sources": [
+      {
+        "_type": "reference",
+        "_ref": "source-dgca-part-iv",
+        "_key": "k0"
+      }
+    ],
+    "claimDeadline": "CAR redress: airline, nodal/appellate officer, AirSewa, then competent statutory body/court. Limitation depends on remedy; no universal deadline asserted."
+  },
+  {
+    "_id": "rule-in-denied_boarding",
+    "_type": "rule",
+    "title": "India: denied boarding",
+    "regime": {
+      "_type": "reference",
+      "_ref": "regime-in"
+    },
+    "trigger": "denied_boarding",
+    "algorithm": "in_denied_boarding",
+    "verified": true,
+    "verificationStatus": "primary_text_reviewed_2026-10-04",
+    "effectiveFrom": "2023-02-15",
+    "paraphrase": "CAR 3.2: involuntary oversales compensation uses basic fare plus fuel charge, alternative departure timing and passenger choice. First-leg connection claims require final arrival at least three hours late.",
+    "thresholds": {
+      "noCompensationMinutes": 60,
+      "departureMinutes": 1440,
+      "connectionMinutes": 180,
+      "lowMultiplier": 2,
+      "highMultiplier": 4
+    },
+    "conditions": [
+      "Covered India route",
+      "Confirmed reservation and applicable check-in",
+      "Basic fare plus fuel charge, not total tax-inclusive fare",
+      "Specific CAR conditions; foreign-carrier and damages claims may require review"
+    ],
+    "entitlements": [],
+    "bands": [
+      {
+        "_type": "reference",
+        "_ref": "band-in-denied-0",
+        "_key": "k0"
+      },
+      {
+        "_type": "reference",
+        "_ref": "band-in-denied-1",
+        "_key": "k1"
+      }
+    ],
+    "sources": [
+      {
+        "_type": "reference",
+        "_ref": "source-dgca-part-iv",
+        "_key": "k0"
+      }
+    ],
+    "claimDeadline": "CAR redress: airline, nodal/appellate officer, AirSewa, then competent statutory body/court. Limitation depends on remedy; no universal deadline asserted."
+  },
+  {
+    "_id": "rule-in-arrival_delay",
+    "_type": "rule",
+    "title": "India: arrival delay",
+    "regime": {
+      "_type": "reference",
+      "_ref": "regime-in"
+    },
+    "trigger": "arrival_delay",
+    "algorithm": "in_arrival_delay",
+    "verified": true,
+    "verificationStatus": "primary_text_reviewed_2026-10-04",
+    "effectiveFrom": "2023-02-15",
+    "paraphrase": "CAR 3.4 provides specified assistance and domestic refund/alternate choices; no general fixed arrival-delay award.",
+    "thresholds": {
+      "shortBlockMinutes": 150,
+      "mediumBlockMinutes": 300,
+      "shortMinutes": 120,
+      "mediumMinutes": 180,
+      "longMinutes": 240,
+      "domesticRefundMinutes": 360,
+      "hotelMinutes": 1440,
+      "nightHotelMinutes": 360
+    },
+    "conditions": [
+      "Covered India route",
+      "Confirmed reservation and applicable check-in",
+      "Basic fare plus fuel charge, not total tax-inclusive fare",
+      "Specific CAR conditions; foreign-carrier and damages claims may require review"
+    ],
+    "entitlements": [],
+    "bands": [],
+    "sources": [
+      {
+        "_type": "reference",
+        "_ref": "source-dgca-part-iv",
+        "_key": "k0"
+      }
+    ],
+    "claimDeadline": "CAR redress: airline, nodal/appellate officer, AirSewa, then competent statutory body/court. Limitation depends on remedy; no universal deadline asserted."
+  },
+  {
+    "_id": "rule-in-care",
+    "_type": "rule",
+    "title": "India: care",
+    "regime": {
+      "_type": "reference",
+      "_ref": "regime-in"
+    },
+    "trigger": "care",
+    "algorithm": "in_care",
+    "verified": true,
+    "verificationStatus": "primary_text_reviewed_2026-10-04",
+    "effectiveFrom": "2023-02-15",
+    "paraphrase": "CAR 3.4 and 3.8: block-time meal thresholds, long/night-delay hotel assistance, and an unavoidable-extraordinary-circumstances exception.",
+    "thresholds": {
+      "shortBlockMinutes": 150,
+      "mediumBlockMinutes": 300,
+      "shortMinutes": 120,
+      "mediumMinutes": 180,
+      "longMinutes": 240,
+      "domesticRefundMinutes": 360,
+      "hotelMinutes": 1440,
+      "nightHotelMinutes": 360
+    },
+    "conditions": [
+      "Covered India route",
+      "Confirmed reservation and applicable check-in",
+      "Basic fare plus fuel charge, not total tax-inclusive fare",
+      "Specific CAR conditions; foreign-carrier and damages claims may require review"
+    ],
+    "entitlements": [],
+    "bands": [],
+    "sources": [
+      {
+        "_type": "reference",
+        "_ref": "source-dgca-part-iv",
+        "_key": "k0"
+      }
+    ],
+    "claimDeadline": "CAR redress: airline, nodal/appellate officer, AirSewa, then competent statutory body/court. Limitation depends on remedy; no universal deadline asserted."
+  },
+  {
+    "_id": "rule-in-refund",
+    "_type": "rule",
+    "title": "India: refund",
+    "regime": {
+      "_type": "reference",
+      "_ref": "regime-in"
+    },
+    "trigger": "refund",
+    "algorithm": "in_refund",
+    "verified": true,
+    "verificationStatus": "primary_text_reviewed_2026-10-04",
+    "effectiveFrom": "2026-03-26",
+    "paraphrase": "Part II Rev.3: credit card seven days, cash immediately, agents/portals fourteen working days. Credit shell by passenger choice; refundable taxes and airport charges on unused tickets. Part IV creates disruption refund choices.",
+    "thresholds": {},
+    "conditions": [
+      "Covered India route",
+      "Confirmed reservation and applicable check-in",
+      "Basic fare plus fuel charge, not total tax-inclusive fare",
+      "Specific CAR conditions; foreign-carrier and damages claims may require review"
+    ],
+    "entitlements": [],
+    "bands": [],
+    "sources": [
+      {
+        "_type": "reference",
+        "_ref": "source-dgca-part-iv",
+        "_key": "k0"
+      },
+      {
+        "_type": "reference",
+        "_ref": "source-dgca-part-ii-2026",
+        "_key": "k1"
+      }
+    ],
+    "claimDeadline": "CAR redress: airline, nodal/appellate officer, AirSewa, then competent statutory body/court. Limitation depends on remedy; no universal deadline asserted."
+  },
+  {
+    "_id": "rule-in-baggage",
+    "_type": "rule",
+    "title": "India: baggage",
+    "regime": {
+      "_type": "reference",
+      "_ref": "regime-in"
+    },
+    "trigger": "baggage",
+    "algorithm": "in_baggage",
+    "verified": true,
+    "verificationStatus": "primary_text_reviewed_2026-10-04",
+    "effectiveFrom": "2024-12-28",
+    "paraphrase": "Baggage claims need evidence, applicable carriage regime and complaint checks. Montreal baggage liability limit is 1,519 SDR per passenger from 28 December 2024, not a guaranteed payment. The 2019 MoCA charter describes domestic INR 20,000 guidance; its old international figure is superseded.",
+    "thresholds": {},
+    "conditions": [
+      "Covered India route",
+      "Confirmed reservation and applicable check-in",
+      "Basic fare plus fuel charge, not total tax-inclusive fare",
+      "Specific CAR conditions; foreign-carrier and damages claims may require review"
+    ],
+    "entitlements": [],
+    "bands": [],
+    "sources": [
+      {
+        "_type": "reference",
+        "_ref": "source-india-carriage-act",
+        "_key": "k0"
+      },
+      {
+        "_type": "reference",
+        "_ref": "source-montreal-limits-2024",
+        "_key": "k1"
+      },
+      {
+        "_type": "reference",
+        "_ref": "source-india-passenger-charter",
+        "_key": "k2"
+      }
+    ],
+    "claimDeadline": "CAR redress: airline, nodal/appellate officer, AirSewa, then competent statutory body/court. Limitation depends on remedy; no universal deadline asserted."
   }
 ]

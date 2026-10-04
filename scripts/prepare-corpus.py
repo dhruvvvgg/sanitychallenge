@@ -124,3 +124,7 @@ for dataset,docs in [('production',D),('corpus',C)]:
 assert len(D)+len(C)+40<140,(len(D),len(C))
 (root/'data/verification.json').write_text(json.dumps({'checkedAnchors':checks,'publicDocuments':len(D),'privateDocuments':len(C),'livePublished':False,'method':'Manual primary-text review with reproducible anchor checks; official court summaries are labeled, not full judgments.'},indent=2)+'\n')
 print(f'Prepared {len(D)} public and {len(C)} private documents, plus budget for 40 golden scenarios. Nothing uploaded.')
+
+# Add the separately reviewed India extension after the original source batch.
+import subprocess
+subprocess.run(["node",str(root/"scripts/india-content.mjs")],check=True)

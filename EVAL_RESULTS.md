@@ -1,11 +1,11 @@
 # Evaluation results
 
-Run: 2026-10-02T21:44:18.659Z. This report labels actual mode and backend; no live Sanity or Context claim is implied by local scores.
+Run: 2026-10-04T14:09:29.104Z. This report labels actual mode and backend; no live Sanity or Context claim is implied by local scores.
 
 | Method | Runtime mode / content | Primary cases | Eligibility | Amount | Entitlement-set F1 | Citation metadata validity | Correct abstention |
 |---|---|---:|---:|---:|---:|---:|---:|
-| D | DETERMINISTIC / LOCAL_SNAPSHOT | 32 | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% |
-| B1 | DETERMINISTIC / LOCAL_SNAPSHOT | 32 | 46.9% | 43.8% | 48.4% | 100.0% | 46.9% |
+| D | DETERMINISTIC / LOCAL_SNAPSHOT | 33 | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% |
+| B1 | DETERMINISTIC / LOCAL_SNAPSHOT | 33 | 60.6% | 57.6% | 53.0% | 100.0% | 57.6% |
 
 - B0: not run: no LLM key
 - STRUCTURED_AGENT: not run: no LLM key
@@ -22,9 +22,9 @@ Citation validity means a cited URL/hash matches a successfully retrieved eviden
 ## Failures and limits
 
 - D: none on this finite suite
-- B1: scenario-02, scenario-03, scenario-04, scenario-05, scenario-06, scenario-07, scenario-08, scenario-10, scenario-11, scenario-13, scenario-14, scenario-15, scenario-16, scenario-17, scenario-24, scenario-29, scenario-31, scenario-32
+- B1: scenario-08, scenario-09, scenario-10, scenario-12, scenario-13, scenario-14, scenario-15, scenario-16, scenario-17, scenario-20, scenario-21, scenario-22, scenario-23, scenario-29, scenario-31, scenario-33
 
-- D held-out primary cases: 7; amount 100.0%; entitlement F1 100.0%; all-case correct abstention 100.0%
-- B1 held-out primary cases: 7; amount 57.1%; entitlement F1 64.3%; all-case correct abstention 57.5%
+- D held-out primary cases: 8; amount 100.0%; entitlement F1 100.0%; all-case correct abstention 100.0%
+- B1 held-out primary cases: 8; amount 75.0%; entitlement F1 68.8%; all-case correct abstention 65.0%
 
-India CAR, full judgments, requested airline breadth, non-time schedule changes, connecting flights, claim deadlines and future/historical law remain coverage gaps. Forty small curated cases are not a legal accuracy benchmark. Local backend validation does not satisfy the challenge requirement to query real Sanity content; deployment/import and FULL eval remain in HANDOFF.md.
+India CAR is now verified; the original India cancellation expectation was explicitly revised for its sourced refund choice. Added CAR boundary cases live in tests/india.test.ts. Foreign-carrier compensation, unsupported connections, individual baggage damages, full judgments, broader airline terms, non-time changes and universal deadlines require further scope review. Forty small curated cases are not a legal accuracy benchmark. Local backend validation does not satisfy the challenge requirement to query real Sanity content; deployment/import and FULL eval remain in HANDOFF.md.
